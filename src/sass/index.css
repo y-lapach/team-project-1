@@ -1,0 +1,127 @@
+/*---------FONTS--------*/
+/*---------COLORS--------*/
+/*---main---*/
+/*---buttons---*/
+/*---forms---*/
+/*---Tablet & mobile menu background---*/
+/*---buy now modal---*/
+/*---products section backgrounds---*/
+@import '~node_modules/modern-normalize/modern-normalize.css';
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+button {
+  border-width: 0px;
+  cursor: pointer;
+}
+
+input {
+  cursor: pointer;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #131313;
+  background-color: #fcfcfc;
+  background-image: url("../images/body/background-mobile.jpg");
+  background-repeat: repeat;
+}
+
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  body {
+    background-image: url("../images/body/background-mobile-2x.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url(../images/body/background-tablet.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  body {
+    background-image: url("../images/body/background-tablet-2x.jpg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url(../images/body/background-desktop.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  body {
+    background-image: url("../images/body/background-desktop-2x.jpg");
+  }
+}
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding: 0 16px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  word-wrap: normal !important;
+  clip-path: inset(50%);
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  overflow: hidden;
+}/*# sourceMappingURL=index.css.map */
