@@ -73,6 +73,8 @@ background: $yellow-bg;
 background: $primary-whiskey;   
 }
 .products-kards-title {
+margin-bottom: 40px;
+
 font-weight: 700;
 font-size: 20px;
 line-height: calc(24 / 20);
@@ -101,7 +103,7 @@ background-color: transparent;
 border: none;
 margin: auto;
 }
-.products-modalka-open {
-    fill: currentColor;
+.products-modal-open {
+fill: currentColor;
 }
 // це не може бути в лі - перенести то в інший дів - картинка виходить за межі 
