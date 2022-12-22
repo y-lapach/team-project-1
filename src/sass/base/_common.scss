@@ -1,0 +1,87 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+button {
+    border-width: 0px;
+    cursor: pointer;
+}
+
+input {
+    cursor: pointer;
+}
+
+body {
+    font-family: $font-montserrat;
+    color: $primary-dark;
+    background-color: $primary-light;
+    background-image: url('../images/body/background-mobile.jpg');
+    background-repeat: repeat;
+}
+    
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        body {
+            background-image: url('../images/body/background-mobile-2x.jpg');
+        }
+    }
+    
+    @media screen and (min-width:768px) {
+        body {
+            background-image: url(../images/body/background-tablet.jpg);
+        }
+    
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            body {
+                background-image: url('../images/body/background-tablet-2x.jpg');
+            }
+        }
+    }
+    
+    @media screen and (min-width:1200px) {
+        body {
+            background-image: url(../images/body/background-desktop.jpg);
+        }
+    
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            body {
+                background-image: url('../images/body/background-desktop-2x.jpg');
+            }
+        }
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media screen and (min-width:480px) {
+        width: 480px;
+    }
+
+    @media screen and (min-width:768px) {
+        width: 768px;
+        padding: 0 32px;
+    }
+
+    @media screen and (min-width:1200px) {
+        width: 1200px;
+        padding: 0 16px;
+    }
+
+}
