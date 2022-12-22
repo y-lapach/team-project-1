@@ -1,0 +1,111 @@
+.footer-main{
+background-color: $primary-green;
+}
+
+.footer-title{
+color: $primary-light;
+width: 232px;
+height: 42px;
+left: 22px;
+top: 1448px;
+font-family: $font-montserrat;
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+margin-left: 22px;
+margin-bottom: 16px;
+
+}
+
+.footer-span-title{
+    color: $primary-light;
+    width: 200px;
+height: 76px;
+left: 20px;
+top: 1506px;
+font-family: $font-montserrat;
+font-style: normal;
+font-weight: 700;
+font-size: 34px;
+line-height: 41px;
+letter-spacing: 0.04em;
+display: block;
+margin-bottom: 60px;
+margin-left: 20px;
+}
+
+.footer-social-links{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: end;
+}
+
+.footer-social-site{
+    margin-right: 20px;
+    border-radius: 50%;
+    border:  1px solid $primary-yellow;
+   background-color: $primary-yellow;
+}
+
+.footer-social-symbol{
+    fill: $primary-grey;
+}
+
+.footer-connect{
+    text-align: right;
+    width: 100%;
+}
+
+
+.footer-mobile-text{
+    margin-right: 20px;
+    margin-bottom: 40px;
+    
+    height: 22px;
+   
+    
+    font-family: $font-montserrat;
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 22px;
+
+color: $primary-dark;
+
+}
+
+.footer-number{
+    
+    width: 244px;
+    height: 22px;
+    left: 56px;
+    top: 1696px;
+    font-family: $font-montserrat;
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 22px;
+text-align: right;
+color: $primary-light;
+}
+
+.footer-line{
+    border: 1px solid #E1E1E1;
+}
+
+.footer-rights{
+    
+height: 42px;
+left: 20px;
+top: 1778px;
+font-family: $font-montserrat;
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 21px;
+text-align: center;
+color: $primary-grey;
+margin-top: 20px;
+display: block;
+}
