@@ -1,0 +1,123 @@
+.hero {
+    background-color: rgba(132, 161, 120, 1);
+    padding-top: 50px;
+    
+}
+li{
+    list-style-type: none;
+        /* Прибираємо маркери */
+}
+.container-hero {
+    outline: red solid 1px;
+    width: 100%;
+   
+    position: relative;
+
+}
+
+.hero-title {
+    font-family: $font-seymour;
+    display: block;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: #fcfcfc;
+   
+    margin-bottom: 32px;
+}
+
+.hero-title-1 {
+    display: block;
+}
+
+.hero-title-2 {
+    display: block;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 0.95;
+}
+
+.hero-list-link {
+    display: flex;
+    padding: 0px;
+
+}
+
+.hero-link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.25;
+
+    background-color: inherit;
+    margin-bottom: 236px;
+}
+
+.hero-link-first {
+    border: 2px solid rgba(248, 210, 78, 1);
+    border-radius: 10px;
+    margin-right: 12px;
+    padding: 11px 26px;
+    text-decoration-line: none;
+    color: $primary-dark;
+&:hover, &:focus {
+    border: 2px solid rgba(10, 136, 23, 1)
+}
+&:focus{
+    color:$primary-light ;
+}
+}
+.hero-link-second {
+    background-color: inherit;
+    text-decoration-line: underline;
+    border: none;
+    color: #f8d24e;
+    padding: 11px 26px;
+&:hover {
+    color: #0A8817;
+}
+}
+.hero-pictures {
+    bottom: 0px;
+    // left: 10px;
+}
+
+.hero-pict-points {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: -2px;
+}
+
+.hero-pict-ice-creams {
+    display: none;
+}
+
+.hero-pict-ice-cream {
+    position: absolute;
+    bottom: 0px;
+    left: 83px;
+}
+
+.hero-text {
+    display: none;
+}
+
+.hero-statistics-list {
+    display: none;
+}
+
+/* .container-hero.media screen and (min-width: 480px) {
+            max-width: 480px;
+        }
+    
+.container-hero.screen and (min-width: 768px) {
+            max-width: 768px;
+    
+        }
+    
+.container-hero.screen and (min-width: 1200px) {
+            max-width: 1200px;
+} */
