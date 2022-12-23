@@ -3,28 +3,43 @@
 }
 .slogan-container {
     width:280px;
+
+    @include tablet {
+        width: 352px;
+    }
 }
 .footer-title{
-    color: $primary-light;
     font-weight: 700;
     font-size: 18px;
-    line-height: 1.22;
+    line-height: 1.2;
     text-transform: uppercase;
+    color: $primary-light;
+
+    @include tablet {
+        font-size: 26px;
+        letter-spacing: 0.04em;
+    }
 }
 .footer-title-span {
     display: block;
-    color: $primary-light;
-    font-size: 34px;
-    line-height: 1.2;
-    letter-spacing: 0.04em;
     margin-top: 16px;
     margin-bottom: 60px;
+    font-size: 34px;
+    letter-spacing: 0.04em;
+    color: $primary-light;
+
+    @include tablet {
+        margin-top: 8px;
+        margin-bottom: 32px;
+        font-size: 48px;
+        letter-spacing: 0.06em;
+    }
 }
 .contacts {
     text-align: right;
+
     @include tablet {
-        margin-left:auto
-    
+        margin-left:auto;
     }
    
 }
@@ -32,13 +47,13 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 20px;
+
     @include tablet {
-    margin-bottom: 34px;
-    
+        margin-bottom: 34px;
     }
 }
 
-.footer-company-info{
+.footer-company-info {
     @include tablet {
         display: flex;
         align-items: center;
@@ -48,11 +63,12 @@
 .footer-social-item {
     border-radius: 50%;
     background-color: $primary-yellow;
+    
     &:not(:last-child) {
         margin-right: 20px;
     }
 }
-.footer-social-link{
+.footer-social-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,14 +76,19 @@
     height: 34px;
     fill: $primary-green;
 }
-.footer-contact-tel{
+.footer-contact-tel {
     margin-bottom: 40px;
     font-weight: 700;
     font-size: 12px;
-    line-height: 1.83;
+    line-height: 1.8;
     color: $primary-dark;
+
+    @include tablet {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
 }
-.footer-tel-number{
+.footer-tel-number {
     color: $primary-light;
 }
 .footer-copyright {
@@ -76,8 +97,8 @@
     text-align: center;
     padding: 20px;
     border-top: 1px solid $grey-divider;
+
     @include tablet {
-        white-space: nowrap;
         padding: 12px;
     }
 }
@@ -87,10 +108,10 @@
     font-size: 14px;
     line-height: 1.5;
     color: $dark-grey;
+
     @include tablet {
-        width: 298px;
-       
-        line-height: 26px;
-        letter-spacing: 0.02em
+        width: auto;
+        line-height: 1.8;
+        letter-spacing: 0.02em;
     }
 }
