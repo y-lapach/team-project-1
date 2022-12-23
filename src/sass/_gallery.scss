@@ -1,11 +1,32 @@
+.gallery {
+  // background-image: url(../images/body/background-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include tablet {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @include desktop {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
+
 .gallery-item {
   list-style-type: none;
 }
 
 .gallery-img {
   position: absolute;
-  width: 80%;
-  height: 60%;
+  border-radius: 24px;
+  max-width: 100%;
+  max-height: 422px;
+
   left: 50%;
   top: 50%;
   -webkit-background-size: cover;
@@ -23,18 +44,73 @@
 }
 
 .first-img {
-  background-image: url(../images/gallery/gallery-first-des-1x.jpg);
+  background-image: url(../images/gallery/gallery-first-mob-1x.jpg);
   animation-delay: 4s;
+  // @include retina {
+  //   background-image: url(../images/gallery/gallery-first-mob-2x.jpg);
+  // }
+
+  @include tablet {
+    background-image: url(../images/gallery/gallery-first-tab-1x.jpg);
+    // @include retina {
+    //   background-image: url(../images/gallery/gallery-first-tab-2x.jpg);
+    // }
+  }
+
+  @include desktop {
+    background-image: url(../images/gallery/gallery-first-des-1x.jpg);
+    max-width: 1013px;
+    // @include retina {
+    //   background-image: url(../images/gallery/gallery-first-des-2x.jpg);
+    // }
+  }
 }
 
 .second-img {
-  background-image: url(../images/gallery/gallery-second-des-1x.jpg);
+  background-image: url(../images/gallery/gallery-second-mob-1x.jpg);
   animation-delay: 2s;
+  // @include retina {
+  //   background-image: url(../images/gallery/gallery-second-mob-2x.jpg);
+  // }
+
+
+  @include tablet {
+    background-image: url(../images/gallery/gallery-second-tab-1x.jpg);
+    // @include retina {
+    //   background-image: url(../images/gallery/gallery-second-tab-2x.jpg);
+    // }
+  }
+
+  @include desktop {
+    background-image: url(../images/gallery/gallery-second-des-1x.jpg);
+    max-width: 1013px;
+    // @include retina {
+    //   background-image: url(../images/gallery/gallery-second-des-2x.jpg);
+    // }
+  }
 }
 
 .third-img {
-  background-image: url(../images/gallery/gallery-third-des-1x.jpg);
+  background-image: url(../images/gallery/gallery-third-mob-1x.jpg);
   animation-delay: 0s;
+  // @include retina {
+  //   background-image: url(../images/gallery/gallery-third-mob-2x.jpg);
+  // }
+
+  @include tablet {
+    background-image: url(../images/gallery/gallery-third-tab-1x.jpg);
+    // @include retina {
+    //   background-image: url(../images/gallery/gallery-third-tab-2x.jpg);
+    // }
+  }
+
+  @include desktop {
+    background-image: url(../images/gallery/gallery-third-des-1x.jpg);
+    max-width: 1013px;
+    // @include retina {
+    //   background-image: url(../images/gallery/gallery-third-des-2x.jpg);
+    // }
+  }
 }
 
 @keyframes imagesFading {
