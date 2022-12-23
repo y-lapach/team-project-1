@@ -1,21 +1,19 @@
 .gallery {
   background-image: linear-gradient(
     to bottom,
-    $primary-green 23%,
-    transparent 23%,
-    transparent
+    $primary-green 40%,
+    transparent 0
   );
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 190vh;
+  min-height: 502px;
   margin: 0 auto;
-
   @include tablet {
-     height: 195vh;
+    min-height: 387px;
   }
   @include desktop {
-    height: 145vh;
+    min-height: 162px;
   }
 }
 
