@@ -15,7 +15,7 @@ li {
 }
 .container-hero {
     position: relative;
-  outline: red solid 1px;
+  // outline: red solid 1px;
   width: 100%;
   padding-bottom: 24px;
 
@@ -75,6 +75,10 @@ li {
   display: flex;
   padding: 0px;
   margin: 0px;
+  margin-bottom: 186px;
+  @include tablet{
+    margin-bottom: 39px;
+  }
   @include desktop {
         margin-bottom: 109px;
       }
@@ -82,7 +86,7 @@ li {
 
 .hero-link {
   display: inline-block;
-  margin-bottom: 39px;
+  // margin-bottom: 39px;
   font-weight: 600;
   font-size: 12px;
   line-height: calc(15 / 12);
@@ -200,6 +204,8 @@ li {
   position: absolute;
   bottom: 0px;
   left: 28%;
+  width: 177px;
+  height: 217px;
   @include tablet {
     left: 53%;
    
