@@ -1,0 +1,145 @@
+.about {
+  padding-top: 61px;
+  padding-bottom: 50px;
+  background-color: $primary-green;
+}
+
+.about-uptitle {
+  display: block;
+  text-align: center;
+  color: $primary-light;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.22;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.about-title {
+  font-family: $font-seymour;
+  color: $primary-light;
+  font-size: 30px;
+  line-height: 38px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 32px;
+  @include tablet {
+    margin-bottom: 72px;
+  }
+  @include desktop {
+    margin-bottom: 82px;
+  }
+}
+
+.about-box {
+  @include tablet {
+    display: flex;
+  }
+}
+
+.about-decorative {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // background: linear-gradient(
+  //     0deg,
+  //     rgba(248, 210, 78, 0.7),
+  //     rgba(248, 210, 78, 0.7)
+  //   ),
+  //   #d9d9d9;
+  // box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+  // border-radius: 140px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+}
+
+.about-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include tablet {
+    width: 336px;
+    align-items: flex-start;
+    margin-left: 38px;
+  }
+
+  @include desktop {
+    width: 463px;
+    margin-left: 110px;
+  }
+}
+
+.about-list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 4px;
+  margin-bottom: 10px;
+  @include tablet {
+    text-align: left;
+    margin-bottom: 32px;
+  }
+}
+
+.about-text {
+  color: $primary-light;
+  font-size: 12px;
+  line-height: 1.76;
+  letter-spacing: 0.04em;
+  @include desktop {
+    font-size: 16px;
+  }
+}
+
+.about-text-last {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+
+.about-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 164px;
+  border-radius: 10px;
+  padding: 12px 34px;
+  border: 0;
+
+  color: $black;
+  background-color: $primary-yellow;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.28;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    color: $black;
+    background-color: $green-hover;
+  }
+  &:focus {
+    color: $primary-light;
+    background-color: $green-hover;
+  }
+  &:disabled {
+    color: $black;
+    background-color: $primary-grey;
+  }
+}
+
+.about-icon {
+  margin-left: 8px;
+}
