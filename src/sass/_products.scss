@@ -1,6 +1,6 @@
 .products {
-    padding-top: 60px;
-    padding-bottom: 60px;
+padding-top: 60px;
+padding-bottom: 60px;
 }
 .products-label {
 display: block;
@@ -41,6 +41,7 @@ color: $primary-dark;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 @include tablet {
+margin-bottom: 80px;
 font-size: 34px;
 line-height: calc(43 / 34);
 }
@@ -126,6 +127,11 @@ background: $primary-whiskey;
     transform: translateX(-50%);
     background-image: url(../images/products/products-ice-cream-mob.png);
 
+    
+    @include tablet {
+        top: -8%; 
+        background-image: url(../images/products/products-ice-cream-tab.png); 
+        }
 
     @include desktop {
     width: 302px;
@@ -150,6 +156,11 @@ background: $primary-whiskey;
         top: -7%;
         transform: translateX(-50%);
         background-image: url(../images/products/products-ice-coffee-mob.png);
+        
+    @include tablet {
+        top: -8%; 
+        background-image: url(../images/products/products-ice-coffee-tab.png); 
+        }
 
         @include desktop {
             width: 302px;
@@ -157,14 +168,16 @@ background: $primary-whiskey;
             top: -10%; 
             background-image: url(../images/products/products-ice-coffee-desk.png); 
             }
-    }
+
+}
 }
 
 .circle-milkshakes {
     background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
-    box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);    
+    box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25); 
 
-    &::before {
+
+        &::before {
         content: '';
         position: absolute;
         width: 200px;
@@ -175,6 +188,11 @@ background: $primary-whiskey;
         top: -7%;
         transform: translateX(-50%);
         background-image: url(../images/products/products-milkshakes-mob.png);
+        
+        @include tablet {
+            top: -8%; 
+            background-image: url(../images/products/products-milkshakes-tab.png); 
+            }
 
         @include desktop {
             width: 302px;
@@ -184,6 +202,7 @@ background: $primary-whiskey;
             }
     }
 }
+
 
 .products-kards-title {
 margin-bottom: 40px;
