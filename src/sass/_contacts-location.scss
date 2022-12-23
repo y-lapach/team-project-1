@@ -3,10 +3,11 @@
 .button {
   padding-top: 20px;
   padding-bottom: 60px;
-  background-color: var($primary-green);
+  background-color: $primary-green;
 }
 
 .button-list {
+  display: block;
   text-align: center;
   align-items: center;
   gap: 16px;
@@ -21,8 +22,8 @@
   height: 42px;
   border: none;
   border-radius: 10px;
-  background: var($primary-yellow);
-  color: var($primary-yellow);
+  background: $primary-yellow;
+  color: $primary-dark;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.29;
@@ -31,39 +32,39 @@
 .button-franchise {
   width: 196px;
   height: 42px;
-  border: 1px solid var($primary-yellow);
+  border: 1px solid $primary-yellow;
   border-radius: 10px;
-  background: var($primary-green);
-  color: var($primary-dark);
+  background: $primary-green;
+  color: $primary-dark;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.29;
 }
 
-.button-location:hover {
-  background-color: var($green-hover);
+.button-location:hover,
+.button-location:focus {
+  background-color: $green-hover;
 }
 
 .button-location:focus {
-  background-color: var($green-hover);
-  color: var($primary-light);
+  color: $primary-light;
 }
 
 .button-location:disabled {
-  color: var($primary-grey);
+  color: $primary-grey;
 }
 
-.button-franchise:hover {
-  border: 1px solid var($green-hover);
+.button-franchise:hover,
+.button-franchise:focus {
+  border: 1px solid $green-hover;
 }
 
 .button-franchise:focus {
-  border: 1px solid var($green-hover);
-  color: var($primary-light);
+  color: $primary-light;
 }
 
 .button-franchise:disabled {
-  border: 1px solid var($primary-grey);
+  border: 1px solid $primary-grey;
 }
 
 //  <-- Модальные окна -->
@@ -80,9 +81,9 @@
 .modal-location {
   width: 280px;
   min-height: 365px;
-  background-color: var($primary-light);
+  background-color: $primary-light;
   border-radius: 10px;
-  border: 1px solid var($primary-yellow);
+  border: 1px solid $primary-yellow;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -115,9 +116,9 @@
 .modal-franchise {
   width: 280px;
   min-height: 674px;
-  background-color: var($primary-light);
+  background-color: $primary-light;
   border-radius: 10px;
-  border: 1px solid var($primary-yellow);
+  border: 1px solid $primary-yellow;
   position: absolute;
   top: 50%;
   left: 50%;
