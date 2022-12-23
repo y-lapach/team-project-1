@@ -1,123 +1,187 @@
-.hero {
-    background-color: rgba(132, 161, 120, 1);
-    padding-top: 50px;
-    
+.hero-section {
+  background-color: rgba(132, 161, 120, 1);
+  padding-top: 50px;
+@include tablet {
+        padding-top: 0px;
+        // padding-bottom: 52px;
+    }
 }
-li{
-    list-style-type: none;
-        /* Прибираємо маркери */
+
+li {
+  list-style-type: none;
+  /* Прибираємо маркери */
 }
 .container-hero {
-    outline: red solid 1px;
-    width: 100%;
-   
-    position: relative;
-
+  outline: red solid 1px;
+  width: 100%;
+  height: 453px;
+  position: relative;
+  @include mobile {
+    width: 480px;
+  }
+  @include tablet {
+    width: 768px;
+    // height: 413px;
+  }
+  @include desktop {
+    width: 1200px;
+  }
 }
-
+.hero-before-title{
+    @include tablet{
+        display: flex;
+        justify-content: space-between;
+    }
+}
 .hero-title {
-    font-family: $font-seymour;
-    display: block;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 1.3;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-
-    color: #fcfcfc;
-   
-    margin-bottom: 32px;
+  font-family: $font-seymour;
+  display: block;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: calc(33 / 26);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $primary-light;
+  margin-bottom: 32px;
+  @include tablet {
+ margin-bottom: 24px;
+  }
 }
 
 .hero-title-1 {
-    display: block;
+  display: block;
 }
 
 .hero-title-2 {
-    display: block;
-    font-weight: 400;
-    font-size: 34px;
-    line-height: 0.95;
+  display: block;
+  font-size: 34px;
+  line-height: 0.95;
 }
 
 .hero-list-link {
-    display: flex;
-    padding: 0px;
+  display: flex;
+  padding: 0px;
+  margin: 0px;
 
 }
 
-.hero-link {
-    font-weight: 600;
+.hero-link-item {
+   font-weight: 600;
+//   font-size: 12px;
+//   line-height: calc(15 / 12);
+//   background-color: inherit;
+
+}
+.hero-link{
+display: inline-block;
+margin-bottom: 39px;
+font-weight: 600;
     font-size: 12px;
-    line-height: 1.25;
-
+    line-height: calc(15 / 12);
     background-color: inherit;
-    margin-bottom: 236px;
 }
-
 .hero-link-first {
-    border: 2px solid rgba(248, 210, 78, 1);
-    border-radius: 10px;
-    margin-right: 12px;
-    padding: 11px 26px;
-    text-decoration-line: none;
-    color: $primary-dark;
-&:hover, &:focus {
-    border: 2px solid rgba(10, 136, 23, 1)
+
+  border: 2px solid rgba(248, 210, 78, 1);
+  border-radius: 10px;
+  margin-right: 12px;
+  padding: 11px 26px;
+  text-decoration-line: none;
+  color: $primary-dark;
+  &:hover,
+  &:focus {
+    border: 2px solid rgba(10, 136, 23, 1);
+  }
+  &:focus {
+    color: $primary-light;
+  }
 }
-&:focus{
-    color:$primary-light ;
+.hero-link-second{
+  background-color: inherit;
+  text-decoration-line: underline;
+  border: none;
+  color: #f8d24e;
+  padding: 11px 26px;
+  &:hover {
+    color: #0a8817;
+  }
 }
+.hero-information {
+  display: none;
+  @include tablet{
+    display: block;
+  
+    padding-left: 184px;
+    padding-right: 381px;
+    
+  }
 }
-.hero-link-second {
-    background-color: inherit;
-    text-decoration-line: underline;
-    border: none;
-    color: #f8d24e;
-    padding: 11px 26px;
-&:hover {
-    color: #0A8817;
+.hero-text{
+    font-size: 12px;
+        line-height: 1.4;
+        color: $primary-grey;
+        margin-bottom: 12px;
 }
+.hero-info-icon{
+    height: 16px;
+    fill: $primary-grey;
+}
+.hero-statistics-list {
+  display: none;
+  @include tablet{
+    display: block;
+  }
+}
+.hero-quantity{
+    font-weight: 900;
+        font-size: 28px;
+        line-height: calc(34 / 28);
+        text-align: right;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+}
+.title-stat{
+    font-weight: 400;
+        font-size: 8px;
+        line-height: calc(10 / 8);
+           
+        text-align: right;
+    
+        color: #FCFCFC;
 }
 .hero-pictures {
-    bottom: 0px;
-    // left: 10px;
+  bottom: 0px;
+  // left: 10px;
 }
 
 .hero-pict-points {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    left: -2px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: -2px;
+  @include tablet{
+    // bottom: -52px;
+  }
 }
 
-.hero-pict-ice-creams {
-    display: none;
+.hero-pict-smiling-ice-cream {
+  position: absolute;
+  bottom: 0px;
+  left: 28%;
+  @include tablet{
+    left: 53%;
+    // bottom: -52px;
+    width: 268px;
+    height: 329px;
+  }
 }
 
-.hero-pict-ice-cream {
+.hero-pict-ice-cream-on-plate {
+  display: none;
+  @include tablet{
     position: absolute;
+    display: block;
     bottom: 0px;
-    left: 83px;
+    left: 32px;
+  }
 }
-
-.hero-text {
-    display: none;
-}
-
-.hero-statistics-list {
-    display: none;
-}
-
-/* .container-hero.media screen and (min-width: 480px) {
-            max-width: 480px;
-        }
-    
-.container-hero.screen and (min-width: 768px) {
-            max-width: 768px;
-    
-        }
-    
-.container-hero.screen and (min-width: 1200px) {
-            max-width: 1200px;
-} */
