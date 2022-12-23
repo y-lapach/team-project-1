@@ -124,4 +124,18 @@ a {
   clip: rect(1px, 1px, 1px, 1px);
   -webkit-clip-path: inset(50%);
   overflow: hidden;
+}
+
+.button {
+  background-color: #84a178;
+}
+
+.button-location {
+  width: 196px;
+  height: 42px;
+  text-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  background: #f8d24e;
 }/*# sourceMappingURL=index.css.map */

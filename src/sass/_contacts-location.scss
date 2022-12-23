@@ -1,3 +1,68 @@
+//   <-- Кнопка -->
+
 .button {
+  padding-top: 20px;
+  padding-bottom: 60px;
   background-color: #84a178;
 }
+
+.button-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  align-items: center;
+}
+
+.button-location {
+  width: 196px;
+  height: 42px;
+  border: none;
+  border-radius: 10px;
+  background: #f8d24e;
+  color: #131313;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  margin-bottom: 16px;
+}
+
+.button-franchise {
+  width: 196px;
+  height: 42px;
+  border: 1px solid #f8d24e;
+  border-radius: 10px;
+  background: #84a178;
+  color: #131313;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+}
+
+.button-location:hover {
+  background-color: #0A8817;
+}
+
+.button-location:focus {
+    background-color: #0A8817;
+    color: #ffffff;
+}
+
+.button-location:disabled {
+    color: #ABABAB;
+}
+
+.button-franchise:hover {
+    border: 1px solid #0A8817;
+}
+
+.button-franchise:focus {
+    border: 1px solid #0A8817;
+    color: #ffffff;
+}
+
+.button-franchise:disabled {
+    border: 1px solid #ABABAB;
+}
+
+//  <-- Модальное окно -->
