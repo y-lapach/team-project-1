@@ -22,12 +22,29 @@
 }
 .contacts {
     text-align: right;
+    @include tablet {
+        margin-left:auto
+    
+    }
+   
 }
 .footer-social-list{
     display: flex;
     justify-content: flex-end;
     margin-bottom: 20px;
+    @include tablet {
+    margin-bottom: 34px;
+    
+    }
 }
+
+.footer-company-info{
+    @include tablet {
+        display: flex;
+        align-items: center;
+    }
+}
+
 .footer-social-item {
     border-radius: 50%;
     background-color: $primary-yellow;
@@ -59,6 +76,10 @@
     text-align: center;
     padding: 20px;
     border-top: 1px solid $grey-divider;
+    @include tablet {
+        white-space: nowrap;
+        padding: 12px;
+    }
 }
 .footer-rights {
     width:280px;
@@ -66,4 +87,10 @@
     font-size: 14px;
     line-height: 1.5;
     color: $dark-grey;
+    @include tablet {
+        width: 298px;
+       
+        line-height: 26px;
+        letter-spacing: 0.02em
+    }
 }
