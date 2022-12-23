@@ -1,30 +1,21 @@
 .gallery {
-  background-image: url(../images/body/background-mobile.jpg);
+  background-image: linear-gradient(
+    to bottom,
+    $primary-green 23%,
+    transparent 23%,
+    transparent
+  );
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  height: 190vh;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  @include retina {
-    background-image: url(../images/body/background-mobile-2x.jpg);
-  }
 
   @include tablet {
-    background-image: url(../images/body/background-tablet.jpg);
-    padding-left: 32px;
-    padding-right: 32px;
-    @include retina {
-      background-image: url(../images/body/background-tablet-2x.jpg);
-    }
+     height: 195vh;
   }
   @include desktop {
-    background-image: url(../images/body/background-desktop.jpg);
-    padding-left: 90px;
-    padding-right: 90px;
-    @include retina {
-      background-image: url(../images/body/background-desktop-2x.jpg);
-    }
+    height: 145vh;
   }
 }
 
@@ -32,17 +23,11 @@
   list-style-type: none;
 }
 
-.gallery-list {
-  padding-left: 90px;
-  padding-right: 90px;
-}
-
 .gallery-img {
   position: absolute;
+  max-width: 280px;
   border-radius: 24px;
-  max-width: 100%;
   max-height: 422px;
-
   left: 50%;
   top: 50%;
   -webkit-background-size: cover;
@@ -57,76 +42,25 @@
   -moz-animation: imagesFading 6s infinite;
   -o-animation: imagesFading 6s infinite;
   animation: imagesFading 6s infinite;
+
+  @include tablet {
+    max-width: 704px;
+  }
+  @include desktop {
+    max-width: 1013px;
+  }
 }
 
 .first-img {
-  background-image: url(../images/gallery/gallery-first-mob-1x.jpg);
   animation-delay: 4s;
-  @include retina {
-    background-image: url(../images/gallery/gallery-first-mob-2x.jpg);
-  }
-
-  @include tablet {
-    background-image: url(../images/gallery/gallery-first-tab-1x.jpg);
-    @include retina {
-      background-image: url(../images/gallery/gallery-first-tab-2x.jpg);
-    }
-  }
-
-  @include desktop {
-    background-image: url(../images/gallery/gallery-first-des-1x.jpg);
-    max-width: 1013px;
-    @include retina {
-      background-image: url(../images/gallery/gallery-first-des-2x.jpg);
-    }
-  }
 }
 
 .second-img {
-  background-image: url(../images/gallery/gallery-second-mob-1x.jpg);
   animation-delay: 2s;
-  @include retina {
-    background-image: url(../images/gallery/gallery-second-mob-2x.jpg);
-  }
-
-
-  @include tablet {
-    background-image: url(../images/gallery/gallery-second-tab-1x.jpg);
-    @include retina {
-      background-image: url(../images/gallery/gallery-second-tab-2x.jpg);
-    }
-  }
-
-  @include desktop {
-    background-image: url(../images/gallery/gallery-second-des-1x.jpg);
-    max-width: 1013px;
-    @include retina {
-      background-image: url(../images/gallery/gallery-second-des-2x.jpg);
-    }
-  }
 }
 
 .third-img {
-  background-image: url(../images/gallery/gallery-third-mob-1x.jpg);
   animation-delay: 0s;
-  @include retina {
-    background-image: url(../images/gallery/gallery-third-mob-2x.jpg);
-  }
-
-  @include tablet {
-    background-image: url(../images/gallery/gallery-third-tab-1x.jpg);
-    @include retina {
-      background-image: url(../images/gallery/gallery-third-tab-2x.jpg);
-    }
-  }
-
-  @include desktop {
-    background-image: url(../images/gallery/gallery-third-des-1x.jpg);
-    max-width: 1013px;
-    @include retina {
-      background-image: url(../images/gallery/gallery-third-des-2x.jpg);
-    }
-  }
 }
 
 @keyframes imagesFading {
