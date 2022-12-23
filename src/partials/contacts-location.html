@@ -1,23 +1,25 @@
 <div class="contacts-location">
   <!-- Кнопка -->
   <section class="button">
-    <ul class="button-list">
+    <ul class="button-list list">
       <li>
-        <button type="button" class="button-location" data-modal-open>
+        <button type="button" class="button-location" data-location-open>
           Our Locations
         </button>
       </li>
       <li>
-        <button type="button" class="button-franchise" data-modal-open>
+        <button type="button" class="button-franchise" data-franchise-open>
           Franchise
         </button>
       </li>
     </ul>
   </section>
   <!-- Модальное окно -->
-  <div class="backdrop is-hidden" data-modal>
+  <div class="backdrop is-hidden" data-location>
     <div class="modal-location">
-      <button type="button" class="modal__close" data-modal-close></button>
+      <button type="button" class="modal__close" data-location-close><svg class="modal__close-icon" width="20" height="20">
+        <use href="./images/icons.svg#icon-cross"></use>
+      </svg></button>
       <h1 class="modal__title">Our Locations</h1>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33924.63062401115!2d34.54627544168393!3d49.58392329530629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d825e425e6ba6b%3A0xcf3e6bdfb9e4ca82!2z0J_QvtC70YLQsNCy0LAsINCf0L7Qu9GC0LDQstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCDQo9C60YDQsNC40L3QsCwgMzYwMDA!5e0!3m2!1sru!2spl!4v1671795706520!5m2!1sru!2spl"
@@ -36,66 +38,53 @@
         >Open map</a
       >
     </div>
-    <div class="modal-franchise">
-      <button type="button" class="modal__close" data-modal-close></button>
-      <h1 class="modal__title">
-        Thank you for your interest in owning an Ice Cream shop
-      </h1>
-      <p class="modal__text">
-        Due to the overwhelming volume of franchise requests we are not
-        accepting new franchisee applications at this time. Once the application
-        process resumes, we will contact you for further information. Please
-        fill out the contact information below and we will reach out for
-        additional information. We appreciate your patience.
-      </p>
-      <form class="modal__form">
-        <div class="modal__field">
-          <label for="user-name" class="modal__input-label"></label>
-          <div class="modal__input-wrap">
-            <input
-              type="text"
-              name="user-name"
-              class="modal__input"
-              id="user-name"
-              placeholder="Name"
-            />
-          </div>
+  </div>
+  <div class="backdrop is-hidden" data-franchise>
+        <div class="modal-franchise">
+          <button type="button" class="modal__close" data-franchise-close><svg class="modal__close-icon" width="20" height="20">
+              <use href="./images/icons.svg#icon-cross"></use>
+            </svg></button>
+          <h1 class="modal__title">
+            Thank you for your interest in owning an Ice Cream shop
+          </h1>
+          <p class="modal__text">
+            Due to the overwhelming volume of franchise requests we are not
+            accepting new franchisee applications at this time. Once the application
+            process resumes, we will contact you for further information. Please
+            fill out the contact information below and we will reach out for
+            additional information. We appreciate your patience.
+          </p>
+          <form class="modal__form">
+            <div class="modal__field">
+              <label for="user-name" class="modal__input-label"></label>
+              <div class="modal__input-wrap">
+                <input type="text" name="user-name" class="modal__input" id="user-name" placeholder="Name" />
+              </div>
+            </div>
+            <div class="modal__field">
+              <label for="user-tel" class="modal__input-label"></label>
+              <div class="modal__input-wrap">
+                <input type="tel" name="user-tel" class="modal__input" id="user-tel" placeholder="Phone" />
+              </div>
+            </div>
+            <div class="modal__field">
+              <label for="user-mail" class="modal__input-label"></label>
+              <div class="modal__input-wrap">
+                <input type="mail" name="user-mail" class="modal__input" id="user-mail" placeholder="Email" />
+              </div>
+            </div>
+            <div class="modal__field-textarea">
+              <label for="user-comment" class="modal__input-label"></label>
+              <textarea name="user-comment" id="user-comment" class="modal__textarea-comment" placeholder="Comment"></textarea>
+            </div>
+            <button type="submit" class="modal__btn btn">Submit</button>
+          </form>
         </div>
-        <div class="modal__field">
-          <label for="user-tel" class="modal__input-label"></label>
-          <div class="modal__input-wrap">
-            <input
-              type="tel"
-              name="user-tel"
-              class="modal__input"
-              id="user-tel"
-              placeholder="Phone"
-            />
-          </div>
-        </div>
-        <div class="modal__field">
-          <label for="user-mail" class="modal__input-label"></label>
-          <div class="modal__input-wrap">
-            <input
-              type="mail"
-              name="user-mail"
-              class="modal__input"
-              id="user-mail"
-              placeholder="Email"
-            />
-          </div>
-        </div>
-        <div class="modal__field-textarea">
-          <label for="user-comment" class="modal__input-label"></label>
-          <textarea
-            name="user-comment"
-            id="user-comment"
-            class="modal__textarea-comment"
-            placeholder="Comment"
-          ></textarea>
-        </div>
-        <button type="submit" class="modal__btn btn">Submit</button>
-      </form>
-    </div>
   </div>
 </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./js/locations.js"></script>
+    <script src="./js/franchise.js"></script>

@@ -7,11 +7,13 @@
 }
 
 .button-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   text-align: center;
   align-items: center;
+  gap: 16px;
+
+  @include tablet {
+    display: flex;
+  }
 }
 
 .button-location {
@@ -24,7 +26,6 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 1.29;
-  margin-bottom: 16px;
 }
 
 .button-franchise {
@@ -40,29 +41,67 @@
 }
 
 .button-location:hover {
-  background-color: #0A8817;
+  background-color: #0a8817;
 }
 
 .button-location:focus {
-    background-color: #0A8817;
-    color: #ffffff;
+  background-color: #0a8817;
+  color: #ffffff;
 }
 
 .button-location:disabled {
-    color: #ABABAB;
+  color: #ababab;
 }
 
 .button-franchise:hover {
-    border: 1px solid #0A8817;
+  border: 1px solid #0a8817;
 }
 
 .button-franchise:focus {
-    border: 1px solid #0A8817;
-    color: #ffffff;
+  border: 1px solid #0a8817;
+  color: #ffffff;
 }
 
 .button-franchise:disabled {
-    border: 1px solid #ABABAB;
+  border: 1px solid #ababab;
 }
 
 //  <-- Модальное окно -->
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(48, 48, 48, 0.563);
+}
+
+.modal-location {
+  width: 280px;
+  min-height: 365px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #f8d24e;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal__close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 12px;
+  top: 12px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}

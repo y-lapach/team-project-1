@@ -1,14 +1,14 @@
 (() => {
   const refs = {
-    openModalBtn: document.querySelector("[data-modal-open]"),
-    closeModalBtn: document.querySelector("[data-modal-close]"),
-    modal: document.querySelector("[data-modal]"),
+    openFranchiseBtn: document.querySelector("[data-franchise-open]"),
+    closeFranchiseBtn: document.querySelector("[data-franchise-close]"),
+    franchise: document.querySelector("[data-franchise]"),
   };
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
+  refs.openFranchiseBtn.addEventListener("click", toggleFranchise);
+  refs.closeFranchiseBtn.addEventListener("click", toggleFranchise);
 
-  function toggleModal() {
-    refs.modal.classList.toggle("is-hidden");
+  function toggleFranchise() {
+    refs.franchise.classList.toggle("is-hidden");
   }
 })();
