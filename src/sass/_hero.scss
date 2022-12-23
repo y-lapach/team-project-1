@@ -1,10 +1,12 @@
 .hero-section {
   background-color: rgba(132, 161, 120, 1);
   padding-top: 50px;
-@include tablet {
-        padding-top: 0px;
-        // padding-bottom: 52px;
-    }
+  @include tablet {
+    padding-top: 0px;
+  }
+ @include desktop{
+    padding-top: 45px;
+ }
 }
 
 li {
@@ -12,26 +14,28 @@ li {
   /* Прибираємо маркери */
 }
 .container-hero {
+    position: relative;
   outline: red solid 1px;
   width: 100%;
-  height: 453px;
-  position: relative;
+  padding-bottom: 24px;
+
   @include mobile {
     width: 480px;
   }
   @include tablet {
     width: 768px;
-    // height: 413px;
+   
   }
   @include desktop {
     width: 1200px;
+    padding-bottom: 103px;
   }
 }
-.hero-before-title{
-    @include tablet{
-        display: flex;
-        justify-content: space-between;
-    }
+.hero-before-title {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .hero-title {
   font-family: $font-seymour;
@@ -44,7 +48,12 @@ li {
   color: $primary-light;
   margin-bottom: 32px;
   @include tablet {
- margin-bottom: 24px;
+    margin-bottom: 24px;
+  }
+  @include desktop {
+    margin-bottom: 28px;
+    font-size: 38px;
+    line-height: calc(48 / 38);
   }
 }
 
@@ -56,32 +65,35 @@ li {
   display: block;
   font-size: 34px;
   line-height: 0.95;
+  @include desktop {
+    font-size: inherit;
+    line-height: inherit;
+  }
 }
 
 .hero-list-link {
   display: flex;
   padding: 0px;
   margin: 0px;
-
+  @include desktop {
+        margin-bottom: 109px;
+      }
 }
 
-.hero-link-item {
-   font-weight: 600;
-//   font-size: 12px;
-//   line-height: calc(15 / 12);
-//   background-color: inherit;
-
-}
-.hero-link{
-display: inline-block;
-margin-bottom: 39px;
-font-weight: 600;
-    font-size: 12px;
-    line-height: calc(15 / 12);
-    background-color: inherit;
+.hero-link {
+  display: inline-block;
+  margin-bottom: 39px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+  background-color: inherit;
+  @include desktop {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+  }
 }
 .hero-link-first {
-
   border: 2px solid rgba(248, 210, 78, 1);
   border-radius: 10px;
   margin-right: 12px;
@@ -95,10 +107,14 @@ font-weight: 600;
   &:focus {
     color: $primary-light;
   }
+  @include desktop {
+    padding: 12px 34px;
+  }
 }
-.hero-link-second{
+.hero-link-second {
   background-color: inherit;
   text-decoration-line: underline;
+  line-height: calc(17 / 14);
   border: none;
   color: #f8d24e;
   padding: 11px 26px;
@@ -108,50 +124,67 @@ font-weight: 600;
 }
 .hero-information {
   display: none;
-  @include tablet{
+  @include tablet {
     display: block;
-  
+
     padding-left: 184px;
     padding-right: 381px;
-    
+  }
+  @include desktop{
+    padding-left: 271px;
+    padding-right: 728px;
   }
 }
-.hero-text{
-    font-size: 12px;
-        line-height: 1.4;
-        color: $primary-grey;
-        margin-bottom: 12px;
+.hero-text {
+  font-size: 12px;
+  line-height: 1.4;
+  color: $primary-grey;
+  margin-bottom: 12px;
+  @include desktop{
+    margin-bottom: 24px;
+        font-size: 14px;
+        
+  }
 }
-.hero-info-icon{
-    height: 16px;
-    fill: $primary-grey;
+.hero-info-icon {
+  height: 16px;
+  fill: $primary-grey;
 }
 .hero-statistics-list {
   display: none;
-  @include tablet{
+  @include tablet {
     display: block;
   }
 }
-.hero-quantity{
-    font-weight: 900;
-        font-size: 28px;
-        line-height: calc(34 / 28);
-        text-align: right;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
+.hero-quantity {
+  font-weight: 900;
+  font-size: 28px;
+  line-height: calc(34 / 28);
+  text-align: right;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  @include desktop{
+        font-size: 46px;
+        line-height: calc(56 / 46);
+  }
 }
-.title-stat{
-    font-weight: 400;
-        font-size: 8px;
-        line-height: calc(10 / 8);
-           
-        text-align: right;
-    
-        color: #FCFCFC;
+.title-stat {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: calc(10 / 8);
+
+  text-align: right;
+
+  color: $primary-light;
+  @include desktop{
+   
+        font-size: 14px;
+        line-height: calc(17 / 14);
+       
+  }
 }
 .hero-pictures {
   bottom: 0px;
-  // left: 10px;
 }
 
 .hero-pict-points {
@@ -159,8 +192,7 @@ font-weight: 600;
   bottom: 0;
   width: 100%;
   left: -2px;
-  @include tablet{
-    // bottom: -52px;
+  @include tablet {
   }
 }
 
@@ -168,20 +200,33 @@ font-weight: 600;
   position: absolute;
   bottom: 0px;
   left: 28%;
-  @include tablet{
+  @include tablet {
     left: 53%;
-    // bottom: -52px;
+   
     width: 268px;
     height: 329px;
+  }
+  @include desktop{
+    width: 456px;
+    height: 560px;
+    bottom: 2px;
+    right: 77px;
   }
 }
 
 .hero-pict-ice-cream-on-plate {
   display: none;
-  @include tablet{
+  @include tablet {
     position: absolute;
     display: block;
     bottom: 0px;
     left: 32px;
+   
+  }
+  @include desktop{
+    left: 1px;
+    bottom: 65px;
+    width: 225px;
+        height: 225px;
   }
 }
