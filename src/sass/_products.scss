@@ -54,23 +54,60 @@ letter-spacing: 0.06em;
 display: flex;
 justify-content: center;
 flex-wrap: wrap;
+position: relative;
 gap: 60px;
 margin: 0;
 padding: 0;
 }
+
 .products-wrapper {
 display: block;
 position: relative;
-width: 280px;;
+width: 280px;
 height: 420px;
 background: $green-bg;
 border-radius: 24px;
+
+&::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: linear-gradient(#ffff66, #ffff66), linear-gradient(cornflowerblue, cornflowerblue);
+    background-size: 95% var(--h);
+    background-position: left 0.75em, right 1em;
+    background-repeat: no-repeat;
+    z-index: 1;
+    border-radius: 50%;
+
+
+background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
+box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+    }
 }
+
 .cofee {
 background: $yellow-bg;   
-    }
+&::before {
+content: '';
+background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+}
+}
 .milkshakes {
-background: $primary-whiskey;   
+background: $primary-whiskey; 
+&::before {
+content: ''; 
+background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
+box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25); 
+}
+}
+
+.products-kard-position {
+display: flex;
+justify-content: flex-end;
 }
 .products-kards-title {
 margin-bottom: 40px;
@@ -95,6 +132,7 @@ color: $primary-dark;
 }
 
 .products-button {
+margin-bottom: 16px;
 display: flex; 
 justify-content: center;
 cursor: pointer; 
@@ -106,4 +144,3 @@ margin: auto;
 .products-modal-open {
 fill: currentColor;
 }
-// це не може бути в лі - перенести то в інший дів - картинка виходить за межі 
