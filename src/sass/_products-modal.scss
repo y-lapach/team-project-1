@@ -25,7 +25,8 @@
   border-radius: 10px;
   padding: 28px 20px;
   @include desktop {
-    width: 528px;
+    width: 568px;
+    padding: 32px 40px;
   }
 }
 
@@ -34,13 +35,20 @@
 }
 
 .products-modal-close {
+  padding: 0;
   position: absolute;
   top: 12px;
   right: 12px;
+  width: 20px;
+  height: 20px;
   background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
+  @include desktop {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .products-modal-title {
@@ -55,15 +63,56 @@
   text-align: center;
   color: $primary-dark;
   margin-bottom: 20px;
+  @include desktop {
+    margin-bottom: 24px;
+  }
+}
+
+.icon-wrap {
+  margin-left: auto;
+  margin-right: auto;
+  width: 132px;
+  height: 139px;
+  position: relative;
+  margin-bottom: 22px;
+  @include desktop {
+    margin-bottom: 24px;
+  }
 }
 
 .products-modal-icon {
-  margin: 0 auto;
-  margin-bottom: 22px;
-  background-image: linear-gradient(
-    to top,
-    rgba(49, 29, 94, 0.85) 7% url(../images/buy/buy-ice-cream.png) 93%
-  );
+  margin-bottom: auto;
+  position: absolute;
+  height: 132px;
+  width: 132px;
+  top: 0px;
+  left: 50%;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+}
+
+.products-modal-icon::before {
+  content: '';
+  position: absolute;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 50%;
+  top: -4%;
+  transform: translateX(-50%);
+  background-image: url(../images/products/products-ice-cream-mob.png);
+  @include retina {
+    background-image: url(../images/products/products-ice-cream-mob-2x.png);
+  }
 }
 
 .products-list {
@@ -71,6 +120,9 @@
   gap: 9px;
   justify-content: center;
   margin-bottom: 40px;
+  @include desktop {
+    gap: 20px;
+  }
 }
 
 .products-link {
@@ -84,6 +136,12 @@
   line-height: calc(12 / 10);
   border: 2px solid $green-circle;
   border-radius: 40px;
+  @include desktop {
+    width: 65px;
+    height: 90px;
+    font-size: 12px;
+    line-height: calc(15 / 12);
+  }
 }
 
 .products-number {
@@ -100,6 +158,13 @@
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  @include desktop {
+    width: 53px;
+    height: 53px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    line-height: calc(28 / 12);
+  }
 }
 
 .products-modal-section {
@@ -134,6 +199,10 @@
   margin-bottom: 11px;
 }
 
+.modal-form {
+  text-align: center;
+}
+
 .modal-input {
   width: 100%;
   max-width: 240px;
@@ -148,6 +217,9 @@
   line-height: 1.4;
   color: $primary-dark;
   margin-bottom: 16px;
+  @include desktop {
+    max-width: 368px;
+  }
 }
 
 .modal-comment {
@@ -164,6 +236,10 @@
   line-height: 1.4;
   color: $primary-dark;
   margin-bottom: 24px;
+  @include desktop {
+    max-width: 368px;
+    margin-bottom: 32px;
+  }
 }
 
 .modal-btn {
