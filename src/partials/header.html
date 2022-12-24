@@ -1,39 +1,74 @@
 <header class="header">
-    <div class="container header__container">
-        <a class="logo header__logo" href="#"><span class="logo-text">Web</span>Studio</a>
-        <nav class="nav header_nav">
-            <ul class="nav-list header__nav-list">
-                <li class="nav-list__item">
-                    <a class="nav-list__link nav-list__link--current" href="./index.html">Студія</a>
-                </li>
-                <li class="nav-list__item">
-                    <a class="nav-list__link" href="./portfolio.html">Портфоліо</a>
-                </li>
-                <li class="nav-list__item">
-                    <a class="nav-list__link" href="#">Контакти</a>
-                </li>
-            </ul>
-        </nav>
-        <ul class="contact-list header__contact-list">
-            <li class="contact-list__item">
-                <a class="contact-list__link" href="mailto:info@devstudio.com">
-                    <svg class="contact-list__icon" width="16" height="12">
-                        <use href="./images/icons.svg#icon-envelope"></use>
-                    </svg>
-                    info@devstudio.com</a>
-            </li>
-            <li class="contact__item">
-                <a class="contact-list__link" href="tel:+380961111111">
-                    <svg class="contact-list__icon" width="10" height="16">
-                        <use href="./images/icons.svg#icon-smartphone"></use>
-                    </svg>
-                    +38 096 111 11 11</a>
-            </li>
-        </ul>
-        <button class="mob-menu__open" data-menu-open>
-            <svg class="mob-menu__open-icon" width="40" height="40">
-                <use href="./images/icons.svg#icon-menu_40px-1"></use>
-            </svg>
-        </button>
+  <div class="container header-container">
+<picture>
+    <source srcset="./images/header/logo-desktop.png 1x, ./images/header/logo-desktop-2x.png  2x" media="(min-width: 1200px)" />
+    <source srcset="./images/header/logo-tablet.png 1x, ./images/header/logo-tablet-2x.png 2x" media="(min-width: 768px)" />
+    <source srcset="./images/header/logo-mobile.png 1x, ./images/header/logo-mobile.png 2x" media="(max-width: 767px)" />
+    <img src="./images/header/logo-desktop.png" width="60" alt="logo photo" />
+</picture>
+    <nav class="header_nav">
+      <ul class="header-list">
+        <li class="header-list-item">
+          <a class="header-list-link" href="#"
+            >Home</a
+          >
+        </li>
+        <li class="header-list-item">
+          <a class="header-list-link" href="#">How it’s made?</a>
+        </li>
+        <li class="header-list-item">
+          <a class="header-list-link" href="#">Our products</a>
+        </li>
+        <li class="header-list-item">
+            <a class="header-list-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <button class="menu-toggle js-open-menu"
+    aria-expanded="false"
+    aria-controls="mobile-menu">
+      <svg class="menu-icon"width="32" height="32">
+        <use href="./images/header/header-icons.svg#icon-eva_menu-fill-1"></use>
+      </svg>
+    </button>
+    <button type="button" class="header-btn">Buy now</button>
+  </div>
+  
+<div class="menu-container js-menu-container"
+ id="mobile-menu">
+    <button class="menu-toggle js-close-menu"
+     aria-expanded="false"
+      aria-controls="mobile-menu">
+        <svg class="menu-icon" width="32px" height="32px">
+            <use href="./images/header/header-icons.svg#icon-ep_close-1"></use>
+        </svg>
+    </button>
+<picture>
+    <source srcset="./images/header/logo-desktop.png 1x, ./images/header/logo-desktop-2x.png  2x"
+        media="(min-width: 1200px)" />
+    <source srcset="./images/header/logo-tablet.png 1x, ./images/header/logo-tablet-2x.png 2x"
+        media="(min-width: 768px)" />
+    <source srcset="./images/header/logo-mobile.png 1x, ./images/header/logo-mobile.png 2x"
+        media="(max-width: 767px)" />
+    <img src="./images/header/logo-desktop.png" width="60" alt="logo photo" />
+</picture>
+    <ul class="mob-menu-list">
+        <li class="mob-menu-item">
+            <a class="mob-menu-link" href="#">Home</a>
+        </li>
+        <li class="mob-menu-item">
+            <a class="mob-menu-link" href="#">How it’s made?</a>
+        </li>
+        <li class="mob-menu-item">
+            <a class="mob-menu-link" href="#">Our products</a>
+        </li>
+        <li class="mob-menu-item">
+            <a class="mob-menu-link" href="#">Contact</a>
+        </li>
+    </ul>
+</nav>
+<button type="button" class="mob-menu-btn">Buy now</button>
+
     </div>
 </header>
