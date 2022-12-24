@@ -1,6 +1,6 @@
 //   <-- Кнопки -->
 
-.button {
+.contacts-button {
   padding-top: 20px;
   padding-bottom: 60px;
   background-color: $primary-green;
@@ -13,6 +13,7 @@
 
   @include tablet {
     display: flex;
+    justify-content: center;
   }
 }
 
@@ -26,6 +27,11 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 1.29;
+  margin-bottom: 16px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
 }
 
 .button-franchise {
