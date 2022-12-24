@@ -1,5 +1,5 @@
 .header {
-  background-color: #84a178;
+  background-color: $primary-green;
 
   
 }
@@ -38,13 +38,13 @@ margin-right: 28px;
 }
 .header-list-link{
   font-style: normal;
-    font-weight: 700;
+  font-weight: 700;
     font-size: 16px;
     line-height: 20px;
     color: #FCFCFC;
   &:hover,
-    &:focus {
-      color:#F8D24E;
+  &:focus {
+    color: $primary-yellow;
     }
 
   
@@ -85,9 +85,9 @@ background-color: transparent;
     }
 }
 
-
-
 .menu-container{
+display: flex;
+flex-direction: column;
 position: fixed;
 top: 0;
 left: 0;
@@ -101,9 +101,8 @@ transition: transform 250ms ease-in-out;
 transform: translateX(0);
 }
 
-.menu-container{
+.menu-container.menu-toggle{
 position: absolute;
 top: 16px;
-right: 20px;
-      
+right: 20px;     
 }
