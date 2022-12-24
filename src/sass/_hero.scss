@@ -1,45 +1,46 @@
 .hero-section {
   background-color: rgba(132, 161, 120, 1);
   padding-top: 50px;
+
   @include tablet {
-    padding-top: 0px;
+    padding-top: 12px;
+
   }
- @include desktop{
+
+  @include desktop {
     padding-top: 45px;
- }
+  }
 }
 
-li {
-  list-style-type: none;
-  /* Прибираємо маркери */
-}
 .container-hero {
-    position: relative;
-  // outline: red solid 1px;
-  width: 100%;
+  position: relative;
   padding-bottom: 24px;
 
-  @include mobile {
-    width: 480px;
-  }
-  @include tablet {
-    width: 768px;
-   
-  }
   @include desktop {
-    width: 1200px;
-    padding-bottom: 103px;
+    padding-bottom: 65px;
   }
 }
+
 .hero-before-title {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 236px;
+
   @include tablet {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 39px;
+  }
+
+  @include desktop {
+    margin-bottom: 109px;
   }
 }
+
 .hero-title {
+  width: 247px;
   font-family: $font-seymour;
-  display: block;
   font-weight: 400;
   font-size: 26px;
   line-height: calc(33 / 26);
@@ -47,24 +48,23 @@ li {
   text-transform: uppercase;
   color: $primary-light;
   margin-bottom: 32px;
+
   @include tablet {
     margin-bottom: 24px;
   }
+
   @include desktop {
+    width: 367px;
     margin-bottom: 28px;
     font-size: 38px;
     line-height: calc(48 / 38);
   }
 }
 
-.hero-title-1 {
-  display: block;
-}
-
 .hero-title-2 {
-  display: block;
   font-size: 34px;
   line-height: 0.95;
+
   @include desktop {
     font-size: inherit;
     line-height: inherit;
@@ -73,120 +73,169 @@ li {
 
 .hero-list-link {
   display: flex;
-  padding: 0px;
-  margin: 0px;
-  margin-bottom: 186px;
-  @include tablet{
-    margin-bottom: 39px ;
-  }
-  @include desktop {
-        margin-bottom: 109px;
-      }
 }
 
 .hero-link {
-  display: inline-block;
-  // margin-bottom: 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 600;
   font-size: 12px;
   line-height: calc(15 / 12);
   background-color: inherit;
+
   @include desktop {
     font-weight: 600;
     font-size: 14px;
     line-height: calc(18 / 14);
   }
 }
+
 .hero-link-first {
-  border: 2px solid rgba(248, 210, 78, 1);
+  width: 108px;
+  height: 38px;
+  border: 2px solid $primary-yellow;
   border-radius: 10px;
   margin-right: 12px;
-  padding: 11px 26px;
-  text-decoration-line: none;
-  color: $primary-dark;
+  text-decoration: none;
+  color: $black;
+
+  @include desktop {
+    width: 134px;
+    height: 42px;
+  }
+
   &:hover,
   &:focus {
-    border: 2px solid rgba(10, 136, 23, 1);
+    border: 2px solid $green-hover;
   }
+
   &:focus {
     color: $primary-light;
   }
-  @include desktop {
-    padding: 12px 34px;
+
+  &:disabled {
+    border: 2px solid $primary-grey;
   }
+
 }
+
 .hero-link-second {
-  background-color: inherit;
+  width: 106px;
+  height: 24px;
   text-decoration-line: underline;
   line-height: calc(17 / 14);
-  border: none;
-  color: #f8d24e;
-  padding: 11px 26px;
-  &:hover {
-    color: #0a8817;
+  color: $primary-yellow;
+
+  @include desktop {
+    width: 154px;
+    height: 40px;
   }
+
+  &:hover {
+    color: $green-hover;
+  }
+
+  &:focus {
+    color: $primary-light;
+  }
+
+  &:disabled {
+    color: $primary-grey;
+  }
+
 }
+
 .hero-information {
   display: none;
-  @include tablet {
-    display: block;
 
-    padding-left: 184px;
-    padding-right: 381px;
+  @include tablet {
+    position: relative;
+    display: block;
+    z-index: 1;
+    width: 139px;
+    height: 85px;
+    margin-left: 184px;
+    margin-bottom: 32px;
   }
-  @include desktop{
-    padding-left: 271px;
-    padding-right: 728px;
+
+  @include desktop {
+    width: 200px;
+    height: 120px;
+    margin-left: 241px;
   }
 }
+
 .hero-text {
   font-size: 12px;
   line-height: 1.4;
-  color: $primary-grey;
-  margin-bottom: 12px;
-  @include desktop{
-    margin-bottom: 24px;
-        font-size: 14px;
-        
+  color: $primary-light;
+  margin-bottom: 20px;
+
+  @include desktop {
+    margin-bottom: 32px;
+    font-size: 14px;
+
   }
 }
+
 .hero-info-icon {
+  width: 41px;
   height: 16px;
-  fill: $primary-grey;
+  fill: $primary-light;
 }
+
 .hero-statistics-list {
   display: none;
+
   @include tablet {
     display: block;
   }
 }
+
+.hero-item-stat {
+  text-align: right;
+}
+
+.hero-item-stat:not(:last-child) {
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    margin-bottom: 16px;
+  }
+}
+
 .hero-quantity {
+  margin-bottom: 4px;
   font-weight: 900;
   font-size: 28px;
   line-height: calc(34 / 28);
-  text-align: right;
+
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  @include desktop{
-        font-size: 46px;
-        line-height: calc(56 / 46);
+
+  @include desktop {
+    font-size: 46px;
+    line-height: calc(56 / 46);
   }
 }
+
 .title-stat {
   font-weight: 400;
   font-size: 8px;
   line-height: calc(10 / 8);
-
-  text-align: right;
-
   color: $primary-light;
-  @include desktop{
-   
-        font-size: 14px;
-        line-height: calc(17 / 14);
-       
+
+  @include desktop {
+
+    font-size: 14px;
+    line-height: calc(17 / 14);
+
   }
 }
+
 .hero-pictures {
   bottom: 0px;
 }
@@ -196,8 +245,8 @@ li {
   bottom: 0;
   width: 100%;
   left: -2px;
-  @include tablet {
-  }
+
+  @include tablet {}
 }
 
 .hero-pict-smiling-ice-cream {
@@ -206,13 +255,15 @@ li {
   left: 28%;
   width: 177px;
   height: 217px;
+
   @include tablet {
     left: 53%;
-   
+
     width: 268px;
     height: 329px;
   }
-  @include desktop{
+
+  @include desktop {
     width: 456px;
     height: 560px;
     bottom: 2px;
@@ -222,17 +273,21 @@ li {
 
 .hero-pict-ice-cream-on-plate {
   display: none;
+
   @include tablet {
     position: absolute;
     display: block;
-    bottom: 0px;
+    width: 152px;
+    height: 152px;
+    bottom: 12px;
     left: 32px;
-   
+
   }
-  @include desktop{
-    left: 1px;
+
+  @include desktop {
+    left: 16px;
     bottom: 65px;
     width: 225px;
-        height: 225px;
+    height: 225px;
   }
 }
