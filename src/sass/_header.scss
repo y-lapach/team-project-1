@@ -93,3 +93,56 @@ position: absolute;
 top: 16px;
 right: 20px;     
 }
+
+.header-backdrop {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity var(--timing), visibility var(--timing);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal{
+  z-index: 9999;
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 95vw;
+    max-width: 280px;
+    min-height: 991px;
+    padding-top: 28px;
+    background-color: $primary-light;
+    border-radius: 10px;
+    // transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -45vh) scale(1);
+    transition: transform var(--timing), scale var(--timing);
+
+ @media screen and (min-width: 7px) {
+   max-width: 568px;
+   min-height: 664px;
+  }
+    .backdrop.is-hidden & {
+      // transform: translate(-50%, -50%) scale(1);
+      transform: translate(-50%, -45vh) scale(0);
+    }
+    }
+        .header-modal-close {
+          position: absolute;
+          align-items: center;
+          justify-content: center;
+          top: 12px;
+          right: 12px;
+          width: 20px;
+          height: 20px;
+          background-color: transparent;
+          
+        }
+   
+    

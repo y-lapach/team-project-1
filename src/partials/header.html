@@ -32,7 +32,7 @@
         <use href="./images/header/header-icons.svg#icon-eva_menu-fill-1"></use>
       </svg>
     </button>
-    <button type="button" class="header-btn">Buy now</button>
+    <button type="button" class="header-btn" data-modal-open>Buy now</button>
   </div>
   
 <div class="menu-container js-menu-container"
@@ -68,7 +68,17 @@
         </li>
     </ul>
 </nav>
-<button type="button" class="mob-menu-btn">Buy now</button>
-
-    </div>
+<button type="button" class="mob-menu-btn" data-modal-open>Buy now</button>
+</div>
+<div class="header-backdrop" data-modal>
+  <div class="modal">
+    <button type="button" class="header-modal-close" data-modal-close>
+      <svg class="modal__icon-close" width="20" height="20">
+        <use href="./images/header/header-icons.svg#icon-clarity_close-line-1"></use>
+      </svg>
+    </button>
+      <p class="header-modal-titel">Buy now</p>
+  </div>
+  </div>
+  
 </header>
