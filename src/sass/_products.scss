@@ -75,14 +75,14 @@
     flex-direction: column;
     width: 280px;
     min-height: 420px;
-    padding: 40px 16px;
+    padding: 16px 40px;
     border-radius: 24px;
     background: $green-bg;
 
     @include tablet {
         width: 224px;
         min-height: 428px; 
-        padding: 26px 12px; 
+        padding: 12px 26çpx; 
     }
 
     @include desktop {
