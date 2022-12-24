@@ -50,7 +50,6 @@
     text-align: center;
     color: $primary-light;
     font-weight: 700;
-    font-size: 12px;
     line-height: 170%;
     @include tablet{
         font-size: 14px;
@@ -58,6 +57,7 @@
     }
     @include desktop{
         font-size: 16px;
+        letter-spacing: 0.02em;
     }
   }
   .advantages-circle {
