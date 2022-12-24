@@ -143,3 +143,111 @@
 .about-icon {
   margin-left: 8px;
 }
+
+/* ---------------- about-modal ---------------- */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.about-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 280px;
+  min-height: 459px;
+  padding: 28px;
+  background-color: $primary-light;
+  border-radius: 10px;
+  opacity: 1;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  @include mobile {
+    width: 280px;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 568px;
+    min-height: 430px;
+    padding: 32px 60px;
+  }
+}
+
+.about-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $primary-dark;
+  background-color: $primary-light;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $primary-yellow;
+  }
+}
+
+.about-modal-icon {
+  fill: currentColor;
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.about-modal-title {
+  text-align: center;
+  font-family: $font-seymour;
+  color: $primary-dark;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 32px;
+  }
+}
+
+.about-modal-video {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  @include tablet {
+    width: 448px;
+    height: 205px;
+  }
+}
+
+.about-modal-text {
+  font-size: 14px;
+  line-height: 1.4;
+  color: $primary-dark;
+}

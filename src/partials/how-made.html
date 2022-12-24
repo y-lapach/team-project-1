@@ -53,7 +53,7 @@
             </p>
           </li>
         </ul>
-        <button type="button" class="about-button button">
+        <button type="button" class="about-button button" data-modal-open>
           Read more
           <svg class="about-icon" width="12" height="12">
             <use href="./images/icons.svg#icon-arrow-right-btn"></use>
@@ -63,3 +63,30 @@
     </div>
   </div>
 </section>
+
+<div class="backdrop is-hidden" data-modal>
+  <div class="about-modal">
+    <button data-modal-close class="about-modal-close" type="button">
+      <svg class="about-modal-icon" width="20" height="20">
+        <use href="./images/icons.svg#icon-about-modal-close"></use>
+      </svg>
+    </button>
+    <h2 class="about-modal-title">How it’s made?</h2>
+    <iframe
+      class="about-modal-video"
+      width="224"
+      height="199"
+      src="https://www.youtube.com/embed/8WEMZ86Eho8"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <p class="about-modal-text">
+      Our herd of small Jersey cows roam freely on our own farmland nearby,
+      grazing on fresh pastures and giving us rich, creamy milk - perfect for
+      making ice cream. Our ice cream is made with soul and heart. Everyone Our
+      main goal: to make the best organic ice cream.
+    </p>
+  </div>
+</div>
