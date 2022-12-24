@@ -129,27 +129,27 @@
         left: 50%;
         top: -4%;
         transform: translateX(-50%);
-        background-image: url(../images/products/products-ice-cream-mob.png); 
+        background-image: url(../images/products/products-ice-cream-mob.jpg); 
         
         @include retina {
-        background-image: url(../images/products/products-ice-cream-mob-2x.png);   
+        background-image: url(../images/products/products-ice-cream-mob-2x.jpg);   
         }
 
     
         @include tablet {
             top: -5%; 
-            background-image: url(../images/products/products-ice-cream-tab.png); 
+            background-image: url(../images/products/products-ice-cream-tab.jpg); 
             @include retina {
-                    background-image: url(../images/products/products-ice-cream-tab-2x.png);
+                    background-image: url(../images/products/products-ice-cream-tab-2x.jpg);
                 }
             }
 
         @include desktop {
             width: 302px;
             height: 302px; 
-            background-image: url(../images/products/products-ice-cream-desk.png);
+            background-image: url(../images/products/products-ice-cream-desk.jpg);
             @include retina {
-                    background-image: url(../images/products/products-ice-cream-desk-2x.png);
+                    background-image: url(../images/products/products-ice-cream-desk-2x.jpg);
                 }
         }
     }
@@ -158,22 +158,22 @@
     box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25); 
     
     &::before {
-        background-image: url(../images/products/products-ice-coffee-mob.png);
+        background-image: url(../images/products/products-ice-coffee-mob.jpg);
         @include retina {
-                background-image: url(../images/products/products-ice-coffee-mob-2x.png);
+                background-image: url(../images/products/products-ice-coffee-mob-2x.jpg);
             }
         
     @include tablet {
-        background-image: url(../images/products/products-ice-coffee-tab.png);
+        background-image: url(../images/products/products-ice-coffee-tab.jpg);
         @include retina {
-                background-image: url(../images/products/products-ice-coffee-tab-2x.png);
+                background-image: url(../images/products/products-ice-coffee-tab-2x.jpg);
             }
     }
 
     @include desktop {
-        background-image: url(../images/products/products-ice-coffee-desk.png);
+        background-image: url(../images/products/products-ice-coffee-desk.jpg);
         @include retina {
-                background-image: url(../images/products/products-ice-coffee-desk-2x.png);
+                background-image: url(../images/products/products-ice-coffee-desk-2x.jpg);
             }
     }
     }
@@ -184,23 +184,23 @@
     box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25); 
 
     &::before {
-        background-image: url(../images/products/products-milkshakes-mob.png);
+        background-image: url(../images/products/products-milkshakes-mob.jpg);
         
         @include retina {
-                background-image: url(../images/products/products-milkshakes-mob-2x.png);
+                background-image: url(../images/products/products-milkshakes-mob-2x.jpg);
             }
         
         @include tablet {
-            background-image: url(../images/products/products-milkshakes-tab.png);
+            background-image: url(../images/products/products-milkshakes-tab.jpg);
             @include retina {
-                    background-image: url(../images/products/products-milkshakes-tab-2x.png);
+                    background-image: url(../images/products/products-milkshakes-tab-2x.jpg);
                 }
         }
 
         @include desktop {
-            background-image: url(../images/products/products-milkshakes-desk.png);
+            background-image: url(../images/products/products-milkshakes-desk.jpg);
             @include retina {
-                    background-image: url(../images/products/products-milkshakes-desk-2x.png);
+                    background-image: url(../images/products/products-milkshakes-desk-2x.jpg);
                 }
         }
     }
