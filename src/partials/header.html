@@ -1,0 +1,74 @@
+<header class="header">
+  <div class="container header-container">
+<picture>
+    <source srcset="./images/header/logo-desktop.png 1x, ./images/header/logo-desktop-2x.png  2x" media="(min-width: 1200px)" />
+    <source srcset="./images/header/logo-tablet.png 1x, ./images/header/logo-tablet-2x.png 2x" media="(min-width: 768px)" />
+    <source srcset="./images/header/logo-mobile.png 1x, ./images/header/logo-mobile.png 2x" media="(max-width: 767px)" />
+    <img src="./images/header/logo-desktop.png" width="60" alt="logo photo" />
+</picture>
+    <nav class="header_nav">
+      <ul class="header-list">
+        <li class="header-list-item">
+          <a class="header-list-link" href="#"
+            >Home</a
+          >
+        </li>
+        <li class="header-list-item">
+          <a class="header-list-link" href="#">How it’s made?</a>
+        </li>
+        <li class="header-list-item">
+          <a class="header-list-link" href="#">Our products</a>
+        </li>
+        <li class="header-list-item">
+            <a class="header-list-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <button class="menu-toggle js-open-menu"
+    aria-expanded="false"
+    aria-controls="mobile-menu">
+      <svg class="menu-icon"width="32" height="32">
+        <use href="./images/header/header-icons.svg#icon-eva_menu-fill-1"></use>
+      </svg>
+    </button>
+    <button type="button" class="header-btn">Buy now</button>
+  </div>
+  
+<div class="menu-container js-menu-container"
+ id="mobile-menu">
+    <button class="menu-toggle js-close-menu"
+     aria-expanded="false"
+      aria-controls="mobile-menu">
+        <svg class="menu-icon" width="32px" height="32px">
+            <use href="./images/header/header-icons.svg#icon-ep_close-1"></use>
+        </svg>
+    </button>
+<picture>
+    <source srcset="./images/header/logo-desktop.png 1x, ./images/header/logo-desktop-2x.png  2x"
+        media="(min-width: 1200px)" />
+    <source srcset="./images/header/logo-tablet.png 1x, ./images/header/logo-tablet-2x.png 2x"
+        media="(min-width: 768px)" />
+    <source srcset="./images/header/logo-mobile.png 1x, ./images/header/logo-mobile.png 2x"
+        media="(max-width: 767px)" />
+    <img src="./images/header/logo-desktop.png" width="60" alt="logo photo" />
+</picture>
+    <ul class="mob-menu-list">
+        <li class="mob-menu-item">
+            <a class="mob-menu-link" href="#">Home</a>
+        </li>
+        <li class="mob-menu-item">
+            <a class="mob-menu-link" href="#">How it’s made?</a>
+        </li>
+        <li class="mob-menu-item">
+            <a class="mob-menu-link" href="#">Our products</a>
+        </li>
+        <li class="mob-menu-item">
+            <a class="mob-menu-link" href="#">Contact</a>
+        </li>
+    </ul>
+</nav>
+<button type="button" class="mob-menu-btn">Buy now</button>
+
+    </div>
+</header>
