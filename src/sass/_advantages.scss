@@ -4,37 +4,24 @@
   
   .advantages-list {
     display: flex;
-    gap: 22px;
+    
   
     @media screen and (max-width: 767px) {
       flex-direction: column;
     }
-    // @include tablet {
-    //   flex-wrap: wrap;
-    //   justify-content: center;
-    // }
+    @include tablet {
+        gap:80px
+     }
+     @include desktop{
+        gap:32px;
+     }
   }
   .advantages-item {
     width: 100%;
     flex-direction: column;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    // @include tablet {
-    //   width: calc((100% - 30px) / 2);
-    // }
-    // @include desktop {
-    //   width: calc((100% - 90px) / 4);
-    // }
+    margin-top: 94px;
   }
- .advantages-icon{
-    display: flex;
-    height: 50px;
-    width: 50px;
-    background-color: $primary-yellow;
-    border-radius: 50px;
-    margin-bottom: 16px;
- }
+
   .advantages-label {
     display: block;
     margin-bottom: 16px;
@@ -44,12 +31,16 @@
     line-height: 1.2;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    font-family: $font-montserrat;
-    font-style: normal;
     font-weight: 700;
-    
+
     @media screen and (max-width: 767px) {
       text-align: center;
+    }
+    @include tablet{
+        font-size: 48px;
+    }
+    @include desktop{
+        font-size: 58px;
     }
   }
   
@@ -58,24 +49,57 @@
     line-height: 1.7;
     text-align: center;
     color: $primary-light;
-    font-family: $font-montserrat;
-    font-style: normal;
     font-weight: 700;
     font-size: 12px;
     line-height: 170%;
+    @include tablet{
+        font-size: 14px;
+        font-weight: 400;
+    }
+    @include desktop{
+        font-size: 16px;
+    }
   }
-//   .services__help-bottom {
-//       position: relative;
-//   }
+  .advantages-circle {
+      position: relative;
+  }
   
-//   .services__help-bottom::before {
-//     content: '';
-//     display: block;
-//     width: 50px;
-//     height: 50px;
-//     border-radius: 50%;
-//     background: yellow;
-//     position: absolute;
-//     top:-50px;
-//     left:50%;
-//   }
+  .advantages-circle::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background:$primary-yellow;
+    position: absolute;
+    background-image: url(../images/advantages/mumu1x.png);
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top:-16px;
+    left:50%;
+    transform: translateX(-50%)translateY(-100%);
+    @include retina{
+        background-image: url(../images/advantages/mumu2x.png);
+    }
+    @include tablet{
+        top:-32px;
+    }
+    @include desktop{
+        top:-40px;
+    }
+  }
+  .dumbbell-logo::before{
+    background-image: url(../images/advantages/dumbbell1x.png);
+    background-size: 28.5px 35px;
+    @include retina{
+        background-image: url(../images/advantages/dumbbell2x.png);
+    }
+  }
+  .icecream-logo::before{
+    background-image: url(../images/advantages/ice-cream1x.png);
+    background-size: 17px 36px;
+    @include retina {
+        background-image: url(../images/advantages/ice-cream2x.png);
+    }
+  }
