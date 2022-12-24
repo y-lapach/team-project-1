@@ -9,6 +9,7 @@
   refs.closeLocationBtn.addEventListener("click", toggleLocation);
 
   function toggleLocation() {
+    document.body.classList.toggle("modal-open");
     refs.location.classList.toggle("is-hidden");
   }
 })();

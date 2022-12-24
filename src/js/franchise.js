@@ -9,6 +9,7 @@
   refs.closeFranchiseBtn.addEventListener("click", toggleFranchise);
 
   function toggleFranchise() {
+    document.body.classList.toggle("modal-open");
     refs.franchise.classList.toggle("is-hidden");
   }
 })();
