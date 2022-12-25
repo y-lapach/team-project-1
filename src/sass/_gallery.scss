@@ -8,14 +8,14 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 162px;
+  min-height: 130px;
   margin: 0 auto;
 
   @include tablet {
-    min-height: 387px;
+    min-height: 327px;
   }
   @include desktop {
-    min-height: 502px;
+    min-height: 422px;
   }
 }
 
