@@ -1,22 +1,19 @@
 .slider-wrapper .slick-dots {
-
     display: flex;
     justify-content: center;
-
     margin: 0 auto;
     padding-left: 0;
-
-
 }
 
 .slider-wrapper .slick-dots li {
     list-style: none;
-    margin: 0 18px;
+}
+.slider-wrapper .slick-dots li:not(:last-child) {
+    margin-right: 18px;
 }
 
 .slider-wrapper .slick-dots button {
     font-size: 0;
-
     width: 12px;
     height: 12px;
     background-color: $light-grey;
@@ -25,29 +22,31 @@
 
 .slick-dots .slick-active button {
     background-color: $primary-green;
-
 }
 
 
 .slider {
-    
     padding-top: 80px;
     padding-bottom: 40px;
-
+    @include tablet {
+        padding-top: 100px;
+        padding-bottom: 80px;
+    }
+    @include desktop {
+        padding-top: 140px;
+        padding-bottom: 100px;
+    }
 }
 
 .slider-avatar {
     width: 85px;
     height: 85px;
-
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 50%;
-
     margin: 0 auto;
     margin-bottom: 32px;
-
 }
 
 .slider-list {
@@ -55,76 +54,59 @@
 }
 
 .slider-text {
-
- 
     display: flex;
     align-items: center;
-
+    text-align: center;
+    justify-content: center;
     max-width: 280px;
     min-height: 256px;
-
-    
-    background-color: $primary-green;
-    
-    
-    font-size: 12px;
-    line-height: 2.5;
-    text-align: center;
-    color: $primary-light;
-    border-radius: 10px;
-    padding: 39px 35px;
     margin: 0 auto;
+    font-size: 12px;
+    line-height: 2.6;
+    border-radius: 10px;
+    color: $primary-light;
+    background-color: $primary-green;
 
     @include tablet {
-        
         min-width: 705px;
         min-height: 138px;
-
-            
-        padding: 28px 80px;
-
-        font-weight: 500;
         font-size: 14px;
-        line-height: 1.8;
+        font-weight: 500;
         letter-spacing: 0.04em;
-
+        line-height: 1.8;
     }
 
+    @include desktop {
+        min-width: 968px;
+        min-height: 138px;
+        font-size: 16px;
+        line-height: 1.9;
+    }
+}
+.slider-text-box {
+    max-width: 202px;
 
-         @include desktop {
-             
-            min-width: 968px;
-            min-height: 138px;
-
-
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 1.8;
-            letter-spacing: 0.04em;
-         }
-
-
+    @include tablet {
+        max-width: 545px;
+    }
+    @include desktop {
+        max-width:750px;
+    }
 }
 
 .slider-name {
-
     font-weight: 500;
     font-size: 20px;
-    line-height: 1.85;
-
+    line-height: 1.8;
     text-align: center;
-
     color: $primary-dark;
-
     margin-top: 32px;
-
+    margin-bottom: 12px;
 
     @include tablet {
-
-            font-size: 16px;
-            line-height: 1.8;
-
-            margin-bottom: 32px;
+        font-size: 16px;
+        line-height: 1.9;
+        margin-bottom: 32px;
     }
 
 }
