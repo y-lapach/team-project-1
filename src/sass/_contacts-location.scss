@@ -160,6 +160,8 @@
   line-height: 1.25;
   text-align: center;
   display: block;
+  margin-right: auto;
+  margin-left: auto;
   margin-top: 24px;
 }
 
@@ -189,6 +191,17 @@
   margin-bottom: 12px;
   border: 1px solid $primary-green;
   background-color: rgba(248, 210, 78, 0.1);
+  padding: 8px 12px;
+  font-style: 12px;
+  line-height: 1.42;
+}
+
+.modal__input::placeholder {
+  font-style: 12px;
+  line-height: 1.42;
+  text-align: left;
+  vertical-align: top;
+  color: $primary-dark;
 }
 
 .modal__textarea-comment {
@@ -198,6 +211,17 @@
   margin-bottom: 24px;
   border: 1px solid $primary-green;
   background-color: rgba(248, 210, 78, 0.1);
+  resize: none;
+  padding-left: 12px;
+  padding-top: 4px;
+}
+
+.modal__textarea-comment::placeholder {
+  font-style: 12px;
+  line-height: 1.42;
+  text-align: left;
+  vertical-align: top;
+  color: $primary-dark;
 }
 
 .modal__btn {
@@ -211,9 +235,9 @@
   font-size: 14px;
   line-height: 1.29;
   padding: 12px 34px;
-  display: flex;
-  text-align: center;
-  justify-content: center;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .modal__btn:hover,
