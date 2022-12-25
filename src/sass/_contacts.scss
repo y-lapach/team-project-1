@@ -1,0 +1,46 @@
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.contacts {
+    position: relative;
+    background-image: linear-gradient(
+      to top,
+      $primary-green 80%,
+      transparent 0
+    );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 502px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.contacts-card-wrap {
+  border-radius: 24px;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  width: 368px;
+  height: 542px;
+  background-color: hsl(251, 100%, 91%);
+  text-align: start;
+  padding: 40px;
+}
+
+.contacts-title {
+  color: $primary-dark;
+  background-color: $primary-yellow;
+  border-radius: 6px;
+  font-family: $font-montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: calc(22 / 16);
+  letter-spacing: 0.04em;
+  border: none;
+  min-width: 76px;
+  height: 30px;
+  margin-bottom: 32px;
+}
