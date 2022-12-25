@@ -1,17 +1,20 @@
 <header class="header">
-  <div class="container header-container">
-<picture>
-    <source srcset="./images/header/logo-desktop.png 1x, ./images/header/logo-desktop-2x.png  2x" media="(min-width: 1200px)" />
-    <source srcset="./images/header/logo-tablet.png 1x, ./images/header/logo-tablet-2x.png 2x" media="(min-width: 768px)" />
-    <source srcset="./images/header/logo-mobile.png 1x, ./images/header/logo-mobile.png 2x" media="(max-width: 767px)" />
-    <img src="./images/header/logo-desktop.png" width="60" alt="logo photo" />
-</picture>
-    <nav class="header_nav">
+  <div class="header-container container">
+    <a href="./index.html" class="logo link">
+    <picture>
+      <source srcset="./images/header/logo-desktop.png 1x, ./images/header/logo-desktop-2x.png  2x"
+        media="(min-width: 1200px)" />
+      <source srcset="./images/header/logo-tablet.png 1x, ./images/header/logo-tablet-2x.png 2x"
+        media="(min-width: 768px)" />
+      <source srcset="./images/header/logo-mobile.png 1x, ./images/header/logo-mobile.png 2x"
+        media="(max-width: 767px)" />
+      <img src="./images/header/logo-desktop.png" width="60" alt="logo photo" />
+    </picture>
+    </a>
+    <nav class="header_nav" data-menu>
       <ul class="header-list">
         <li class="header-list-item">
-          <a class="header-list-link" href="#"
-            >Home</a
-          >
+          <a class="header-list-link" href="#">Home</a>
         </li>
         <li class="header-list-item">
           <a class="header-list-link" href="#how-its-made">How it’s made?</a>
@@ -20,65 +23,84 @@
           <a class="header-list-link" href="#our-products">Our products</a>
         </li>
         <li class="header-list-item">
-            <a class="header-list-link" href="#contact">Contact</a>
+          <a class="header-list-link" href="#contact">Contact</a>
         </li>
       </ul>
+            <button type="button" class="buy-now-button mobile-visible" data-modal-buy-now-open>
+              Buy now
+              <svg width="12" height="12" class="buy-now-icon">
+                <use href="./images//header/header-icons.svg#icon-ep_arrow-right-bold-1"></use>
+              </svg>
+            </button>
     </nav>
-    
-    <button class="menu-toggle js-open-menu"
-    aria-expanded="false"
-    aria-controls="mobile-menu">
-      <svg class="menu-icon"width="32" height="32">
-        <use href="./images/header/header-icons.svg#icon-eva_menu-fill-1"></use>
+    <button type="button" class="menu-button" data-menu-button>
+      <svg width="32" height="32" class="menu-button-icon">
+        <use href="./images//header/header-icons.svg#icon-eva_menu-fill-1" class="menu-icon-burger"></use>
+        <use href="./images//header/header-icons.svg#icon-ep_close-1" class="menu-icon-close"></use>
       </svg>
     </button>
-    <button type="button" class="header-btn" data-modal-open>Buy now</button>
-  </div>
-  
-<div class="menu-container js-menu-container"
- id="mobile-menu">
-    <button class="menu-toggle js-close-menu"
-     aria-expanded="false"
-      aria-controls="mobile-menu">
-        <svg class="menu-icon" width="32px" height="32px">
-            <use href="./images/header/header-icons.svg#icon-ep_close-1"></use>
-        </svg>
+    <button type="button" class="buy-now-button desktop-visible" data-modal-buy-now-open>
+      Buy now <svg width="12" height="12" class="buy-now-icon">
+        <use href="./images//header/header-icons.svg#icon-ep_arrow-right-bold-1"></use>
+      </svg>
     </button>
-<picture>
-    <source srcset="./images/header/logo-desktop.png 1x, ./images/header/logo-desktop-2x.png  2x"
-        media="(min-width: 1200px)" />
-    <source srcset="./images/header/logo-tablet.png 1x, ./images/header/logo-tablet-2x.png 2x"
-        media="(min-width: 768px)" />
-    <source srcset="./images/header/logo-mobile.png 1x, ./images/header/logo-mobile.png 2x"
-        media="(max-width: 767px)" />
-    <img src="./images/header/logo-desktop.png" width="60" alt="logo photo" />
-</picture>
-    <ul class="mob-menu-list">
-        <li class="mob-menu-item">
-            <a class="mob-menu-link" href="#">Home</a>
-        </li>
-        <li class="mob-menu-item">
-            <a class="mob-menu-link" href="#">How it’s made?</a>
-        </li>
-        <li class="mob-menu-item">
-            <a class="mob-menu-link" href="#">Our products</a>
-        </li>
-        <li class="mob-menu-item">
-            <a class="mob-menu-link" href="#">Contact</a>
-        </li>
-    </ul>
-</nav>
-<button type="button" class="mob-menu-btn" data-modal-open>Buy now</button>
-</div>
-<div class="header-backdrop" data-modal>
-  <div class="modal">
-    <button type="button" class="header-modal-close" data-modal-close>
-      <svg class="modal__icon-close" width="20" height="20">
+  </div>
+</header>
+
+
+<div class="buy-now-backdrop backdrop-buy-now--is-hidden" data-modal-buy-now >
+  <div class="buy-now-modal">
+    <button type="button" class="buy-now-btn-close" data-modal-buy-now-close>
+      <svg class="buy-now-icon-close" width="20" height="20">
         <use href="./images/header/header-icons.svg#icon-clarity_close-line-1"></use>
       </svg>
     </button>
-      <p class="header-modal-titel">Buy now</p>
+    <p class="buy-now-title">Buy now</p>
+    <form class="buy-now-form" action="#">
+      <div class="buy-now-radio-buttons">
+        <div class="buy-now-radio-button">
+          <label class="radio-button-label" for="ice-cream">
+            <input class="radio-button-input" type="checkbox" id="ice-cream">
+            <div class="radio-button-chekbox radio-button-chekbox--green">
+              <img class="radio-img"
+                srcset="./images/header/header-icecream.jpg 1x, ./images/header/header-icecream-2x.jpg 2x"
+                src="./images/header/header-icecream.jpg" alt="Ice cream photo">
+              <div class="radio-img-circle radio-img-circle--green"></div>
+              <p class="radio-button-title">ice cream</p>
+            </div>
+          </label>
+        </div>
+        <div class="buy-now-radio-button">
+          <label class="radio-button-label" for="ice-coffee">
+            <input class="radio-button-input" type="checkbox" id="ice-coffee">
+            <div class="radio-button-chekbox radio-button-chekbox--yellow">
+              <img class="radio-img"
+                srcset="./images/header/header-icekoffee.jpg 1x, ./images/header/header-icekoffee-2x.jpg 2x"
+                src="./images/header/header-icekoffee.jpg" alt="Ice coffee photo">
+              <div class="radio-img-circle radio-img-circle--yellow"></div>
+              <p class="radio-button-title">ice coffee</p>
+            </div>
+          </label>
+        </div>
+        <div class="buy-now-radio-button">
+          <label class="radio-button-label" for="milkshake">
+            <input class="radio-button-input" type="checkbox" id="milkshake">
+            <div class="radio-button-chekbox radio-button-chekbox--brown">
+              <img class="radio-img"
+                srcset="./images/header/header-milkshake.jpg 1x, ./images/header/header-milkshake-2x.jpg 2x"
+                src="./images/header/header-milkshake.jpg" alt="Milk Shake photo">
+              <div class="radio-img-circle radio-img-circle--brown"></div>
+              <p class="radio-button-title">milkshake</p>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div class="buy-now-input-wrap">
+        <input class="buy-now-input" type="text" placeholder="Name">
+        <input class="buy-now-input" type="text" placeholder="Phone">
+        <textarea class="buy-now-textarea" name="" placeholder="Comment"></textarea>
+      </div>
+      <button class="buy-now-btn-submit" type="submit">Submit</button>
+    </form>
   </div>
-  </div>
-  
-</header>
+</div>
