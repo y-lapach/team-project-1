@@ -46,6 +46,15 @@
   line-height: 1.29;
 }
 
+.button__icon {
+  margin-left: 7px;
+  fill: $primary-dark;
+}
+
+.button__icon:focus {
+  fill: $primary-light;
+}
+
 .button-location:hover,
 .button-location:focus {
   background-color: $green-hover;
