@@ -1,0 +1,375 @@
+.products-backdrop {
+  visibility: hidden;
+  opacity: 0;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  transition: .3s all;
+  z-index: 20;
+}
+
+.products-modal {
+  opacity: 0;
+  visibility: hidden;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s all;
+  width: 100%;
+  max-width: 280px;
+  padding: 28px 20px;
+  background-color: $primary-light;
+  border: 2px solid $primary-yellow;
+  border-radius: 10px;
+  z-index: 30;
+
+
+  @include tablet {
+    width: 100%;
+    max-width: 568px;
+    min-height: 968px;
+    padding: 32px 40px;
+  }
+}
+
+.products-modal.active,
+.products-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.products-modal-close {
+  padding: 0;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
+}
+.products-modal-close-icon {
+  width: 11px;
+  height: 11px;
+  fill: $primary-dark;
+  @include tablet {
+      width: 13.33px;
+      height: 13.33px;
+    }
+}
+
+.products-modal-title {
+  font-family: $font-seymour;
+  font-size: 20px;
+  line-height: calc(28 / 20);
+  text-align: center;
+  color: $primary-dark;
+  margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 24px;
+  }
+}
+
+.icon-wrap {
+  width: 132px;
+  height: 132px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 22px;
+  border-radius: 50%;
+
+  @include tablet {
+    margin-bottom: 24px;
+  }
+}
+
+.modal-icecream-circle {
+  background: linear-gradient(0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)),
+    $light-grey;
+  box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+}
+
+.modal-icecoffee-circle {
+  background: linear-gradient(0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)),
+    $light-grey;
+  box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+}
+
+.modal-milkshake-circle {
+  background: linear-gradient(0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)),
+    $light-grey;
+  box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+}
+
+.products-modal-icon {
+  position: absolute;
+  height: 132px;
+  width: 132px;
+  top: -7px;
+  left: 50%;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal-icecream-img {
+  background-image: url(../images/buy/chocolate-icecream.jpg);
+
+  @include retina {
+    background-image: url(../images/buy/chocolate-icecream-2x.jpg);
+  }
+}
+
+.modal-icecoffee-img {
+  background-image: url(../images/buy/ice-coffee.jpg);
+
+  @include retina {
+    background-image: url(../images/buy/ice-coffee-2x.jpg);
+  }
+}
+
+.modal-milkshake-img {
+  background-image: url(../images/buy/milkshake.jpg);
+
+  @include retina {
+    background-image: url(../images/buy/milkshake-2x.jpg);
+  }
+}
+
+.products-list {
+  display: flex;
+  gap: 9px;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  @include desktop {
+    gap: 20px;
+  }
+}
+
+.products-link {
+  width: 53px;
+  height: 72px;
+  font-size: 10px;
+  line-height: calc(12 / 10);
+  border-radius: 40px;
+
+  @include tablet {
+    width: 65px;
+    height: 90px;
+    font-size: 12px;
+    line-height: calc(15 / 12);
+  }
+}
+
+.icecream-nutr-item {
+  border: 2px solid $green-circle;
+}
+
+.icecoffee-nutr-item {
+  border: 2px solid $primary-yellow;
+}
+
+.milkshake-nutr-item {
+  border: 2px solid $whiskey-circle;
+}
+
+.products-number {
+  display: grid;
+  align-items: center;
+  width: 43px;
+  height: 43px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: calc(28 / 10);
+  border-radius: 50%;
+
+  @include tablet {
+    width: 53px;
+    height: 53px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    line-height: calc(28 / 12);
+  }
+}
+
+.icecream-nutr-numb {
+  background-color: $green-circle;
+  box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+}
+
+.icecoffee-nutr-numb {
+  background-color: $primary-yellow;
+  box-shadow: 0px 6px 20px rgba(153, 114, 23, 0.25);
+}
+
+.milkshake-nutr-numb {
+  background-color: $whiskey-circle;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.products-modal-section {
+  margin-bottom: 40px;
+
+  @include tablet {
+    margin-bottom: 48px;
+  }
+}
+
+.modal-section-title {
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: calc(28 / 20);
+  color: $primary-dark;
+}
+
+.modal-section-link {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: calc(25 / 14);
+  letter-spacing: 0.04em;
+  color: $primary-dark;
+}
+
+.modal-section-link:not(:last-child) {
+  margin-bottom: 11px;
+}
+
+/*----------------Products modal form------------------*/
+.modal-form {
+  text-align: center;
+}
+
+.form-input {
+  width: 100%;
+  max-width: 240px;
+  padding: 11px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $primary-dark;
+  background: $input-bg;
+  outline: 1px solid transparent;
+
+  @include tablet {
+    max-width: 368px;
+    padding: 11px;
+  }
+}
+
+.modal-input {
+  height: 42px;
+  margin-bottom: 16px;
+}
+
+.modal-comment {
+  height: 84px;
+  resize: none;
+  margin-bottom: 24px;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
+}
+
+.icecream-modal-input {
+  border: 1px solid $primary-green;
+
+  &:focus {
+    outline: 1px solid $green-circle;
+  }
+}
+
+.icecoffee-modal-input {
+  border: 1px solid $primary-yellow;
+
+  &:focus {
+    outline: 1px solid $yellow-bg;
+  }
+}
+
+.milkshake-modal-input {
+  border: 1px solid $primary-whiskey;
+
+  &:focus {
+    outline: 1px solid $whiskey-circle;
+  }
+}
+
+*::-webkit-input-placeholder {
+  color: $primary-dark;
+}
+
+*:-moz-placeholder {
+  /* FF 4-18 */
+  color: $primary-dark;
+  opacity: 1;
+}
+
+*::-moz-placeholder {
+  /* FF 19+ */
+  color: $primary-dark;
+  opacity: 1;
+}
+
+*:-ms-input-placeholder {
+  /* IE 10+ */
+  color: $primary-dark;
+}
+
+*::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: $primary-dark;
+}
+
+*::placeholder {
+  /* modern browser */
+  color: $primary-dark;
+}
+
+.modal-btn {
+  margin: 0 auto;
+  display: block;
+  width: 132px;
+  height: 42px;
+  background: $primary-yellow;
+  border-radius: 10px;
+  font-family: $font-montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+  color: $primary-dark;
+}
