@@ -48,11 +48,7 @@
 
 .button__icon {
   margin-left: 7px;
-  fill: $primary-dark;
-}
-
-.button__icon:focus {
-  fill: $primary-light;
+  fill: currentColor;
 }
 
 .button-location:hover,
