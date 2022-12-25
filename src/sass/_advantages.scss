@@ -1,105 +1,128 @@
 .advantages-section {
     background-color: $primary-green;
+    padding-bottom:32px;
+    @include tablet {
+        padding-bottom: 60px;
+      }
+    
+      @include desktop {
+        padding-bottom: 80px;
+      }
   }
   
   .advantages-list {
     display: flex;
-    
-  
-    @media screen and (max-width: 767px) {
-      flex-direction: column;
-    }
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width:230px;
+    gap:24px;
+
     @include tablet {
-        gap:80px
+      flex-direction: row;
+      gap:80px;
+      width: 616px;
      }
      @include desktop{
+        width: 100%;
         gap:32px;
      }
   }
   .advantages-item {
     width: 100%;
-    flex-direction: column;
-    margin-top: 94px;
-  }
+    margin-top: 66px;
+    position: relative;
 
-  .advantages-label {
-    display: block;
-    margin-bottom: 16px;
-    text-align: center;
-    color: $primary-light;
-    font-size: 36px;
-    line-height: 1.2;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    font-weight: 700;
-
-    @media screen and (max-width: 767px) {
-      text-align: center;
+    @include tablet {
+      margin-top: 82px;
     }
-    @include tablet{
-        font-size: 48px;
-    }
-    @include desktop{
-        font-size: 58px;
+    
+      @include desktop {
+      margin-top: 90px;
     }
   }
   
-  .advantages-text {
-    font-size: 12px;
-    line-height: 1.7;
-    text-align: center;
-    color: $primary-light;
-    font-weight: 700;
-    line-height: 170%;
-    @include tablet{
-        font-size: 14px;
-        font-weight: 400;
-    }
-    @include desktop{
-        font-size: 16px;
-        letter-spacing: 0.02em;
-    }
-  }
-  .advantages-circle {
-      position: relative;
-  }
-  
-  .advantages-circle::before {
-    content: '';
-    display: block;
+  .advantages-item::before {
+    content: "";
     width: 50px;
     height: 50px;
-    border-radius: 50%;
-    background:$primary-yellow;
-    position: absolute;
-    background-image: url(../images/advantages/mumu1x.png);
-    background-size: 36px 36px;
-    background-repeat: no-repeat;
+    background-color: $primary-yellow;
     background-position: center;
-    top:-16px;
-    left:50%;
-    transform: translateX(-50%)translateY(-100%);
-    @include retina{
-        background-image: url(../images/advantages/mumu2x.png);
-    }
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: -33px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
     @include tablet{
-        top:-32px;
+        top: -46px;
     }
     @include desktop{
-        top:-40px;
+        top: -53px;
     }
   }
-  .dumbbell-logo::before{
+  .cow-icon::before {
+    background-image: url(../images/advantages/mumu1x.png);
+    background-size: 36px 36px;
+    @include retina {
+        background-image: url(../images/advantages/mumu2x.png);
+      }
+  }
+  .dumbbell-icon::before{
     background-image: url(../images/advantages/dumbbell1x.png);
     background-size: 28.5px 35px;
     @include retina{
         background-image: url(../images/advantages/dumbbell2x.png);
     }
   }
-  .icecream-logo::before{
+  .icecream-icon::before{
     background-image: url(../images/advantages/ice-cream1x.png);
     background-size: 17px 36px;
     @include retina {
         background-image: url(../images/advantages/ice-cream2x.png);
     }
   }
+  .advantages-point {
+    font-weight: 700;
+  }
+  .advantages-label {
+      display: block;
+      margin-bottom: 16px;
+      color: $primary-light;
+      font-size: 36px;
+      line-height: calc(44 / 36);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+  
+      @include tablet {
+        font-size: 48px;
+        text-transform:inherit;
+        line-height: calc(59 / 48);
+      }
+  
+      @include desktop {
+        font-size: 58px;
+        line-height: calc(71 / 58);
+      }
+  }
+  
+  .advantages-text {
+      display: block;
+      font-size: 12px;
+      color: $primary-light;
+      line-height: calc(20 / 12);
+  
+      @include tablet {
+        font-size: 14px;
+        font-weight: 400;
+      }
+  
+      @include desktop {
+        font-size: 16px;
+        letter-spacing: 0.02em;
+      }
+    }
