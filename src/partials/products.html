@@ -1,3 +1,332 @@
 <section>
-  <div class="container"></div>
+  <div class="container products">
+    <p class="products-label">100% natural</p>
+    <h2 class="products-title">Products</h2>
+
+    <ul class="products-cards">
+      <li class="products-wrapper icecream">
+        <div class="products-circle circle-icecream"></div>
+        <div class="products-short-descr">
+          <h3 class="products-cards-title">Ice cream</h3>
+          <p class="products-cards-about">
+            Soft ice cream with a delicate taste. Made with milk, cream, sugar
+            and natural stabilizer
+          </p>
+          <button
+            type="button"
+            class="products-button products-open-modal"
+            data-modal="1"
+          >
+            <svg class="products-modal-open" width="40" height="16">
+              <use href="./images/icons.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+      </li>
+      <li class="products-wrapper coffee">
+        <div class="products-circle circle-coffee"></div>
+        <div class="products-short-descr">
+          <h3 class="products-cards-title">Ice coffee</h3>
+          <p class="products-cards-about">
+            Fragrant invigorating drink created from 100% natural ingredients
+            without the use of preservatives and flavor enhancers
+          </p>
+          <button
+            type="button"
+            class="products-button products-open-modal"
+            data-modal="2"
+          >
+            <svg class="products-modal-open" width="40" height="16">
+              <use href="./images/icons.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+      </li>
+      <li class="products-wrapper milkshakes">
+        <div class="products-circle circle-milkshakes"></div>
+        <div class="products-short-descr">
+          <h3 class="products-cards-title">Milkshakes</h3>
+          <p class="products-cards-about">
+            Sweet drinks based on milk and ice cream, supplemented with syrups,
+            fruits, berries and other sweets of your choice
+          </p>
+          <button
+            type="button"
+            class="products-button products-open-modal"
+            data-modal="3"
+          >
+            <svg class="products-modal-open" width="40" height="16">
+              <use href="./images/icons.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+      </li>
+    </ul>
+
+    <!----------------MODAL WINDOWS----------------->
+    <div class="modal-container">
+      <div class="products-modal" data-modal="1">
+        <button type="button" class="products-modal-close">
+          <svg class="products-modal-close-icon">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h3 class="products-modal-title">Chololate ice&nbsp;cream</h3>
+        <div class="icon-wrap modal-icecream-circle">
+          <div class="products-modal-icon modal-icecream-img"></div>
+        </div>
+        <ul class="products-list icecream-nutr list">
+          <li class="products-link icecream-nutr-item">
+            <p class="products-number icecream-nutr-numb">320</p>
+            <p class="products-text">ckal</p>
+          </li>
+          <li class="products-link icecream-nutr-item">
+            <p class="products-number icecream-nutr-numb">4g</p>
+            <p class="products-text">Protein</p>
+          </li>
+          <li class="products-link icecream-nutr-item">
+            <p class="products-number icecream-nutr-numb">8,2g</p>
+            <p class="products-text">Fats</p>
+          </li>
+          <li class="products-link icecream-nutr-item">
+            <p class="products-number icecream-nutr-numb">40,4g</p>
+            <p class="products-text">Carbs</p>
+          </li>
+        </ul>
+        <div class="products-modal-section">
+          <h3 class="modal-section-title">Ingredients</h3>
+          <ul class="list modal-section-list">
+            <li class="modal-section-link">
+              Milk
+              <span>100ml</span>
+            </li>
+            <li class="modal-section-link">
+              Belgian chocolate
+              <span>20g</span>
+            </li>
+            <li class="modal-section-link">
+              Cream
+              <span>150ml</span>
+            </li>
+            <li class="modal-section-link">
+              Cocoa powder
+              <span>30g</span>
+            </li>
+            <li class="modal-section-link">
+              Sugar
+              <span>40g</span>
+            </li>
+            <li class="modal-section-link">
+              Vanilla sugar
+              <span>10g</span>
+            </li>
+          </ul>
+        </div>
+        <form class="modal-form">
+          <div class="input-wrap">
+            <input
+              type="text"
+              name="user-name"
+              class="form-input modal-input icecream-modal-input"
+              id="user-name"
+              placeholder="Name"
+              pattern="[A-Za-z0-9]+"
+            />
+          </div>
+          <div class="input-wrap">
+            <input
+              type="tel"
+              name="user-tel"
+              class="form-input modal-input icecream-modal-input"
+              id="user-tel"
+              placeholder="Phone"
+              size="20"
+              minlength="9"
+              maxlength="14"
+              pattern="[0-9]+"
+              required
+            />
+          </div>
+          <textarea
+            name="uzer-text"
+            id="user-text"
+            class="form-input modal-comment icecream-modal-input"
+            placeholder="Comment"
+          ></textarea>
+          <button type="submit" class="modal-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!---------------------------MODAL 2-------------------->
+
+    <div class="products-modal" data-modal="2">
+      <button type="button" class="products-modal-close">
+        <svg class="products-modal-close-icon">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <h2 class="products-modal-title">Ice coffee</h2>
+      <div class="icon-wrap modal-icecoffee-circle">
+        <div class="products-modal-icon modal-icecoffee-img"></div>
+      </div>
+      <ul class="products-list icecoffee-nutr list">
+        <li class="products-link icecoffee-nutr-item">
+          <p class="products-number icecoffee-nutr-numb">180</p>
+          <div class="products-text">ckal</div>
+        </li>
+        <li class="products-link icecoffee-nutr-item">
+          <p class="products-number icecoffee-nutr-numb">5g</p>
+          <div class="products-text">Protein</div>
+        </li>
+        <li class="products-link icecoffee-nutr-item">
+          <p class="products-number icecoffee-nutr-numb">3g</p>
+          <div class="products-text">Fats</div>
+        </li>
+        <li class="products-link icecoffee-nutr-item">
+          <p class="products-number icecoffee-nutr-numb">32g</p>
+          <div class="products-text">Carbs</div>
+        </li>
+      </ul>
+      <div class="products-modal-section">
+        <h3 class="modal-section-title">Ingredients</h3>
+        <ul class="list modal-section-list">
+          <li class="modal-section-link">
+            Coffee
+            <span>35g</span>
+          </li>
+          <li class="modal-section-link">
+            Filtered water
+            <span>330g</span>
+          </li>
+          <li class="modal-section-link">
+            Ice
+            <span>170g</span>
+          </li>
+          <li class="modal-section-link">
+            Milk
+            <span>30ml</span>
+          </li>
+        </ul>
+      </div>
+      <form class="modal-form">
+        <div class="input-wrap">
+          <input
+            type="text"
+            name="user-name"
+            class="form-input modal-input icecoffee-modal-input"
+            id="user-name"
+            placeholder="Name"
+            pattern="[A-Za-z0-9]+"
+          />
+        </div>
+        <div class="input-wrap">
+          <input
+            type="tel"
+            name="user-tel"
+            class="form-input modal-input icecoffee-modal-input"
+            id="user-tel"
+            placeholder="Phone"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            required
+          />
+        </div>
+        <textarea
+          name="user-text"
+          id="user-text"
+          class="form-input modal-comment icecoffee-modal-input"
+          placeholder="Comment"
+        ></textarea>
+        <button type="submit" class="modal-btn">Submit</button>
+      </form>
+    </div>
+
+    <!---------------------------MODAL 3-------------------->
+    <div class="products-modal" data-modal="3">
+      <button type="button" class="products-modal-close">
+        <svg class="products-modal-close-icon">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <h2 class="products-modal-title">Milkshake</h2>
+      <div class="icon-wrap modal-milkshake-circle">
+        <div class="products-modal-icon modal-milkshake-img"></div>
+      </div>
+      <ul class="products-list milkshake-nutr list">
+        <li class="products-link milkshake-nutr-item">
+          <p class="products-number milkshake-nutr-numb">11,2</p>
+          <p class="products-text">ckal</p>
+        </li>
+        <li class="products-link milkshake-nutr-item">
+          <p class="products-number milkshake-nutr-numb">3,9g</p>
+          <p class="products-text">Protein</p>
+        </li>
+        <li class="products-link milkshake-nutr-item">
+          <p class="products-number milkshake-nutr-numb">3g</p>
+          <p class="products-text">Fats</p>
+        </li>
+        <li class="products-link milkshake-nutr-item">
+          <p class="products-number milkshake-nutr-numb">18g</p>
+          <p class="products-text">Carbs</p>
+        </li>
+      </ul>
+      <div class="products-modal-section">
+        <h3 class="modal-section-title">Ingredients</h3>
+        <ul class="list modal-section-list">
+          <li class="modal-section-link">
+            Milk
+            <span>400ml</span>
+          </li>
+          <li class="modal-section-link">
+            Whipped cream
+            <span>50g</span>
+          </li>
+          <li class="modal-section-link">
+            Ice cream
+            <span>200g</span>
+          </li>
+          <li class="modal-section-link">
+            Sugar
+            <span>40g</span>
+          </li>
+          <li class="modal-section-link">
+            Vanilla sugar
+            <span>10g</span>
+          </li>
+        </ul>
+      </div>
+      <form class="modal-form">
+        <div class="input-wrap">
+          <input
+            type="text"
+            name="user-name"
+            class="form-input modal-input milkshake-modal-input"
+            id="user-name"
+            placeholder="Name"
+            pattern="[A-Za-z0-9]+"
+          />
+        </div>
+        <div class="input-wrap">
+          <input
+            type="tel"
+            name="user-tel"
+            class="form-input modal-input milkshake-modal-input"
+            id="user-tel"
+            placeholder="Phone"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            required
+          />
+        </div>
+        <textarea
+          name="user-text"
+          id="user-text"
+          class="form-input modal-comment milkshake-modal-input"
+          placeholder="Comment"
+        ></textarea>
+        <button type="submit" class="modal-btn">Submit</button>
+      </form>
+    </div>
+
+    <div class="products-backdrop products-overlay-modal"></div>
+  </div>
 </section>
