@@ -95,6 +95,7 @@ right: 20px;
 }
 
 .header-backdrop {
+  z-index: 9999;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -110,7 +111,7 @@ right: 20px;
   pointer-events: none;
 }
 .modal{
-  z-index: 9999;
+  
   position: absolute;
     top: 50%;
     left: 50%;
