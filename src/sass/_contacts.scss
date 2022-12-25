@@ -6,20 +6,18 @@ gap: 16px;
 padding-left: 32px;
 padding-right: 24px;
 padding-top: 40px;
-background: #FCFCFC;
 border-radius: 24px;
 width: 280px;
 position: relative;
 @media screen and (min-width:768px) {
    display: flex;
-   gap: 16px; 
+   gap: 16px;
    flex-direction: row;
-   justify-content: center;
-   width: 224px;
 }
 @media screen and (min-width:1200px) {
     padding: 40px;
-    width: 368px;
+    gap: 16px;
+   flex-direction: row;
 }
 }
 
@@ -30,12 +28,16 @@ padding-top: 24px;
 padding-left: 32px;
 padding-right: 24px;
 padding-bottom: 24px;
+background: #FCFCFC;
 @media screen and (max-width:768px) {
     font-size: 14px;
     line-height: 150%;
     padding-left: 24px;
     padding-right: 24px;
     padding-bottom: 40px;
+}
+@media screen and (min-width:1200px) {
+    padding: 40px;
 }
 }
 
@@ -149,6 +151,14 @@ color: $primary-grey;
 .contact-item {
 list-style: none;
 padding-left: 32px;
+@media screen and (min-width:768px) {
+    padding-left: 24px;
+    padding-top: 32px;
+}
+@media screen and (min-width:1200px) {
+   padding-left: 40px;
+   padding-top: 32px;
+}
 }
 
 .contact-link {
