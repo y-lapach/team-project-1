@@ -1,0 +1,293 @@
+.hero-section {
+  background-color: rgba(132, 161, 120, 1);
+  padding-top: 50px;
+
+  @include tablet {
+    padding-top: 12px;
+
+  }
+
+  @include desktop {
+    padding-top: 45px;
+  }
+}
+
+.container-hero {
+  position: relative;
+  padding-bottom: 24px;
+
+  @include desktop {
+    padding-bottom: 65px;
+  }
+}
+
+.hero-before-title {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 236px;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 39px;
+  }
+
+  @include desktop {
+    margin-bottom: 109px;
+  }
+}
+
+.hero-title {
+  width: 247px;
+  font-family: $font-seymour;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: calc(33 / 26);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $primary-light;
+  margin-bottom: 32px;
+
+  @include tablet {
+    margin-bottom: 24px;
+  }
+
+  @include desktop {
+    width: 367px;
+    margin-bottom: 28px;
+    font-size: 38px;
+    line-height: calc(48 / 38);
+  }
+}
+
+.hero-title-2 {
+  font-size: 34px;
+  line-height: 0.95;
+
+  @include desktop {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+
+.hero-list-link {
+  display: flex;
+}
+
+.hero-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+  background-color: inherit;
+
+  @include desktop {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+  }
+}
+
+.hero-link-first {
+  width: 108px;
+  height: 38px;
+  border: 2px solid $primary-yellow;
+  border-radius: 10px;
+  margin-right: 12px;
+  text-decoration: none;
+  color: $black;
+
+  @include desktop {
+    width: 134px;
+    height: 42px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid $green-hover;
+  }
+
+  &:focus {
+    color: $primary-light;
+  }
+
+  &:disabled {
+    border: 2px solid $primary-grey;
+  }
+
+}
+
+.hero-link-second {
+  width: 106px;
+  height: 24px;
+  text-decoration-line: underline;
+  line-height: calc(17 / 14);
+  color: $primary-yellow;
+
+  @include desktop {
+    width: 154px;
+    height: 40px;
+  }
+
+  &:hover {
+    color: $green-hover;
+  }
+
+  &:focus {
+    color: $primary-light;
+  }
+
+  &:disabled {
+    color: $primary-grey;
+  }
+
+}
+
+.hero-information {
+  display: none;
+
+  @include tablet {
+    position: relative;
+    display: block;
+    z-index: 1;
+    width: 139px;
+    height: 85px;
+    margin-left: 184px;
+    margin-bottom: 32px;
+  }
+
+  @include desktop {
+    width: 200px;
+    height: 120px;
+    margin-left: 241px;
+  }
+}
+
+.hero-text {
+  font-size: 12px;
+  line-height: 1.4;
+  color: $primary-light;
+  margin-bottom: 20px;
+
+  @include desktop {
+    margin-bottom: 32px;
+    font-size: 14px;
+
+  }
+}
+
+.hero-info-icon {
+  width: 41px;
+  height: 16px;
+  fill: $primary-light;
+}
+
+.hero-statistics-list {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.hero-item-stat {
+  text-align: right;
+}
+
+.hero-item-stat:not(:last-child) {
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    margin-bottom: 16px;
+  }
+}
+
+.hero-quantity {
+  margin-bottom: 4px;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: calc(34 / 28);
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  @include desktop {
+    font-size: 46px;
+    line-height: calc(56 / 46);
+  }
+}
+
+.title-stat {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: calc(10 / 8);
+  color: $primary-light;
+
+  @include desktop {
+
+    font-size: 14px;
+    line-height: calc(17 / 14);
+
+  }
+}
+
+.hero-pictures {
+  bottom: 0px;
+}
+
+.hero-pict-points {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: -2px;
+
+  @include tablet {}
+}
+
+.hero-pict-smiling-ice-cream {
+  position: absolute;
+  bottom: 0px;
+  left: 28%;
+  width: 177px;
+  height: 217px;
+
+  @include tablet {
+    left: 53%;
+
+    width: 268px;
+    height: 329px;
+  }
+
+  @include desktop {
+    width: 456px;
+    height: 560px;
+    bottom: 2px;
+    right: 77px;
+  }
+}
+
+.hero-pict-ice-cream-on-plate {
+  display: none;
+
+  @include tablet {
+    position: absolute;
+    display: block;
+    width: 152px;
+    height: 152px;
+    bottom: 12px;
+    left: 32px;
+
+  }
+
+  @include desktop {
+    left: 16px;
+    bottom: 65px;
+    width: 225px;
+    height: 225px;
+  }
+}
