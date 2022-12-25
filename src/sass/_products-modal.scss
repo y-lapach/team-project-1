@@ -4,11 +4,11 @@
 
   position: fixed;
   top: 0;
-  left:0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  opacity:1;
+  opacity: 1;
   transition: .3s all;
   z-index: 20;
 }
@@ -30,8 +30,8 @@
   border: 2px solid $primary-yellow;
   border-radius: 10px;
   z-index: 30;
-  
-  
+
+
   @include tablet {
     width: 100%;
     max-width: 568px;
@@ -39,6 +39,7 @@
     padding: 32px 40px;
   }
 }
+
 .products-modal.active,
 .products-backdrop.active {
   opacity: 1;
@@ -57,6 +58,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
   @include tablet {
     width: 24px;
     height: 24px;
@@ -70,6 +72,7 @@
   text-align: center;
   color: $primary-dark;
   margin-bottom: 20px;
+
   @include tablet {
     margin-bottom: 24px;
   }
@@ -83,17 +86,20 @@
   margin-right: auto;
   margin-bottom: 22px;
   border-radius: 50%;
-    @include tablet {
+
+  @include tablet {
     margin-bottom: 24px;
   }
 }
+
 .modal-icecream-circle {
   background: linear-gradient(0deg,
-        rgba(156, 190, 143, 0.7),
-        rgba(156, 190, 143, 0.7)),
-      $light-grey;
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)),
+    $light-grey;
   box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
 }
+
 .modal-icecoffee-circle {
   background: linear-gradient(0deg,
       rgba(248, 210, 78, 0.7),
@@ -101,6 +107,7 @@
     $light-grey;
   box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
 }
+
 .modal-milkshake-circle {
   background: linear-gradient(0deg,
       rgba(213, 117, 63, 0.7),
@@ -120,92 +127,28 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .modal-icecream-img {
-  background-image: url(../images/products/products-ice-cream-mob.png);
+  background-image: url(../images/buy/chocolate-icecream.jpg);
 
   @include retina {
-    background-image: url(../images/products/products-ice-cream-mob-2x.png);
+    background-image: url(../images/buy/chocolate-icecream-2x.jpg);
   }
 }
+
 .modal-icecoffee-img {
-  background-image: url(../images/products/products-ice-cream-mob.png);
+  background-image: url(../images/buy/ice-coffee.jpg);
 
   @include retina {
-    background-image: url(../images/products/products-ice-cream-mob-2x.png);
+    background-image: url(../images/buy/ice-coffee-2x.jpg);
   }
 }
+
 .modal-milkshake-img {
-  background-image: url(../images/products/products-ice-cream-mob.png);
+  background-image: url(../images/buy/milkshake.jpg);
 
-}
-
-.products-modal-icon2 {
-  margin-bottom: auto;
-  position: absolute;
-  height: 132px;
-  width: 132px;
-  top: 0px;
-  left: 50%;
-  border-radius: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(
-      0deg,
-      rgba(156, 190, 143, 0.7),
-      rgba(156, 190, 143, 0.7)
-    ),
-    #d9d9d9;
-  box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
-}
-
-.products-modal-icon2::before {
-  content: '';
-  position: absolute;
-  width: 132px;
-  height: 132px;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  left: 50%;
-  top: -4%;
-  transform: translateX(-50%);
-  background-image: url(../images/products_modal/ice_coffee_mob.jpeg);
   @include retina {
-    background-image: url(../images/products_modal/ice_coffee_mobX2.jpeg);
-  }
-}
-
-.products-modal-icon3 {
-  margin-bottom: auto;
-  position: absolute;
-  height: 132px;
-  width: 132px;
-  top: 0px;
-  left: 50%;
-  border-radius: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(
-      0deg,
-      rgba(156, 190, 143, 0.7),
-      rgba(156, 190, 143, 0.7)
-    ),
-    #d9d9d9;
-  box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
-}
-
-.products-modal-icon3::before {
-  content: '';
-  position: absolute;
-  width: 132px;
-  height: 132px;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  left: 50%;
-  top: -4%;
-  transform: translateX(-50%);
-  background-image: url(../images/products_modal/milkshake_mob.jpeg);
-  @include retina {
-    background-image: url(../images/products_modal/milkshake_mobX2.jpeg);
+    background-image: url(../images/buy/milkshake-2x.jpg);
   }
 }
 
@@ -215,6 +158,7 @@
   text-align: center;
   justify-content: center;
   margin-bottom: 40px;
+
   @include desktop {
     gap: 20px;
   }
@@ -234,12 +178,15 @@
     line-height: calc(15 / 12);
   }
 }
+
 .icecream-nutr-item {
-    border: 2px solid $green-circle;
+  border: 2px solid $green-circle;
 }
+
 .icecoffee-nutr-item {
   border: 2px solid $primary-yellow;
 }
+
 .milkshake-nutr-item {
   border: 2px solid $whiskey-circle;
 }
@@ -265,6 +212,7 @@
     line-height: calc(28 / 12);
   }
 }
+
 .icecream-nutr-numb {
   background-color: $green-circle;
   box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
@@ -282,9 +230,10 @@
 
 .products-modal-section {
   margin-bottom: 40px;
+
   @include tablet {
-      margin-bottom: 48px;
-    }
+    margin-bottom: 48px;
+  }
 }
 
 .modal-section-title {
@@ -317,19 +266,20 @@
 .form-input {
   width: 100%;
   max-width: 240px;
-  padding:11px 16px;
+  padding: 11px 16px;
   border-radius: 10px;
   font-size: 14px;
   line-height: 1.4;
   color: $primary-dark;
   background: $input-bg;
   outline: 1px solid transparent;
-  
+
   @include tablet {
-      max-width: 368px;
-      padding:11px;
-    }
+    max-width: 368px;
+    padding: 11px;
+  }
 }
+
 .modal-input {
   height: 42px;
   margin-bottom: 16px;
@@ -339,29 +289,34 @@
   height: 84px;
   resize: none;
   margin-bottom: 24px;
+
   @include tablet {
     margin-bottom: 32px;
   }
 }
+
 .icecream-modal-input {
   border: 1px solid $primary-green;
+
   &:focus {
-      outline: 1px solid $green-circle;
-    }
+    outline: 1px solid $green-circle;
+  }
 }
 
 .icecoffee-modal-input {
   border: 1px solid $primary-yellow;
+
   &:focus {
-      outline: 1px solid $yellow-bg;
-    }
+    outline: 1px solid $yellow-bg;
+  }
 }
 
 .milkshake-modal-input {
   border: 1px solid $primary-whiskey;
+
   &:focus {
-      outline: 1px solid $whiskey-circle;
-    }
+    outline: 1px solid $whiskey-circle;
+  }
 }
 
 *::-webkit-input-placeholder {
@@ -394,6 +349,7 @@
   /* modern browser */
   color: $primary-dark;
 }
+
 .modal-btn {
   margin: 0 auto;
   display: block;
