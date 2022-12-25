@@ -68,6 +68,10 @@
   width: 11px;
   height: 11px;
   fill: $primary-dark;
+  @include tablet {
+      width: 13.33px;
+      height: 13.33px;
+    }
 }
 
 .products-modal-title {
