@@ -24,7 +24,6 @@
   transition: 0.3s all;
   width: 100%;
   max-width: 280px;
-  margin: 40px 0;
   padding: 28px 20px;
   background-color: $primary-light;
   border: 2px solid $primary-yellow;
@@ -46,6 +45,7 @@
   visibility: visible;
 }
 
+
 .products-modal-close {
   padding: 0;
   position: absolute;
@@ -63,6 +63,11 @@
     width: 24px;
     height: 24px;
   }
+}
+.products-modal-close-icon {
+  width: 11px;
+  height: 11px;
+  fill: $primary-dark;
 }
 
 .products-modal-title {
