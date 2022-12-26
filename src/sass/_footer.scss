@@ -1,5 +1,12 @@
 .footer-main{
     background-color: $primary-green;
+    padding-top:30px;
+    @include tablet {
+    padding-top: 20px;
+  }
+  @include desktop {
+    padding-top: 60px;
+  }
 }
 .footer-company-info {
    @include tablet {
@@ -55,7 +62,7 @@
         line-height: calc(71 / 58);
     }
 }
-.contacts {
+.ftr-contacts {
     text-align: right;
 
     @include tablet {

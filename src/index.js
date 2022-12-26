@@ -1,4 +1,6 @@
 import './js/mob-menu';
+import './js/hero-title-typing';
+import './js/counter';
 import './js/buy-now';
 import './js/products-modals';
 import './js/how-made';
