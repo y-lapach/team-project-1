@@ -1,6 +1,7 @@
 .hero-section {
   background-color: rgba(132, 161, 120, 1);
   padding-top: 50px;
+  padding-bottom: 24px;
 
   @include tablet {
     padding-top: 12px;
@@ -9,16 +10,11 @@
 
   @include desktop {
     padding-top: 45px;
-  }
-}
-
-.container-hero {
-  position: relative;
-  padding-bottom: 24px;
-
-  @include desktop {
     padding-bottom: 65px;
   }
+}
+.hero-container {
+  position: relative;
 }
 
 .hero-before-title {
@@ -70,11 +66,6 @@
     line-height: inherit;
   }
 }
-
-/*--------------------------TYPING EFFECT----------------*/
-
-
-/*------------------END-------------*/
 
 .hero-list-link {
   display: flex;
@@ -242,7 +233,28 @@
 }
 
 .hero-pictures {
-  bottom: 0px;
+  position: absolute;
+  width: 100%;
+  bottom: -22%;
+    margin: 0 -20px;
+    bottom: -259px;
+  
+    @media screen and (min-width:480px) {
+      width: 480px;
+    }
+  
+    @media screen and (min-width:768px) {
+      width: 768px;
+      margin: 0 -32px;
+      bottom: -19%;
+    }
+  
+    @media screen and (min-width:1200px) {
+      width: 1200px;
+      margin: 0 -16px;
+      bottom: -22%;
+    }
+  
 }
 
 .hero-pict-points {
@@ -250,8 +262,6 @@
   bottom: 0;
   width: 100%;
   left: -2px;
-
-  @include tablet {}
 }
 
 .hero-pict-smiling-ice-cream {
@@ -263,7 +273,6 @@
 
   @include tablet {
     left: 53%;
-
     width: 268px;
     height: 329px;
   }

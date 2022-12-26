@@ -14,3 +14,9 @@
     mobileMenuRef.classList.toggle("is-open");
   });
 })();
+
+jQuery(document).ready(function($) {
+    $('nav .header-list-item a').on('click', function() {
+        $('nav').removeClass('is-open');
+    })
+});
