@@ -1,46 +1,32 @@
-ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 .contacts {
   position: relative;
   background-image: linear-gradient(
     to top,
-    $primary-green 71%,
+    $primary-green 75%,
     transparent 0
   );
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 502px;
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 
   @include tablet {
     background-image: linear-gradient(
       to top,
-      $primary-green 48%,
+      $primary-green 55%,
       transparent 0
     );
-    padding-bottom: 40px;
+    padding-bottom: 20px;
   }
   @include desktop {
     background-image: linear-gradient(
       to top,
-      $primary-green 80%,
+      $primary-green 82%,
       transparent 0
     );
     padding-bottom: 60px;
   }
-}
-
-.contacts-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .contacts-card-list {
@@ -48,21 +34,24 @@ ul {
   flex-direction: column;
   justify-content: center;
   gap: 16px;
+  align-items: center;
+  margin-bottom: 20px;
 
   @include tablet {
    flex-direction: row;
+  margin-bottom: 40px;
   }
   @include desktop {
     flex-direction: row;
     flex-basis: calc((100% - 64px) / 3);
     gap: 32px;
+    margin-bottom: 60px;
   }
 }
 
 .contacts-card-item {
   border-radius: 24px;
-  border: 1px solid $grey-divider;
-  background-color: #FFFFFF;
+  background-color: $primary-light;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   text-align: start;
   padding: 40px 32px 24px 32px;
@@ -70,22 +59,23 @@ ul {
   width: 280px;
 
   @include tablet {
-    padding: 40px 24px;
-    max-width: 224px;
+    padding:40px 24px;
+    width: 224px;
   }
 
   @include desktop {
-    border-radius: 24px;
-    border: 1px solid $grey-divider;
-    background-color: #FFFFFF;
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-    text-align: start;
-    padding: 40px;
-    min-width: 368px;
+    width: 368px;
   }
 }
 
 .contacts-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  min-width: 80px;
+  height: 22px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   color: $primary-dark;
   background-color: $primary-yellow;
@@ -94,18 +84,12 @@ ul {
   font-weight: 500;
   line-height: calc(14 / 12);
   letter-spacing: 0.04em;
-  border: none;
-  min-width: 80px;
-  height: 22px;
-  padding: 4px 22px;
-  margin-bottom: 20px;
 
   @include tablet {
     border-radius: 6px;
     font-size: 16px;
     line-height: calc(22 / 16);
     min-width: 73px;
-    padding: 4px 13px;
   }
 
   @include desktop {
@@ -113,11 +97,8 @@ ul {
     color: $primary-dark;
     background-color: $primary-yellow;
     border-radius: 6px;
-    font-size: 16px;
-    line-height: calc(22 / 16);
     min-width: 76px;
     height: 30px;
-    padding: 4px 14px;
     margin-bottom: 32px;
   }
 }
@@ -125,7 +106,6 @@ ul {
 .truck {
   @include tablet {
     min-width: 138px;
-    padding: 4px 10px;
   }
 }
 
@@ -140,16 +120,17 @@ ul {
   @include tablet {
     font-size: 14px;
     line-height: calc(26 / 14);
+    margin-bottom: 12px;
   }
   @include desktop {
     font-size: 16px;
     line-height: calc(30 / 16);
+    margin-bottom: 8px;
   }
 }
 
 .contacts-map-link {
   font-weight: 500;
-  font-style: normal;
   font-size: 12px;
   line-height: calc(22 / 12);
   letter-spacing: 0.04em;
@@ -167,40 +148,35 @@ ul {
 
 .contacts-line {
   border-bottom: 1px solid $grey-divider;
-
-  @include desktop {
-    border-bottom: 1px solid $grey-divider;
-  }
 }
 
 .contacts-line:nth-child(3) {
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 
-  @include desktop {
+  @include tablet {
     margin-top: 32px;
     margin-bottom: 32px;
   }
 }
 
 .contacts-map {
-  margin-bottom: 30px;
-
-  @include desktop {
-    margin-bottom: 30px;
-  }
-}
-
-.contacts-schedule-item:last-child {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 
   @include desktop {
     margin-bottom: 32px;
   }
 }
 
+.contacts-schedule-item:last-child {
+  margin-bottom: 24px;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
+}
+
 .contacts-days {
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: calc(22 / 12);
@@ -218,11 +194,10 @@ ul {
 }
 
 .contacts-hours {
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: calc(22 / 12);
-  color: #ABABAB;
+  color: $primary-grey;
 
   @include tablet {
     font-size: 14px;
@@ -243,7 +218,6 @@ ul {
 }
 
 .contacts-communication-item {
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: calc(19 / 12);
@@ -258,12 +232,9 @@ ul {
   }
 }
 
-.contacts-tel, .contacts-mail {
+.contacts-tel,
+.contacts-mail {
   color: $primary-dark;
-
-  @include desktop {
-    color: $primary-dark;
-  }
 }
 
 
@@ -276,4 +247,7 @@ ul {
   @include desktop {
     margin-bottom: 4px;
   }
+}
+address {
+  font-style:normal;
 }
