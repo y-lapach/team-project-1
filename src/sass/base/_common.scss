@@ -26,6 +26,7 @@ body {
     background-color: $primary-light;
     background-image: url('../images/body/background-mobile.jpg');
     background-repeat: repeat;
+    background-attachment: fixed;
 }
     
     @media (min-device-pixel-ratio: 2),
