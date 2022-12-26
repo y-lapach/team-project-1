@@ -168,10 +168,21 @@
   }
 }
 
-.contacts-schedule-item:last-child {
+.contacts-schedule-item:nth-child(1) {
+  margin-bottom: 8px;
+
+  @include desktop {
+    margin-bottom: 12px;
+  }
+}
+
+.contacts-schedule-item:nth-child(2) {
   margin-bottom: 24px;
 
   @include tablet {
+    margin-bottom: 32px;
+  }
+  @include desktop {
     margin-bottom: 32px;
   }
 }
@@ -209,14 +220,6 @@
   }
 }
 
-.contacts-hours:first-child {
-  margin-bottom: 8px;
-
-  @include desktop {
-    margin-bottom: 12px;
-  }
-}
-
 .contacts-communication-item {
   font-weight: 500;
   font-size: 12px;
@@ -237,7 +240,6 @@
   color: $primary-dark;
 }
 
-
 .contacts-communication-item:first-child {
   margin-bottom: 6px;
 
@@ -248,6 +250,7 @@
     margin-bottom: 4px;
   }
 }
+
 address {
   font-style:normal;
 }
