@@ -1,0 +1,210 @@
+//   <-- Кнопки -->
+
+.contacts-button {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  background-color: $primary-green;
+}
+
+.button-list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 16px;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.contacts-btn {
+  width: 196px;
+  height: 42px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  border-radius: 10px;
+  color: $primary-dark;
+  transition: all .5s ease;
+}
+.button-location {
+  border: none;
+  background-color: $primary-yellow;
+}
+
+.button-franchise {
+  border: 2px solid $primary-yellow;
+  background-color: transparent;
+}
+
+.button-location:hover,
+.button-location:focus {
+  background-color: $green-hover;
+}
+
+.button-location:focus {
+  color: $primary-light;
+}
+
+.button-location:disabled {
+  color: $primary-grey;
+}
+
+.button-franchise:hover,
+.button-franchise:focus {
+  border: 2px solid $green-hover;
+}
+
+.button-franchise:focus {
+  color: $primary-light;
+}
+
+.button-franchise:disabled {
+  border: 2px solid $primary-grey;
+}
+.button__icon {
+  margin-left: 7px;
+  fill: currentColor;
+}
+//  <-- Модальные окна -->
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(48, 48, 48, 0.56);
+  transition: opacity 300ms linear, visibility 300ms linear;
+}
+
+.modal__close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 12px;
+  top: 12px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background-color: transparent;
+  @include tablet {
+      width: 24px;
+      height: 24px;
+    }
+}
+.modal__close-icon {
+  width:11.11px;
+  height:11.14px;
+
+  @include tablet {
+    width: 13.33px;
+    height: 13.37px;
+  }
+}
+
+.modal-general {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 300ms linear;
+  width: 280px;
+  padding: 28px;
+  background-color: $primary-light;
+  border-radius: 10px;
+  border: 2px solid $primary-yellow;
+  @include tablet {
+      padding: 32px 60px;
+      width: 568px;
+  }
+}
+.modal-location {
+  min-height: 365px;
+
+  @include tablet {
+    min-height: 458px;
+  }
+}
+
+.modal-franchise {
+  min-height: 674px;
+
+  @include tablet {
+    min-height: 668px;
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.backdrop.is-hidden .modal-franchise,
+.backdrop.is-hidden .modal-location {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.modal__title {
+  font-family: $font-seymour;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 24px;
+  }
+}
+
+.location__google {
+  display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 24px;
+  width: 134px;
+  height: 42px;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 34px;
+  background-color: $primary-yellow;
+  color: $primary-dark;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: center;
+  transition: all .5s ease;
+
+  @include tablet {
+    width: 145px;
+    font-size: 14px;
+    line-height: 1.21;
+    margin-top: 32px;
+  }
+}
+
+.location__google:hover,
+.location__google:focus {
+  background-color: $green-hover;
+}
+
+.location__google:active {
+  color: $primary-light;
+}
+
+.modal__text {
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: left;
+  vertical-align: top;
+  margin-bottom: 24px;
+
+  @include tablet {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+}
