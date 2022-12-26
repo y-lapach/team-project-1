@@ -80,6 +80,42 @@
   }
 }
 
+// .header-list-link::after {
+//   @media screen and (max-width: 1199px) {
+//   content: '';
+//     bottom: 1px;
+//     left: 0;
+//     width: 100%;
+//     height: 3px;
+//     border-radius: 2px;
+//     position: absolute;
+//     display: inline-block;
+//     background: $primary-dark;
+//     transform: scaleX(0);
+//     transition: transform 250ms ease-in-out;
+//     transform-origin: left;
+//   }
+
+//   //  @media screen and (min-width: 1200px) {
+//   // content: '';
+//   //   bottom: 1px;
+//   //   left: 0;
+//   //   width: 100%;
+//   //   height: 3px;
+//   //   border-radius: 2px;
+//   //   position: absolute;
+//   //   display: inline-block;
+//   //   background: $primary-yellow;
+//   //   transform: scaleX(0);
+//   //   transition: transform 250ms ease-in-out;
+//   //   transform-origin: left;
+//   // }
+// }
+
+// .header-list-link:hover:after {
+//   transform: scaleX(1);
+// }
+
 .header-list-link {
   position: relative;
   font-weight: 700;
@@ -112,24 +148,6 @@
   }
 }
 
-.header-list-link::after {
-  content: '';
-  bottom: 1px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  position: absolute;
-  display: inline-block;
-  background: $primary-yellow;
-  transform: scaleX(0);
-  transition: transform 250ms ease-in-out;
-  transform-origin: left;
-}
-.header-list-link:hover:after {
-  transform: scaleX(1);
-}
-
 .buy-now-button {
   display: flex;
   width: 152px;
@@ -142,14 +160,6 @@
   text-align: center;
   transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
 
-  @include tablet {
-    &:focus,
-    &:active {
-      background-color: $green-hover;
-      color: #ffffff;
-    }
-  }
-
   @include desktop {
     &:hover {
       background-color: $green-hover;
@@ -158,6 +168,14 @@
       background-color: $green-hover;
       color: #ffffff;
     }
+  }
+}
+
+.mobile-visible {
+  &:focus,
+  &:active {
+    background-color: $green-hover;
+    color: #ffffff;
   }
 }
 
