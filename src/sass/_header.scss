@@ -36,15 +36,15 @@
     position: fixed;
     top: 0;
     left: 100%;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    overflow: auto;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding-top: 100px;
     padding-bottom: 64px;
-    background-color: #84a178;
+    overflow-y: scroll;
+    background-color: $primary-green;
     transition: transform 250ms ease-in-out;
 
     &.is-open {
@@ -52,7 +52,7 @@
     }
     @include tablet {
       padding-top: 140px;
-      background-color: #97af8d;
+      background-color: $tablet-menu;
     }
   }
 
@@ -62,9 +62,7 @@
 }
 
 .header-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -132,21 +130,29 @@
 
 .buy-now-button {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 152px;
   height: 42px;
   padding: 0;
   border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: calc(17 / 14);
   background-color: $primary-yellow;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+  color: $black;
+  transition: all .5s ease;
+
+  &:disabled {
+      background-color: $primary-grey;
+    }
 
   @include tablet {
     &:focus,
     &:active {
       background-color: $green-hover;
-      color: #ffffff;
+      color: $primary-light;
     }
   }
 
@@ -154,25 +160,16 @@
     &:hover {
       background-color: $green-hover;
     }
-    &:focus {
-      background-color: $green-hover;
-      color: #ffffff;
-    }
   }
 }
 
 .buy-now-icon {
   margin-left: 5px;
-  transition: fill 250ms ease-in-out;
-
-  .buy-now-button:focus &,
-  .buy-now-button:active & {
-    fill: #ffffff;
-  }
+  fill: currentColor;
 }
 
 .mobile-visible {
-  @media screen and (min-width: 1199px) {
+  @media screen and (min-width: 1200px) {
     display: none;
   }
 }
@@ -181,11 +178,12 @@
   display: inline-block;
   width: 32px;
   height: 32px;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  z-index: 1;
   margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color:$primary-light;
+  z-index: 1;
 
   @include tablet {
     margin-right: 32px;
@@ -201,9 +199,20 @@
     display: none;
   }
 }
+.menu-button-icon {
+  fill: currentColor;
+}
 
 .menu-button.is-open .menu-icon-cros {
   display: none;
+}
+.menu-icon-cros {
+  width:24px;
+  height:16px;
+}
+.menu-icon-cros {
+  width: 19.21px;
+  height: 19.21px;
 }
 
 .menu-icon-close {
@@ -227,10 +236,10 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 3;
   opacity: 1;
-  transition: opacity 250ms ease-in-out, visibility opacity 250ms ease-in-out;
+  transition: opacity 300ms linear, visibility 300ms linear;
 }
 
 .backdrop-buy-now--is-hidden {
@@ -320,7 +329,7 @@
 }
 
 .radio-button-chekbox--green {
-  border: 2px solid #96af8c;
+  border: 2px solid $green-outline;
   background-color: transparent;
   transition: background-color 250ms ease-in-out, box-shadow 250ms ease-in-out;
 }
@@ -338,7 +347,7 @@
 }
 
 .radio-button-input:checked + .radio-button-chekbox--green {
-  background-color: #96af8c;
+  background-color: $green-outline;
   box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
 }
 
@@ -430,12 +439,12 @@
   width: 100%;
   height: 32px;
   padding: 8px 12px;
-  border: 1px solid #84a178;
+  border: 1px solid $primary-green;
   border-radius: 10px;
-  background-color: rgba(248, 210, 78, 0.1);
+  background-color: $input-bg;
   font-size: 12px;
   line-height: 1.4;
-  color: #131313;
+  color: $primary-dark;
   transition: border 250ms ease-in-out, background-color 250ms ease-in-out;
 
   &:focus {
@@ -468,9 +477,9 @@
   width: 100%;
   height: 65px;
   padding: 8px 12px;
-  border: 1px solid #84a178;
+  border: 1px solid $primary-green;
   border-radius: 10px;
-  background-color: rgba(248, 210, 78, 0.1);
+  background-color: $input-bg;
   outline: 0;
 
   transition: border 250ms ease-in-out, background-color 250ms ease-in-out;
@@ -488,7 +497,7 @@
 .buy-now-textarea::placeholder {
   font-size: 12px;
   line-height: 1.4;
-  color: #131313;
+  color: $primary-dark;
 
   @include tablet {
     font-size: 14px;
