@@ -1,17 +1,14 @@
-<div class="location-franchise">
-  <!-- Кнопки -->
-  <section class="contacts-button">
-    <div class="container">
+<div class="contacts-button">
       <ul class="button-list list">
         <li>
-          <button type="button" class="button-location" data-location-open>
+          <button type="button" class="button-location contacts-btn" aria-label="Check locations" data-location-open>
             Our Locations<svg class="button__icon" width="5" height="10">
               <use class="button__svg" href="./images/icons.svg#icon-arrow-right-btn"></use>
             </svg>
           </button>
         </li>
         <li>
-          <button type="button" class="button-franchise" data-franchise-open>
+          <button type="button" class="button-franchise contacts-btn" aria-label="Open Franchise form" data-franchise-open>
             Franchise<svg class="button__icon" width="5" height="10">
               <use class="button__svg" href="./images/icons.svg#icon-arrow-right-btn"></use>
             </svg>
@@ -19,25 +16,30 @@
         </li>
       </ul>
     </div>
-  </section>
   <!-- Модальные окна -->
   <div class="backdrop is-hidden" data-location>
-    <div class="modal-location">
-      <button type="button" class="modal__close" data-location-close>
-        <svg class="modal__close-icon" width="20" height="20">
-          <use href="./images/icons.svg#icon-cross"></use>
+    <div class="modal-location modal-general">
+      <button type="button" class="modal__close"  aria-label="Close modal window" data-location-close>
+        <svg class="modal__close-icon" width="11.11" height="11.14">
+          <use href="./images/icons.svg#icon-close"></use>
         </svg>
       </button>
-      <h1 class="modal__title">Our Locations</h1>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33924.63062401115!2d34.54627544168393!3d49.58392329530629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d825e425e6ba6b%3A0xcf3e6bdfb9e4ca82!2z0J_QvtC70YLQsNCy0LAsINCf0L7Qu9GC0LDQstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCDQo9C60YDQsNC40L3QsCwgMzYwMDA!5e0!3m2!1sru!2spl!4v1671795706520!5m2!1sru!2spl"
-        width="224"
-        height="199"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+      <h3 class="modal__title">Our Locations</h3>
+      <picture>
+        <source
+            srcset="./images/contacts/map-mobile.jpg 1x, ./images/contacts/map-mobile-2x.jpg 2x"
+            media="(max-width: 767px)" sizes="(max-width: 767px) 767px, 100vw"
+          />
+          <source
+            srcset="./images/contacts/map-desktop.jpg 1x, ./images/contacts/map-desktop-2x.jpg 2x"
+            media="(min-width: 768px)" sizes="(min-width: 768px) 768px, 100vw"
+          />
+          <img
+            src="./images/contacts/map-mobile.jpg"
+            class="locations-map-img"
+            alt="Our company locations"
+          />
+        </picture>
       <a
         href="https://www.google.com/maps/place/Полтава,+Полтавская+область,+Украина,+36000/@49.6061119,34.5134379,12.78z/data=!4m5!3m4!1s0x40d825e425e6ba6b:0xcf3e6bdfb9e4ca82!8m2!3d49.588267!4d34.5514169"
         class="location__google link"
@@ -48,8 +50,8 @@
     </div>
   </div>
   <div class="backdrop is-hidden" data-franchise>
-    <div class="modal-franchise">
-      <button type="button" class="modal__close" data-franchise-close>
+    <div class="modal-franchise modal-general">
+      <button type="button" class="modal__close" aria-label="Close modal window" data-franchise-close>
         <svg class="modal__close-icon" width="20" height="20">
           <use href="./images/icons.svg#icon-cross"></use>
         </svg>
@@ -64,46 +66,47 @@
         fill out the contact information below and we will reach out for
         additional information. We appreciate your patience.
       </p>
-      <form class="modal__form">
-          <div class="modal__input-wrap">
+      <form class="modal-form">
+          <div class="input-wrap">
             <input
               type="text"
               name="user-name"
-              class="modal__input"
+              class="form-input modal-input icecream-modal-input"
               id="user-name"
               placeholder="Name"
               required
+              pattern="[A-Za-z0-9]+"
             />
           </div>
-          <div class="modal__input-wrap">
+          <div class="input-wrap">
             <input
               type="tel"
               name="user-tel"
-              class="modal__input"
+              class="form-input modal-input icecream-modal-input"
               id="user-tel"
               placeholder="Phone"
+              pattern="[0-9]+"
               required
             />
           </div>
-          <div class="modal__input-wrap">
+          <div class="input-wrap">
             <input
               type="mail"
               name="user-mail"
-              class="modal__input"
+              class="form-input modal-input icecream-modal-input"
               id="user-mail"
               placeholder="Email"
+              pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
               required
             />
           </div>
-        <div class="modal__field-textarea">
           <textarea
             name="user-comment"
             id="user-comment"
-            class="modal__textarea-comment"
+            class="form-input modal-comment icecream-modal-input"
             placeholder="Comment"
           ></textarea>
-        </div>
-        <button type="submit" class="modal__btn btn">Submit</button>
+        <button type="submit" class="modal-btn">Submit</button>
       </form>
     </div>
   </div>
