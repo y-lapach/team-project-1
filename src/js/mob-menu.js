@@ -16,7 +16,9 @@
 })();
 
 jQuery(document).ready(function($) {
-    $('nav .header-list-item a').on('click', function() {
-        $('nav').removeClass('is-open');
+    $('nav').on('click', function() {
+      $('nav').removeClass('is-open');
+      $('.menu-button').removeClass('is-open');
+      $('body').removeClass('no-scroll');
     })
 });
