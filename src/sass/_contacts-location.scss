@@ -115,7 +115,7 @@
 
 .modal-general {
   position: absolute;
-  top: 90%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: transform 300ms linear;
@@ -126,6 +126,7 @@
   border: 2px solid $primary-yellow;
   z-index:60;
   @include tablet {
+    top:50%;
       padding: 32px 60px;
       width: 568px;
   }
