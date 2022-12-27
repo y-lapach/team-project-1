@@ -12,7 +12,7 @@
         <div class="buy-now-radio-button">
           <label class="radio-button-label" for="ice-cream">
             <input class="radio-button-input" type="checkbox" id="ice-cream" />
-            <div class="radio-button-chekbox radio-button-chekbox--green">
+            <p class="radio-button-chekbox radio-button-chekbox--green">
               <img
                 class="radio-img"
                 srcset="
@@ -22,15 +22,15 @@
                 src="./images/header/header-icecream.jpg"
                 alt="Ice cream photo"
               />
-              <div class="radio-img-circle radio-img-circle--green"></div>
-              <p class="radio-button-title">ice cream</p>
-            </div>
+              <span class="radio-img-circle radio-img-circle--green"></span>
+              <span class="radio-button-title">ice cream</span>
+            </p>
           </label>
         </div>
         <div class="buy-now-radio-button">
           <label class="radio-button-label" for="ice-coffee">
             <input class="radio-button-input" type="checkbox" id="ice-coffee" />
-            <div class="radio-button-chekbox radio-button-chekbox--yellow">
+            <p class="radio-button-chekbox radio-button-chekbox--yellow">
               <img
                 class="radio-img"
                 srcset="
@@ -40,15 +40,15 @@
                 src="./images/header/header-icekoffee.jpg"
                 alt="Ice coffee photo"
               />
-              <div class="radio-img-circle radio-img-circle--yellow"></div>
-              <p class="radio-button-title">ice coffee</p>
-            </div>
+              <span class="radio-img-circle radio-img-circle--yellow"></span>
+              <span class="radio-button-title">ice coffee</span>
+            </p>
           </label>
         </div>
         <div class="buy-now-radio-button">
           <label class="radio-button-label" for="milkshake">
             <input class="radio-button-input" type="checkbox" id="milkshake" />
-            <div class="radio-button-chekbox radio-button-chekbox--brown">
+            <p class="radio-button-chekbox radio-button-chekbox--brown">
               <img
                 class="radio-img"
                 srcset="
@@ -58,9 +58,9 @@
                 src="./images/header/header-milkshake.jpg"
                 alt="Milk Shake photo"
               />
-              <div class="radio-img-circle radio-img-circle--brown"></div>
-              <p class="radio-button-title">milkshake</p>
-            </div>
+              <span class="radio-img-circle radio-img-circle--brown"></span>
+              <span class="radio-button-title">milkshake</span>
+            </p>
           </label>
         </div>
       </div>
@@ -157,7 +157,7 @@
           type="text"
           name="user-name"
           class="form-input modal-input icecream-modal-input"
-          id="user-name"
+          id="user-name-icecream"
           placeholder="Name"
           pattern="[A-Za-z0-9]+"
           required
@@ -168,7 +168,7 @@
           type="tel"
           name="user-tel"
           class="form-input modal-input icecream-modal-input"
-          id="user-tel"
+          id="user-tel-icecream"
           placeholder="Phone"
           size="20"
           minlength="9"
@@ -181,7 +181,7 @@
       <div class="input-wrap-textarea">
         <textarea
           name="user-text"
-          id="user-text"
+          id="user-text-icecream"
           class="form-input modal-comment icecream-modal-input"
           placeholder="Comment"
         ></textarea>
@@ -254,7 +254,7 @@
           type="text"
           name="user-name"
           class="form-input modal-input icecoffee-modal-input"
-          id="user-name"
+          id="user-name-icecoffee"
           placeholder="Name"
           pattern="[A-Za-z0-9]+"
           required
@@ -265,7 +265,7 @@
           type="tel"
           name="user-tel"
           class="form-input modal-input icecoffee-modal-input"
-          id="user-tel"
+          id="user-tel-icecoffee"
           placeholder="Phone"
           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
           title="Format: 123-456-7890"
@@ -275,7 +275,7 @@
       <div class="input-wrap-textarea">
         <textarea
           name="user-text"
-          id="user-text"
+          id="user-text-icecoffee"
           class="form-input modal-comment icecoffee-modal-input"
           placeholder="Comment"
         ></textarea>
@@ -351,7 +351,7 @@
           type="text"
           name="user-name"
           class="form-input modal-input milkshake-modal-input"
-          id="user-name"
+          id="user-name-milkshake"
           placeholder="Name"
           pattern="[A-Za-z0-9]+"
           required
@@ -362,7 +362,7 @@
           type="tel"
           name="user-tel"
           class="form-input modal-input milkshake-modal-input"
-          id="user-tel"
+          id="user-tel-milkshake"
           placeholder="Phone"
           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
           title="Format: 123-456-7890"
@@ -372,7 +372,7 @@
       <div class="input-wrap-textarea">
         <textarea
           name="user-text"
-          id="user-text"
+          id="user-text-milkshake"
           class="form-input modal-comment milkshake-modal-input"
           placeholder="Comment"
         ></textarea>
@@ -491,7 +491,7 @@
       <div class="input-wrap">
         <input
           type="text"
-          name="user-name"
+          name="user-name-franchise"
           class="form-input modal-input icecream-modal-input"
           id="user-name"
           placeholder="Name"
@@ -502,7 +502,7 @@
       <div class="input-wrap">
         <input
           type="tel"
-          name="user-tel"
+          name="user-tel-franchise"
           class="form-input modal-input icecream-modal-input"
           id="user-tel"
           placeholder="Phone"
@@ -516,7 +516,7 @@
           type="mail"
           name="user-mail"
           class="form-input modal-input icecream-modal-input"
-          id="user-mail"
+          id="user-mail-franchise"
           placeholder="Email"
           pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
           required
@@ -525,7 +525,7 @@
       <div class="input-wrap-textarea">
         <textarea
           name="user-comment"
-          id="user-comment"
+          id="user-comment-franchise"
           class="form-input modal-comment icecream-modal-input"
           placeholder="Comment"
         ></textarea>

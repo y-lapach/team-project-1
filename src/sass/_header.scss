@@ -297,6 +297,9 @@ transform: scaleX(1);
   margin-top: 63px;
   border-radius: 15px;
 }
+.radio-button-chekbox span{
+  display: block;
+}
 
 .radio-button-chekbox--green {
   border: 2px solid $green-outline;
