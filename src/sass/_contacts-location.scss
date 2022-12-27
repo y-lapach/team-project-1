@@ -155,8 +155,7 @@
   pointer-events: none;
   
 }
-.backdrop.is-hidden .modal-franchise,
-.backdrop.is-hidden .modal-location {
+.backdrop.is-hidden .modal-general {
   transform: translate(-50%, -50%) scale(0);
   transition: transform 300ms linear;
 }
