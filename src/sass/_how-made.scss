@@ -201,9 +201,6 @@
     min-height: 430px;
   }
 }
-.backdrop.is-hidden .about-modal {
-  transform: translate(-50%, -50%) scale(0);
-}
 .about-modal-title {
   text-align: center;
   font-family: $font-seymour;

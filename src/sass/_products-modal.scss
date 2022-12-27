@@ -13,9 +13,6 @@
   display: block;
   position: absolute;
 }
-.backdrop.is-hidden .products-modal {
-  transform: translate(-50%, -50%) scale(0);
-}
 .products-modal-title {
   font-family: $font-seymour;
   font-size: 20px;
