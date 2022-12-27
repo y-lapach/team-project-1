@@ -208,6 +208,7 @@
   &:hover,
   &:focus {
     color:$primary-yellow;
+    
   }
 }
 
@@ -215,6 +216,11 @@
   width: 41px;
   height: 16px;
   fill: currentColor;
+  &:hover,
+  &:focus {
+    animation: tilt-shaking 0.25s infinite;
+    
+  }
 }
 
 .hero-statistics-list {
