@@ -1,4 +1,4 @@
-.dev-list {
+.dev-photo-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -6,7 +6,7 @@
   list-style-type: none;
 }
 
-.dev-item {
+.dev-photo-item {
   flex-basis: calc((100% - 90px) / 4);
 
   @include tablet {
@@ -17,7 +17,7 @@
   }
 }
 
-.dev-link {
+.dev-photo-link {
   display: block;
   text-decoration: none;
   transition-property: box-shadow;
@@ -28,12 +28,12 @@
   }
 }
 
-.dev-wrap {
+.dev-photo-wrap {
   position: relative;
   overflow: hidden;
 }
 
-.dev-text-top {
+.dev-photo-text-top {
   position: absolute;
   top: 0;
   font-size: 18px;
@@ -48,12 +48,12 @@
   transition-property: transform;
   transition-duration: 300ms;
   transition-timing-function: linear;
-  .dev-link:hover & {
+  .dev-photo-link:hover & {
     transform: translateY(0);
   }
 }
 
-.dev-text-wrap {
+.dev-photo-text-wrap {
   text-align: start;
   padding: 20px 24px;
   background-color: $primary-yellow;
@@ -64,7 +64,7 @@
   margin-top: 10px;
 }
 
-.dev-name {
+.dev-photo-name {
   font-size: 18px;
   font-weight: 700;
   line-height: calc(36 / 18);
@@ -72,7 +72,7 @@
   color: $green-hover;
 }
 
-.dev-type {
+.dev-photo-type {
   font-size: 12px;
   font-weight: 600;
   line-height: 1.9;

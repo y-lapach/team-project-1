@@ -1,36 +1,16 @@
-.nav-list {
-  display: flex;
-  column-gap: 50px;
-  font-weight: 500;
-  font-size: 14px;
-  list-style-type: none;
-}
-
-.nav-button {
-  display: none;
-}
-
-.nav-link {
-  color: #000;
-}
-
-.nav-link.active {
-  color: #606060;
-}
-
-.header {
+.develop-header {
   padding-top: 46px;
   background-color: #F1F1F1;
 }
 
-.header-nav {
+.dev-header-nav-wrap {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 60px;
 }
 
-.logo {
+.dev-header-logo {
   position: relative;
   padding: 0 12px 3px 0;
   font-weight: 700;
@@ -39,7 +19,7 @@
   color: #000;
 }
 
-.logo::after {
+.dev-header-logo::after {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -48,28 +28,48 @@
   display: block;
   width: 8px;
   height: 8px;
-  background-color: #FDA300;
+  background-color: $primary-yellow;
   border-radius: 50%;
 }
 
-.header-row {
+.dev-heder-logo-na {
+  color: $primary-yellow;
+}
+
+.dev-header-nav-list {
+  display: flex;
+  column-gap: 50px;
+  font-weight: 500;
+  font-size: 14px;
+  list-style-type: none;
+}
+
+.dev-header-nav-link {
+  color: #000;
+}
+
+.dev-header-nav-link.active {
+  color: #606060;
+}
+
+.dev-header-row {
   display: flex;
   justify-content: space-between;
   column-gap: 30px;
 }
 
-.header-content {
+.dev-header-content {
   margin-top: 124px;
   max-width: 500px;
   line-height: 75px;
 }
 
-.header-heading {
+.dev-header-heading {
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 44px;
 }
 
-.header-content p {
+.dev-header-content p {
   line-height: 2;
 }
