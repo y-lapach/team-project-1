@@ -126,12 +126,11 @@
   border: 2px solid $primary-yellow;
   z-index:60;
   @include tablet {
+    top: 50%;
       padding: 32px 60px;
       width: 568px;
   }
-    @include desktop {
-      top: 50%;
-    }
+
 }
 
 .modal-location {
