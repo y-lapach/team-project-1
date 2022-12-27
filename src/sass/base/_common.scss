@@ -16,9 +16,6 @@ button {
     cursor: pointer;
 }
 
-input {
-    cursor: pointer;
-}
 
 body {
     font-family: $font-montserrat;
@@ -27,6 +24,9 @@ body {
     background-image: url('../images/body/background-mobile.jpg');
     background-repeat: repeat;
     background-attachment: fixed;
+}
+body.modal-open {
+    overflow: hidden;
 }
     
     @media (min-device-pixel-ratio: 2),
