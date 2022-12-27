@@ -30,17 +30,9 @@
   max-height: 422px;
   left: 50%;
   top: 50%;
-  -webkit-background-size: cover;
   background-size: cover;
   background-position: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  -webkit-animation: imagesFading 6s infinite;
-  -moz-animation: imagesFading 6s infinite;
-  -o-animation: imagesFading 6s infinite;
   animation: imagesFading 6s infinite;
 
   @include tablet {

@@ -1,9 +1,9 @@
 .contacts {
   position: relative;
   background-image: linear-gradient(
-    to top,
-    $primary-green 75%,
-    transparent 0
+    to bottom,
+    transparent 25%,
+    $primary-green 0
   );
   background-repeat: no-repeat;
   background-position: center;
@@ -13,17 +13,17 @@
 
   @include tablet {
     background-image: linear-gradient(
-      to top,
-      $primary-green 55%,
-      transparent 0
+      to bottom,
+      transparent 45%,
+      $primary-green 0
     );
     padding-bottom: 20px;
   }
   @include desktop {
     background-image: linear-gradient(
-      to top,
-      $primary-green 82%,
-      transparent 0
+      to bottom,
+      transparent 18%,
+      $primary-green 0
     );
     padding-bottom: 60px;
   }

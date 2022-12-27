@@ -1,6 +1,9 @@
-.products {
+.section-products {
     padding-top: 60px;
-    padding-bottom: 60px;
+        padding-bottom: 60px;
+}
+.products {
+
     position: relative;
 }
 .products-label {
@@ -110,12 +113,22 @@
     border-radius: 50%;
     transform: translateX(-50%) translateY(-60%);
 
-    background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), $light-grey;
-    box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
-
     @include desktop {
         height: 302px;
         width: 302px;   
+    }
+}
+@-webkit-keyframes blink {
+    100% {
+        box-shadow: 0 10px 25px #0a881740;
+        ;
+    }
+}
+
+@keyframes blink {
+    100% {
+        box-shadow: 0 10px 25px #0a881740;
+        ;
     }
 }
 
@@ -130,7 +143,23 @@
         left: 50%;
         top: -4%;
         transform: translateX(-50%);
-        background-image: url(../images/products/products-ice-cream-mob.jpg); 
+        @include tablet {
+                top: -5%;
+            }
+        
+            @include desktop {
+                width: 302px;
+                height: 302px;
+            }
+        
+    }
+.circle-icecream {
+    background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), $light-grey;
+    box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+
+    animation: blink 0.7s infinite alternate;
+    &::before {
+    background-image: url(../images/products/products-ice-cream-mob.jpg); 
         
         @include retina {
         background-image: url(../images/products/products-ice-cream-mob-2x.jpg);   
@@ -154,6 +183,8 @@
                 }
         }
     }
+
+}
 .circle-coffee {
     background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), $light-grey;
     box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25); 
@@ -261,7 +292,22 @@
     background-color: transparent;
     border: none;
     margin: auto;
+    color:$primary-dark;
+    
+    &:hover {
+        color:$green-hover;
+    }
+    &:focus {
+        color:$primary-light;
+    }
+    &:hover,
+    &:focus {
+        transition: all .5s ease;
+        animation: tilt-shaking 0.25s infinite;
+        
+    }
 }
+
 .products-modal-open {
     fill: currentColor;
 }

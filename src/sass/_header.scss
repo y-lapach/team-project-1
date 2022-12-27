@@ -157,7 +157,7 @@ transform: scaleX(1);
   font-weight: 600;
   line-height: calc(17 / 14);
   background-color: $primary-yellow;
-  color: $black;
+  color: $primary-dark;
   transition: all .5s ease;
 
   &:disabled {
@@ -251,63 +251,11 @@ transform: scaleX(1);
   }
 }
 
-.buy-now-backdrop {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 3;
-  opacity: 1;
-  transition: opacity 300ms linear, visibility 300ms linear;
-}
-
-.backdrop-buy-now--is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.buy-now-modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 280px;
-  padding: 28px;
-  border: 2px solid $primary-yellow;
-  border-radius: 10px;
-  background-color: $primary-light;
-  transform: translate(-50%, -45vh);
-  transition: transform 250ms ease-in-out;
-
-  @include tablet {
-    width: 568px;
-    padding: 32px 54px;
-  }
-
-  @include desktop {
-    transform: translate(-50%, -50%);
-  }
-}
-
-.buy-now-btn-close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  padding: 0;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-}
+/*------HEADER MODAL---------------*/
 
 .buy-now-title {
   margin-bottom: 20px;
-  font-family: Seymour One, sans-serif;
+  font-family: $font-seymour;
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
@@ -348,6 +296,9 @@ transform: scaleX(1);
   height: 136px;
   margin-top: 63px;
   border-radius: 15px;
+}
+.radio-button-label span{
+  display: block;
 }
 
 .radio-button-chekbox--green {
@@ -469,28 +420,9 @@ transform: scaleX(1);
   color: $primary-dark;
   transition: border 250ms ease-in-out, background-color 250ms ease-in-out;
 
-  &:focus {
-    border: 1px solid #556b4c;
-    background-color: #f9fde4;
-  }
-
   @include tablet {
     font-size: 14px;
     height: 42px;
-  }
-}
-
-.buy-now-input:not(:focus):not(:placeholder-shown):invalid {
-  background-color: rgba(241, 153, 171, 0.644);
-}
-
-.buy-now-input::placeholder {
-  font-size: 12px;
-  line-height: 1.4;
-  color: $primary-dark;
-
-  @include tablet {
-    font-size: 14px;
   }
 }
 
@@ -503,13 +435,7 @@ transform: scaleX(1);
   border-radius: 10px;
   background-color: $input-bg;
   outline: 0;
-
   transition: border 250ms ease-in-out, background-color 250ms ease-in-out;
-
-  &:focus {
-    border: 1px solid #556b4c;
-    background-color: #f9fde4;
-  }
 
   @include tablet {
     height: 84px;
@@ -524,19 +450,4 @@ transform: scaleX(1);
   @include tablet {
     font-size: 14px;
   }
-}
-
-.buy-now-btn-submit {
-  display: flex;
-  margin: 0 auto;
-  height: 42px;
-  width: 121px;
-  border-radius: 10px;
-  background-color: $primary-yellow;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: calc(17 / 14);
-  align-items: center;
-  justify-content: center;
-  color: $primary-dark;
 }

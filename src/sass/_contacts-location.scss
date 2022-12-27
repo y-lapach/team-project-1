@@ -27,7 +27,6 @@
   transition: all .5s ease;
 }
 .button-location {
-  border: none;
   background-color: $primary-yellow;
 }
 
@@ -65,7 +64,9 @@
   margin-left: 7px;
   fill: currentColor;
 }
-//  <-- Модальные окна -->
+
+
+/*-- Модальные окна --*/
 
 .backdrop {
   position: fixed;
@@ -74,24 +75,35 @@
   height: 100%;
   background-color: rgba(48, 48, 48, 0.56);
   transition: opacity 300ms linear, visibility 300ms linear;
+  overflow-y: auto;
+  z-index:50;
 }
 
 .modal__close {
   position: absolute;
-  width: 20px;
-  height: 20px;
-  right: 12px;
-  top: 12px;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  background-color: transparent;
-  @include tablet {
+    top: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primary-dark;
+    background-color: $primary-light;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+  
+    @include tablet {
       width: 24px;
       height: 24px;
     }
+  
+    &:hover,
+    &:focus {
+      color: $primary-yellow;
+    }
 }
 .modal__close-icon {
+  fill: currentColor;
   width:11.11px;
   height:11.14px;
 
@@ -112,11 +124,13 @@
   background-color: $primary-light;
   border-radius: 10px;
   border: 2px solid $primary-yellow;
+  z-index:60;
   @include tablet {
       padding: 32px 60px;
       width: 568px;
   }
 }
+
 .modal-location {
   min-height: 365px;
 
@@ -137,10 +151,12 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  
 }
 .backdrop.is-hidden .modal-franchise,
 .backdrop.is-hidden .modal-location {
   transform: translate(-50%, -50%) scale(0);
+  transition: transform 300ms linear;
 }
 
 .modal__title {
@@ -197,7 +213,7 @@
 .modal__text {
   font-size: 14px;
   line-height: 1.4;
-  text-align: left;
+  text-align: start;
   vertical-align: top;
   margin-bottom: 24px;
 

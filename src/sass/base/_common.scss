@@ -16,9 +16,6 @@ button {
     cursor: pointer;
 }
 
-input {
-    cursor: pointer;
-}
 
 body {
     font-family: $font-montserrat;
@@ -27,6 +24,9 @@ body {
     background-image: url('../images/body/background-mobile.jpg');
     background-repeat: repeat;
     background-attachment: fixed;
+}
+body.modal-open {
+    overflow: hidden;
 }
     
     @media (min-device-pixel-ratio: 2),
@@ -87,4 +87,25 @@ body {
         padding: 0 16px;
     }
 
+}
+@keyframes tilt-shaking {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(0eg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
