@@ -1,7 +1,7 @@
-.footer-main{
-    background-color: $primary-green;
-    padding-top:30px;
-    @include tablet {
+.footer-main {
+  background-color: $primary-green;
+  padding-top: 30px;
+  @include tablet {
     padding-top: 20px;
   }
   @include desktop {
@@ -9,157 +9,164 @@
   }
 }
 .footer-company-info {
-    margin-bottom: 40px;
-   @include tablet {
-        display: flex;
-        align-items: center;
-        margin-bottom: 48px;
-    }
-    @include desktop {
-        margin-bottom: 60px;
-    } 
+  margin-bottom: 40px;
+  @include tablet {
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+  @include desktop {
+    margin-bottom: 60px;
+  }
 }
 
 .slogan-container {
-    width:280px;
+  width: 280px;
 
-    @include tablet {
-        width: 352px;
-    }
-    @include desktop {
-        width: auto;
-    }
+  @include tablet {
+    width: 352px;
+  }
+  @include desktop {
+    width: auto;
+  }
 }
 .footer-title {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    color: $primary-light;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: $primary-light;
 
-    @include tablet {
-        font-size: 26px;
-        letter-spacing: 0.04em;
-    }
-    @include desktop {
-        font-size: 30px;
-    }
+  @include tablet {
+    font-size: 26px;
+    letter-spacing: 0.04em;
+  }
+  @include desktop {
+    font-size: 30px;
+  }
 }
 .footer-title-span {
-    display: block;
-    margin-top: 16px;
-    margin-bottom: 60px;
-    font-size: 34px;
-    letter-spacing: 0.04em;
-    color: $primary-light;
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 60px;
+  font-size: 34px;
+  letter-spacing: 0.04em;
+  color: $primary-light;
 
-    @include tablet {
-        margin-top: 8px;
-        margin-bottom: 32px;
-        font-size: 48px;
-        letter-spacing: 0.06em;
-    }
-    
-    @include desktop {
-        margin-top: 14px;
-        margin-bottom: 0;
-        font-size: 58px;
-        line-height: calc(71 / 58);
-    }
+  @include tablet {
+    margin-top: 8px;
+    margin-bottom: 32px;
+    font-size: 48px;
+    letter-spacing: 0.06em;
+  }
+
+  @include desktop {
+    margin-top: 14px;
+    margin-bottom: 0;
+    font-size: 58px;
+    line-height: calc(71 / 58);
+  }
 }
 .ftr-contacts {
-    text-align: end;
+  text-align: end;
 
-    @include tablet {
-        margin-left:auto;
-    }
-   
+  @include tablet {
+    margin-left: auto;
+  }
 }
-.footer-social-list{
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 20px;
+.footer-social-list {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
 
-    @include tablet {
-        margin-bottom: 34px;
-    }
-    @include desktop {
-        margin-bottom: 40px;
-    }
+  @include tablet {
+    margin-bottom: 34px;
+  }
+  @include desktop {
+    margin-bottom: 40px;
+  }
 }
-
-
 
 .footer-social-item {
-    border-radius: 50%;
-    background-color: $primary-yellow;
-    
-    &:not(:last-child) {
-        margin-right: 20px;
-    }
+  border-radius: 50%;
+  background-color: $primary-yellow;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
 }
 .footer-social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width:34px;
-    height: 34px;
-    color: $primary-green;
-    transition: all .5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  color: $primary-green;
+  transition: all 0.5s ease;
 
-    &:hover,
-    &:focus {
-        color: $primary-light;
-    }
+  &:hover,
+  &:focus {
+    color: $primary-light;
+  }
 }
 
 .footer-social-icon {
-    fill:currentColor;
+  fill: currentColor;
 }
 .footer-contact-tel {
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 1.8;
-    color: $primary-dark;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.8;
+  color: $primary-dark;
 
-    @include tablet {
-        font-size: 14px;
-    }
-    @include desktop {
-        font-size: 16px;
-    }
+  @include tablet {
+    font-size: 14px;
+  }
+  @include desktop {
+    font-size: 16px;
+  }
 }
 .footer-tel-number {
-    color: $primary-light;
+  color: $primary-light;
 }
-.footer-copyright {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    padding: 20px;
-    border-top: 1px solid $grey-divider;
 
-    @include tablet {
-        padding: 12px;
-    }
-    @include desktop {
-        width: calc(100% - 2 * 16px);
-    }
+.footer-wrap {
+  display: flex;
+  // align-items: flex-start;
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  border-top: 1px solid $grey-divider;
+
+  @include tablet {
+    padding: 12px;
+  }
+  @include desktop {
+    width: calc(100% - 2 * 16px);
+  }
 }
 .footer-rights {
-    width:280px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.5;
-    color: $dark-grey;
+  width: 280px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $dark-grey;
 
-    @include tablet {
-        width: auto;
-        line-height: 1.8;
-        letter-spacing: 0.02em;
+  @include tablet {
+    width: auto;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+  }
+  @include desktop {
+    font-size: 12px;
+
+    &-name {
+      color: $primary-yellow;
     }
-    @include desktop {
-        font-size: 12px;;
-    }
+  }
 }
