@@ -257,9 +257,16 @@ transform: scaleX(1);
 /*------HEADER MODAL---------------*/
 .header-modal,
 .products-modal {
-@media (max-width:768px) and (max-height:895px){
+  
+@media (max-width:768px) and (max-height:920px){
     top: 60% !important;
   }
+    @media (max-width:768px) and (max-height:740px) {
+      top: 70% !important;
+    }
+    @media (max-height:667px) {
+      top: 80% !important;
+    }
   }
 .header-modal::after{
   content: '';
