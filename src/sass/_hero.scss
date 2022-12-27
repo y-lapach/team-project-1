@@ -202,11 +202,19 @@
 
   }
 }
+.hero-info-link {
+  color: $primary-light;
+
+  &:hover,
+  &:focus {
+    color:$primary-yellow;
+  }
+}
 
 .hero-info-icon {
   width: 41px;
   height: 16px;
-  fill: $primary-light;
+  fill: currentColor;
 }
 
 .hero-statistics-list {
@@ -218,7 +226,7 @@
 }
 
 .hero-item-stat {
-  text-align: right;
+  text-align: end;
 }
 
 .hero-item-stat:not(:last-child) {

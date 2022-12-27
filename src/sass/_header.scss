@@ -157,7 +157,7 @@ transform: scaleX(1);
   font-weight: 600;
   line-height: calc(17 / 14);
   background-color: $primary-yellow;
-  color: $black;
+  color: $primary-dark;
   transition: all .5s ease;
 
   &:disabled {
