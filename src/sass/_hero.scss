@@ -36,6 +36,7 @@
 
 .hero-title {
   width: 247px;
+  height: 97px;
   font-family: $font-seymour;
   font-weight: 400;
   font-size: 26px;
@@ -51,22 +52,49 @@
 
   @include desktop {
     width: 367px;
+    height: 144px;
     margin-bottom: 28px;
     font-size: 38px;
     line-height: calc(48 / 38);
+  }
+}
+.hero-title-1 {
+  display: block;
+  min-height: 68px;
+  @include desktop {
+      min-height: 96px;
   }
 }
 
 .hero-title-2 {
   font-size: 34px;
   line-height: 0.95;
+  animation-name: fadeInOut;
+  animation-delay: 8.5s;
+  animation-duration: 9s;
 
   @include desktop {
     font-size: inherit;
     line-height: inherit;
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
 
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1.4s;
+  animation-delay: 1.9s;
+}
 .hero-list-link {
   display: flex;
 }
@@ -174,11 +202,19 @@
 
   }
 }
+.hero-info-link {
+  color: $primary-light;
+
+  &:hover,
+  &:focus {
+    color:$primary-yellow;
+  }
+}
 
 .hero-info-icon {
   width: 41px;
   height: 16px;
-  fill: $primary-light;
+  fill: currentColor;
 }
 
 .hero-statistics-list {
@@ -190,7 +226,7 @@
 }
 
 .hero-item-stat {
-  text-align: right;
+  text-align: end;
 }
 
 .hero-item-stat:not(:last-child) {

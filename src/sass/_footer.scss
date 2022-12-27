@@ -9,13 +9,17 @@
   }
 }
 .footer-company-info {
+    margin-bottom: 40px;
    @include tablet {
+        display: flex;
+        align-items: center;
         margin-bottom: 48px;
     }
     @include desktop {
         margin-bottom: 60px;
     } 
 }
+
 .slogan-container {
     width:280px;
 
@@ -55,6 +59,7 @@
         font-size: 48px;
         letter-spacing: 0.06em;
     }
+    
     @include desktop {
         margin-top: 14px;
         margin-bottom: 0;
@@ -63,7 +68,7 @@
     }
 }
 .ftr-contacts {
-    text-align: right;
+    text-align: end;
 
     @include tablet {
         margin-left:auto;
@@ -83,12 +88,7 @@
     }
 }
 
-.footer-company-info {
-    @include tablet {
-        display: flex;
-        align-items: center;
-    }
-}
+
 
 .footer-social-item {
     border-radius: 50%;
@@ -104,17 +104,25 @@
     justify-content: center;
     width:34px;
     height: 34px;
-    fill: $primary-green;
+    color: $primary-green;
+    transition: all .5s ease;
+
+    &:hover,
+    &:focus {
+        color: $primary-light;
+    }
+}
+
+.footer-social-icon {
+    fill:currentColor;
 }
 .footer-contact-tel {
-    margin-bottom: 40px;
     font-weight: 700;
     font-size: 12px;
     line-height: 1.8;
     color: $primary-dark;
 
     @include tablet {
-        margin-bottom: 0;
         font-size: 14px;
     }
     @include desktop {

@@ -12,4 +12,5 @@
     document.body.classList.toggle("modal-open");
     refs.location.classList.toggle("is-hidden");
   }
+  
 })();

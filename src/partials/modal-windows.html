@@ -1,3 +1,422 @@
+<!----------------HEADER SECTION BUY NOW POPUP----------------->
+<div class="backdrop is-hidden" data-modal-buy-now>
+  <div class="modal-general">
+    <button type="button" class="modal__close" data-modal-buy-now-close>
+      <svg class="modal__close-icon" width="11.11" height="11.14">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+    <p class="buy-now-title">Buy now</p>
+    <form class="buy-now-form" action="#">
+      <div class="buy-now-radio-buttons">
+        <div class="buy-now-radio-button">
+          <label class="radio-button-label" for="ice-cream">
+            <input class="radio-button-input" type="checkbox" id="ice-cream" />
+            <span class="radio-button-chekbox radio-button-chekbox--green">
+              <img
+                class="radio-img"
+                srcset="
+                  ./images/header/header-icecream.jpg    1x,
+                  ./images/header/header-icecream-2x.jpg 2x
+                "
+                src="./images/header/header-icecream.jpg"
+                alt="Ice cream photo"
+              />
+              <span class="radio-img-circle radio-img-circle--green"></span>
+              <span class="radio-button-title">ice cream</span>
+            </span>
+          </label>
+        </div>
+        <div class="buy-now-radio-button">
+          <label class="radio-button-label" for="ice-coffee">
+            <input class="radio-button-input" type="checkbox" id="ice-coffee" />
+            <span class="radio-button-chekbox radio-button-chekbox--yellow">
+              <img
+                class="radio-img"
+                srcset="
+                  ./images/header/header-icekoffee.jpg    1x,
+                  ./images/header/header-icekoffee-2x.jpg 2x
+                "
+                src="./images/header/header-icekoffee.jpg"
+                alt="Ice coffee photo"
+              />
+              <span class="radio-img-circle radio-img-circle--yellow"></span>
+              <span class="radio-button-title">ice coffee</span>
+            </span>
+          </label>
+        </div>
+        <div class="buy-now-radio-button">
+          <label class="radio-button-label" for="milkshake">
+            <input class="radio-button-input" type="checkbox" id="milkshake" />
+            <span class="radio-button-chekbox radio-button-chekbox--brown">
+              <img
+                class="radio-img"
+                srcset="
+                  ./images/header/header-milkshake.jpg    1x,
+                  ./images/header/header-milkshake-2x.jpg 2x
+                "
+                src="./images/header/header-milkshake.jpg"
+                alt="Milk Shake photo"
+              />
+              <span class="radio-img-circle radio-img-circle--brown"></span>
+              <span class="radio-button-title">milkshake</span>
+            </span>
+          </label>
+        </div>
+      </div>
+      <div class="buy-now-input-wrap">
+        <input
+          class="buy-now-input"
+          type="text"
+          placeholder="Name"
+          minlength="5"
+          required
+        />
+        <input
+          class="buy-now-input"
+          type="tel"
+          placeholder="Phone"
+          required
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          title="Format: 123-456-7890"
+        />
+        <textarea class="buy-now-textarea" placeholder="Comment"></textarea>
+      </div>
+      <button class="modal-btn" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!----------------PRODUCTS SECTION MODAL WINDOWS----------------->
+<div class="backdrop is-hidden" data-icecream>
+  <div class="products-modal modal-general">
+    <button
+      type="button"
+      class="modal__close"
+      aria-label="Close modal window"
+      data-icecream-close
+    >
+      <svg class="modal__close-icon" width="11.11" height="11.14">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+    <h3 class="products-modal-title">Chololate ice&nbsp;cream</h3>
+    <div class="icon-wrap modal-icecream-circle">
+      <div class="products-modal-icon modal-icecream-img"></div>
+    </div>
+    <ul class="products-list icecream-nutr list">
+      <li class="products-link icecream-nutr-item">
+        <p class="products-number icecream-nutr-numb">320</p>
+        <p class="products-text">ckal</p>
+      </li>
+      <li class="products-link icecream-nutr-item">
+        <p class="products-number icecream-nutr-numb">4g</p>
+        <p class="products-text">Protein</p>
+      </li>
+      <li class="products-link icecream-nutr-item">
+        <p class="products-number icecream-nutr-numb">8,2g</p>
+        <p class="products-text">Fats</p>
+      </li>
+      <li class="products-link icecream-nutr-item">
+        <p class="products-number icecream-nutr-numb">40,4g</p>
+        <p class="products-text">Carbs</p>
+      </li>
+    </ul>
+    <div class="products-modal-section">
+      <h3 class="modal-section-title">Ingredients</h3>
+      <ul class="list modal-section-list">
+        <li class="modal-section-link">
+          Milk
+          <span>100ml</span>
+        </li>
+        <li class="modal-section-link">
+          Belgian chocolate
+          <span>20g</span>
+        </li>
+        <li class="modal-section-link">
+          Cream
+          <span>150ml</span>
+        </li>
+        <li class="modal-section-link">
+          Cocoa powder
+          <span>30g</span>
+        </li>
+        <li class="modal-section-link">
+          Sugar
+          <span>40g</span>
+        </li>
+        <li class="modal-section-link">
+          Vanilla sugar
+          <span>10g</span>
+        </li>
+      </ul>
+    </div>
+    <form class="modal-form">
+      <div class="input-wrap">
+        <input
+          type="text"
+          name="user-name"
+          class="form-input modal-input icecream-modal-input"
+          id="user-name-icecream"
+          placeholder="Name"
+          pattern="[A-Za-z0-9]+"
+          required
+        />
+      </div>
+      <div class="input-wrap">
+        <input
+          type="tel"
+          name="user-tel"
+          class="form-input modal-input icecream-modal-input"
+          id="user-tel-icecream"
+          placeholder="Phone"
+          size="20"
+          minlength="9"
+          maxlength="14"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          title="Format: 123-456-7890"
+          required
+        />
+      </div>
+      <div class="input-wrap-textarea">
+        <textarea
+          name="user-text"
+          id="user-text-icecream"
+          class="form-input modal-comment icecream-modal-input"
+          placeholder="Comment"
+        ></textarea>
+      </div>
+      <button type="submit" class="modal-btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!---------------------------MODAL 2-------------------->
+
+<div class="backdrop is-hidden" data-icecoffee>
+  <div class="products-modal modal-general">
+    <button
+      type="button"
+      class="modal__close"
+      aria-label="Close modal window"
+      data-icecoffee-close
+    >
+      <svg class="modal__close-icon" width="11.11" height="11.14">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+    <h2 class="products-modal-title">Ice coffee</h2>
+    <div class="icon-wrap modal-icecoffee-circle">
+      <div class="products-modal-icon modal-icecoffee-img"></div>
+    </div>
+    <ul class="products-list icecoffee-nutr list">
+      <li class="products-link icecoffee-nutr-item">
+        <p class="products-number icecoffee-nutr-numb">180</p>
+        <div class="products-text">ckal</div>
+      </li>
+      <li class="products-link icecoffee-nutr-item">
+        <p class="products-number icecoffee-nutr-numb">5g</p>
+        <div class="products-text">Protein</div>
+      </li>
+      <li class="products-link icecoffee-nutr-item">
+        <p class="products-number icecoffee-nutr-numb">3g</p>
+        <div class="products-text">Fats</div>
+      </li>
+      <li class="products-link icecoffee-nutr-item">
+        <p class="products-number icecoffee-nutr-numb">32g</p>
+        <div class="products-text">Carbs</div>
+      </li>
+    </ul>
+    <div class="products-modal-section">
+      <h3 class="modal-section-title">Ingredients</h3>
+      <ul class="list modal-section-list">
+        <li class="modal-section-link">
+          Coffee
+          <span>35g</span>
+        </li>
+        <li class="modal-section-link">
+          Filtered water
+          <span>330g</span>
+        </li>
+        <li class="modal-section-link">
+          Ice
+          <span>170g</span>
+        </li>
+        <li class="modal-section-link">
+          Milk
+          <span>30ml</span>
+        </li>
+      </ul>
+    </div>
+    <form class="modal-form">
+      <div class="input-wrap">
+        <input
+          type="text"
+          name="user-name"
+          class="form-input modal-input icecoffee-modal-input"
+          id="user-name-icecoffee"
+          placeholder="Name"
+          pattern="[A-Za-z0-9]+"
+          required
+        />
+      </div>
+      <div class="input-wrap">
+        <input
+          type="tel"
+          name="user-tel"
+          class="form-input modal-input icecoffee-modal-input"
+          id="user-tel-icecoffee"
+          placeholder="Phone"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          title="Format: 123-456-7890"
+          required
+        />
+      </div>
+      <div class="input-wrap-textarea">
+        <textarea
+          name="user-text"
+          id="user-text-icecoffee"
+          class="form-input modal-comment icecoffee-modal-input"
+          placeholder="Comment"
+        ></textarea>
+      </div>
+      <button type="submit" class="modal-btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!---------------------------MODAL 3-------------------->
+<div class="backdrop is-hidden" data-milkshake>
+  <div class="products-modal modal-general">
+    <button
+      type="button"
+      class="modal__close"
+      aria-label="Close modal window"
+      data-milkshake-close
+    >
+      <svg class="modal__close-icon" width="11.11" height="11.14">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+    <h2 class="products-modal-title">Milkshake</h2>
+    <div class="icon-wrap modal-milkshake-circle">
+      <div class="products-modal-icon modal-milkshake-img"></div>
+    </div>
+    <ul class="products-list milkshake-nutr list">
+      <li class="products-link milkshake-nutr-item">
+        <p class="products-number milkshake-nutr-numb">11,2</p>
+        <p class="products-text">ckal</p>
+      </li>
+      <li class="products-link milkshake-nutr-item">
+        <p class="products-number milkshake-nutr-numb">3,9g</p>
+        <p class="products-text">Protein</p>
+      </li>
+      <li class="products-link milkshake-nutr-item">
+        <p class="products-number milkshake-nutr-numb">3g</p>
+        <p class="products-text">Fats</p>
+      </li>
+      <li class="products-link milkshake-nutr-item">
+        <p class="products-number milkshake-nutr-numb">18g</p>
+        <p class="products-text">Carbs</p>
+      </li>
+    </ul>
+    <div class="products-modal-section">
+      <h3 class="modal-section-title">Ingredients</h3>
+      <ul class="list modal-section-list">
+        <li class="modal-section-link">
+          Milk
+          <span>400ml</span>
+        </li>
+        <li class="modal-section-link">
+          Whipped cream
+          <span>50g</span>
+        </li>
+        <li class="modal-section-link">
+          Ice cream
+          <span>200g</span>
+        </li>
+        <li class="modal-section-link">
+          Sugar
+          <span>40g</span>
+        </li>
+        <li class="modal-section-link">
+          Vanilla sugar
+          <span>10g</span>
+        </li>
+      </ul>
+    </div>
+    <form class="modal-form">
+      <div class="input-wrap">
+        <input
+          type="text"
+          name="user-name"
+          class="form-input modal-input milkshake-modal-input"
+          id="user-name-milkshake"
+          placeholder="Name"
+          pattern="[A-Za-z0-9]+"
+          required
+        />
+      </div>
+      <div class="input-wrap">
+        <input
+          type="tel"
+          name="user-tel"
+          class="form-input modal-input milkshake-modal-input"
+          id="user-tel-milkshake"
+          placeholder="Phone"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          title="Format: 123-456-7890"
+          required
+        />
+      </div>
+      <div class="input-wrap-textarea">
+        <textarea
+          name="user-text"
+          id="user-text-milkshake"
+          class="form-input modal-comment milkshake-modal-input"
+          placeholder="Comment"
+        ></textarea>
+      </div>
+      <button type="submit" class="modal-btn">Submit</button>
+    </form>
+  </div>
+</div>
+<!------------------------END-------------->
+
+<!---------MODAL WITh VIDEO------->
+<div class="backdrop is-hidden" data-how-made>
+  <div class="about-modal modal-general">
+    <button
+      type="button"
+      class="modal__close"
+      aria-label="Close modal window"
+      data-how-made-close
+    >
+      <svg class="modal__close-icon" width="11.11" height="11.14">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+    <h3 class="about-modal-title">How it’s made?</h3>
+    <iframe
+      class="about-modal-video"
+      width="224"
+      height="199"
+      src="https://www.youtube.com/embed/8WEMZ86Eho8"
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <p class="about-modal-text">
+      Our herd of small Jersey cows roam freely on our own farmland nearby,
+      grazing on fresh pastures and giving us rich, creamy milk - perfect for
+      making ice cream. Our ice cream is made with soul and heart. Everyone Our
+      main goal: to make the best organic ice cream.
+    </p>
+  </div>
+</div>
+
+<!-------------END----------------------->
+
 <!------------------------LOCATION and FRANCHISE-------------->
 <!-- Модальные окна -->
 <div class="backdrop is-hidden" data-location>
@@ -20,7 +439,6 @@
           ./images/contacts/map-mobile-2x.jpg 2x
         "
         media="(max-width: 767px)"
-        sizes="(max-width: 767px) 767px, 100vw"
       />
       <source
         srcset="
@@ -28,7 +446,6 @@
           ./images/contacts/map-desktop-2x.jpg 2x
         "
         media="(min-width: 768px)"
-        sizes="(min-width: 768px) 768px, 100vw"
       />
       <img
         src="./images/contacts/map-mobile.jpg"
@@ -71,7 +488,7 @@
       <div class="input-wrap">
         <input
           type="text"
-          name="user-name"
+          name="user-name-franchise"
           class="form-input modal-input icecream-modal-input"
           id="user-name"
           placeholder="Name"
@@ -82,31 +499,34 @@
       <div class="input-wrap">
         <input
           type="tel"
-          name="user-tel"
+          name="user-tel-franchise"
           class="form-input modal-input icecream-modal-input"
           id="user-tel"
           placeholder="Phone"
-          pattern="[0-9]+"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          title="Format: 123-456-7890"
           required
         />
       </div>
       <div class="input-wrap">
         <input
-          type="mail"
+          type="email"
           name="user-mail"
           class="form-input modal-input icecream-modal-input"
-          id="user-mail"
+          id="user-mail-franchise"
           placeholder="Email"
           pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
           required
         />
       </div>
-      <textarea
-        name="user-comment"
-        id="user-comment"
-        class="form-input modal-comment icecream-modal-input"
-        placeholder="Comment"
-      ></textarea>
+      <div class="input-wrap-textarea">
+        <textarea
+          name="user-comment"
+          id="user-comment-franchise"
+          class="form-input modal-comment icecream-modal-input"
+          placeholder="Comment"
+        ></textarea>
+      </div>
       <button type="submit" class="modal-btn">Submit</button>
     </form>
   </div>

@@ -162,7 +162,7 @@
   padding: 12px 34px;
   margin: 0 auto;
   border: 0;
-  color: $black;
+  color: $primary-dark;
   background-color: $primary-yellow;
   font-weight: 600;
   font-size: 14px;
@@ -189,60 +189,6 @@
 
 /* ---------------- about-modal ---------------- */
 
-.modal-overlay {
-  opacity: 0;
-  visibility: hidden;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll;
-  z-index: 20;
-  transition: 0.3s all;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.modal-overlay::-webkit-scrollbar {
-  width: 1px;
-}
-
-.modal-overlay::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 0 transparent;
-  border-radius: none;
-}
-
-.modal-overlay::-webkit-scrollbar-thumb {
-  border-radius: none;
-  -webkit-box-shadow: inset 0 0 0 transparent;
-}
-
-.modal-window {
-  opacity: 0;
-  visibility: hidden;
-
-  position: fixed;
-  width: 280px;
-
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 300ms linear;
-  
-  z-index: 30;
-
-  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  padding: 28px;
-  border-radius: 10px;
-  border: 2px solid $primary-yellow;
-  background-color: $primary-light;
-  
-
-  @include tablet {
-    width: 568px;
-  }
-}
 .about-modal {
   min-height: 459px;
   text-align: center;
@@ -253,47 +199,11 @@
     flex-direction: column;
     align-items: center;
     min-height: 430px;
-    padding: 32px 60px;
   }
 }
-
-.modal-window.active,
-.modal-overlay.active {
-  opacity: 1;
-  visibility: visible;
+.backdrop.is-hidden .about-modal {
+  transform: translate(-50%, -50%) scale(0);
 }
-.modal-window.active {
-  transform: translate(-50%, -50%);
-  transition: transform 300ms linear;
-}
-
-.modal-button-close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: $primary-dark;
-  background-color: $primary-light;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  @include tablet {
-    width: 24px;
-    height: 24px;
-  }
-
-  &:hover,
-  &:focus {
-    color: $primary-yellow;
-  }
-}
-
-.modal-icon-close {
-  fill: $primary-dark;
-}
-
 .about-modal-title {
   text-align: center;
   font-family: $font-seymour;
@@ -323,6 +233,7 @@
   font-size: 14px;
   line-height: 1.4;
   color: $primary-dark;
+  text-align: start;
   @include tablet {
       font-size: 16px;
     }
