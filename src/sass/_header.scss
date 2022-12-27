@@ -268,8 +268,12 @@ transform: scaleX(1);
       top: 68vh !important;
     }
   }
-  .backdrop .icecream-modal-window,
   .backdrop .modal-franchise {
+    @media (max-height:647px) {
+        top: 65vh !important;
+      }
+  }
+  .backdrop .icecream-modal-window {
     @media (max-height:667px) {
         top: 70vh !important;
       }
