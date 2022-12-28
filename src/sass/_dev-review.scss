@@ -29,7 +29,7 @@
 }
 
 .slick-dots .slick-active button {
-  background-color: hsl(274, 90%, 26%);;
+  background-color: $green-hover;
 }
 
 .dev-slider {
@@ -53,7 +53,7 @@
   line-height: 1.9;
   border-radius: 10px;
   color: $primary-light;
-  background-color: hsl(274, 90%, 26%);
+  background-color: $green-hover;
   padding: 10px;
 }
 

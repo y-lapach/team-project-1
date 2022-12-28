@@ -1,6 +1,5 @@
 .develop-header {
   padding-top: 46px;
-  background-color: #F1F1F1;
 }
 
 .dev-header-nav-wrap {
@@ -45,7 +44,9 @@
 }
 
 .dev-header-nav-link {
-  color: #000;
+  color: $green-hover;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .dev-header-nav-link.active {
