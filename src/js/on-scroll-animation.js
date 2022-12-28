@@ -37,6 +37,22 @@ if(animItems.length > 0) {
 }
 
 
+/*H2 ANIMATION*/
+const observer = new IntersectionObserver(entries => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is visible
+    if (entry.isIntersecting) {
+      // Add the animation class
+      entry.target.classList.add('title-anim');
+    }
+  });
+});
+
+observer.observe(document.querySelector('.to-anim1'));
+observer.observe(document.querySelector('.to-anim2'));
+observer.observe(document.querySelector('.to-anim3'));
+observer.observe(document.querySelector('.to-anim4'));
 
 /*BACK TO TOP*/
 $(document).ready(() => {
@@ -57,21 +73,3 @@ $(document).ready(() => {
     return false
   })
 })
-
-
-/*H2 ANIMATION*/
-const observer = new IntersectionObserver(entries => {
-  // Loop over the entries
-  entries.forEach(entry => {
-    // If the element is visible
-    if (entry.isIntersecting) {
-      // Add the animation class
-      entry.target.classList.add('title-anim');
-    }
-  });
-});
-
-observer.observe(document.querySelector('.to-anim1'));
-observer.observe(document.querySelector('.to-anim2'));
-observer.observe(document.querySelector('.to-anim3'));
-observer.observe(document.querySelector('.to-anim4'));

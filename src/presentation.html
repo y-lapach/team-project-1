@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>naFronte</title>
+    <link rel="icon" type="image/x-icon" href="./images/na-fronte.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Seymour+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body data-body>
+    <!-- ❗️❗️❗️ Add partials like so for every page -->
+    <include src="./partials/dev-header.html"></include>
+    <main>
+      <include src="./partials/dev-photo.html"></include>
+      <include src="./partials/dev-user.html"></include>
+      <include src="./partials/dev-stack.html"></include>
+      <include src="./partials/dev-review.html"></include>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="./js/dev-slider.js"></script>
+  </body>
+</html>

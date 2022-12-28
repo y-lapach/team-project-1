@@ -1,0 +1,57 @@
+body {
+  background-image: none;
+}
+
+.dev-photo {
+  padding: 50px 10px;
+}
+
+.dev-photo-list {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style-type: none;
+}
+
+.dev-photo-item {
+
+  @include tablet {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+}
+
+.dev-photo-wrap {
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  &:hover {
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.dev-photo-text-wrap {
+  text-align: center;
+  padding: 20px 24px;
+  background-color: transparent;
+  margin-top: 10px;
+}
+
+.dev-photo-name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: calc(36 / 18);
+  letter-spacing: 0.06em;
+  color: $green-hover;
+}
+
+.dev-photo-type {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  color: $primary-dark;
+}

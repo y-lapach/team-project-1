@@ -1,0 +1,75 @@
+.develop-header {
+  padding-top: 46px;
+}
+
+.dev-header-nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+
+.dev-header-logo {
+  position: relative;
+  padding: 0 12px 3px 0;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1;
+  color: #000;
+}
+
+.dev-header-logo::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: $primary-yellow;
+  border-radius: 50%;
+}
+
+.dev-heder-logo-na {
+  color: $primary-yellow;
+}
+
+.dev-header-nav-list {
+  display: flex;
+  column-gap: 50px;
+  font-weight: 500;
+  font-size: 14px;
+  list-style-type: none;
+}
+
+.dev-header-nav-link {
+  color: $green-hover;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.dev-header-nav-link.active {
+  color: #606060;
+}
+
+.dev-header-row {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+
+.dev-header-content {
+  max-width: 500px;
+  line-height: 75px;
+}
+
+.dev-header-heading {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 44px;
+}
+
+.dev-header-content p {
+  line-height: 2;
+}
