@@ -2,15 +2,13 @@
   background-color: $primary-green;
 }
 .sticky {
+  width: 100%;
   position: fixed;
   top: 0;
   background-color: $primary-green;
   padding-bottom:20px;
   z-index:49;
   box-shadow: 0 5.34219px 20.0332px #0a881740;
-  @include desktop {
-    width:100%;
-  }
 }
 .sticky+.hero-section {
   padding-top: 105px;
