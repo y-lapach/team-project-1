@@ -1,14 +1,14 @@
-.user-container {
+.dev-user-container {
   padding: 50px 10px;
   display: flex;
 }
 
-.user-header {
+.dev-user-title {
   font-size: 70px;
   margin: 30px 0px 80px 0px;
 }
 
-.user-list {
+.dev-user-list {
   list-style-type: none;
   list-style-position: inside;
   display: flex;
@@ -16,7 +16,7 @@
   flex-direction: column;
 }
 
-.user-item {
+.dev-user-item {
   padding-left: 2.5rem;
   background-image: url(../images/dev/user-icon-list.png);
   background-position: 0 0;
