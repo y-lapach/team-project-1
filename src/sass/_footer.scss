@@ -132,7 +132,9 @@
 
 .footer-wrap {
   display: flex;
-  // align-items: flex-start;
+  @media screen and (max-width:767px){
+    flex-direction: column;
+  }
 }
 
 .footer-copyright {
@@ -165,14 +167,36 @@
   @include desktop {
     font-size: 12px;
 
-    &-name {
-      color: $primary-yellow;
-    }
-    @include desktop {
-      font-size: 12px;
-    }
   }
 }
+.footer-team {
+  width: 280px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $dark-grey;
+
+  @include tablet {
+    width: auto;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+  }
+
+  @include desktop {
+    font-size: 12px;
+  }
+}
+.ftr-team {
+  padding: 10px 0;
+}
+.footer-team-link {
+  color: $primary-yellow;
+  @include desktop {
+      font-size: 12px;
+    }
+}
+
+
   .back-to-top {
     background-color: #ed5198;
     text-decoration: none;
