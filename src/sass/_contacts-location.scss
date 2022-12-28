@@ -117,18 +117,18 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  transition: transform 300ms linear;
   width: 280px;
   padding: 28px;
+  transform: translate(-50%, -50%);
+  transition: transform 300ms linear;
   background-color: $primary-light;
   border-radius: 10px;
   border: 2px solid $primary-yellow;
-  z-index:60;
   @include tablet {
       padding: 32px 60px;
       width: 568px;
   }
+
 }
 
 .modal-location {
@@ -153,8 +153,7 @@
   pointer-events: none;
   
 }
-.backdrop.is-hidden .modal-franchise,
-.backdrop.is-hidden .modal-location {
+.backdrop.is-hidden .modal-general {
   transform: translate(-50%, -50%) scale(0);
   transition: transform 300ms linear;
 }

@@ -110,3 +110,19 @@ body.no-scroll {
         transform: rotate(0deg);
     }
 }
+
+
+.title-anim {
+    animation: fadeInTop 1s ease-in both;
+}
+@keyframes fadeInTop {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}

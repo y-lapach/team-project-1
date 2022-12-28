@@ -1,3 +1,4 @@
+/*----------ADVANTAGES ANIMATION ON SCROLL--------------*/
 const animItems = document.querySelectorAll('._anim-items');
 
 if(animItems.length > 0) {
@@ -34,3 +35,43 @@ if(animItems.length > 0) {
     return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
   }
 }
+
+
+
+/*BACK TO TOP*/
+$(document).ready(() => {
+  
+  const backToTop = $('#backToTop')
+  const amountScrolled = 300
+  
+  $(window).scroll(() => {
+    $(window).scrollTop() >= amountScrolled 
+      ? backToTop.fadeIn('fast') 
+      : backToTop.fadeOut('fast')
+  })
+  
+  backToTop.click(() => {
+    $('body, html').animate({
+      scrollTop: 0
+    }, 400)
+    return false
+  })
+})
+
+
+/*H2 ANIMATION*/
+const observer = new IntersectionObserver(entries => {
+  // Loop over the entries
+  entries.forEach(entry => {
+    // If the element is visible
+    if (entry.isIntersecting) {
+      // Add the animation class
+      entry.target.classList.add('title-anim');
+    }
+  });
+});
+
+observer.observe(document.querySelector('.to-anim1'));
+observer.observe(document.querySelector('.to-anim2'));
+observer.observe(document.querySelector('.to-anim3'));
+observer.observe(document.querySelector('.to-anim4'));
