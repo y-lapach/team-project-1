@@ -74,7 +74,9 @@
           class="buy-now-input"
           type="text"
           placeholder="Name"
-          minlength="5"
+          minlength="2"
+          pattern="[A-Za-z]{1,32}"
+          title="Use your first name"
           required
         />
         <input
@@ -169,7 +171,9 @@
           class="form-input modal-input icecream-modal-input"
           id="user-name-icecream"
           placeholder="Name"
-          pattern="[A-Za-z0-9]+"
+          minlength="2"
+          pattern="[A-Za-z]{1,32}"
+          title="Use your first name"
           required
         />
       </div>
@@ -271,7 +275,9 @@
           class="form-input modal-input icecoffee-modal-input"
           id="user-name-icecoffee"
           placeholder="Name"
-          pattern="[A-Za-z0-9]+"
+          minlength="2"
+          pattern="[A-Za-z]{1,32}"
+          title="Use your first name"
           required
         />
       </div>
@@ -373,7 +379,9 @@
           class="form-input modal-input milkshake-modal-input"
           id="user-name-milkshake"
           placeholder="Name"
-          pattern="[A-Za-z0-9]+"
+          minlength="2"
+          pattern="[A-Za-z]{1,32}"
+          title="Use your first name"
           required
         />
       </div>
@@ -492,6 +500,8 @@
     >
   </div>
 </div>
+
+<!--------FRANCHISE------->
 <div class="backdrop is-hidden" data-franchise>
   <div class="modal-franchise modal-general">
     <button
@@ -523,7 +533,9 @@
           id="user-name"
           placeholder="Name"
           required
-          pattern="[A-Za-z0-9]+"
+          minlength="2"
+          pattern="[A-Za-z]{1,32}"
+          title="Use your first name"
         />
       </div>
       <div class="input-wrap">
