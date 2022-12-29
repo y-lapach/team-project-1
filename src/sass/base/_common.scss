@@ -89,6 +89,52 @@ body.no-scroll {
     }
 
 }
+
+.modal-general {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 280px;
+    padding: 28px;
+    transform: translate(-50%, -50%);
+    transition: transform 300ms linear;
+    background-color: $primary-light;
+    border-radius: 10px;
+    border: 2px solid $primary-yellow;
+
+    @include tablet {
+        padding: 32px 60px;
+        width: 568px;
+    }
+
+    @include desktop {
+        transform: translate(-50%, -50%);
+    }
+}
+
+.backdrop .header-modal,
+.backdrop .products-modal,
+.backdrop .modal-franchise {
+    transform: translate(-50%, -45vh);
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 5vh;
+        display: block;
+        position: absolute;
+    }
+    @include desktop {
+        transform: translate(-50%, -50%);
+
+        &::after {
+            content: '';
+            height:0vh;
+    }
+}
+}
+
+/*-------Shaking arrows in product section-----*/
 @keyframes tilt-shaking {
     0% {
         transform: rotate(0deg);
@@ -111,7 +157,7 @@ body.no-scroll {
     }
 }
 
-
+/*-----h2 animation-----*/
 .title-anim {
     animation: fadeInTop 1s ease-in both;
 }
